@@ -12,7 +12,7 @@ header.innerHTML = `
 <header class="nav" id="top">
   <div class="nav-inner">
     <a class="brand" href="index.html" aria-label="CSE ZEN - Accueil">
-      <img src="assets/logo-cse-zen.jpg" alt="CSE ZEN" class="brand-logo">
+      <img src="assets/logo-cse-zen-panda.jpg" alt="CSE ZEN" class="brand-logo">
     </a>
     <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Ouvrir le menu">☰</button>
     <nav class="main-menu" id="main-menu" aria-label="Navigation principale">

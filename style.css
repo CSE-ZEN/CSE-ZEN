@@ -125,10 +125,10 @@ p{margin:0 0 1em}
    ========================================================================== */
 .nav{
   position:sticky;top:0;z-index:100;
-  background:rgba(247,243,238,.82);
+  background:rgba(255,255,255,.92);
   backdrop-filter:blur(20px) saturate(180%);
   -webkit-backdrop-filter:blur(20px) saturate(180%);
-  border-bottom:1px solid rgba(27,32,54,.06);
+  border-bottom:1px solid rgba(27,32,54,.08);
   transition:background .3s ease,box-shadow .3s ease,border-color .3s ease,height .3s ease;
 }
 .nav::after{
@@ -137,8 +137,8 @@ p{margin:0 0 1em}
   opacity:0;transition:opacity .4s ease;
 }
 .nav.is-scrolled{
-  background:rgba(255,255,255,.94);
-  box-shadow:0 6px 24px rgba(27,32,54,.06);
+  background:rgba(255,255,255,.98);
+  box-shadow:0 6px 24px rgba(27,32,54,.08);
 }
 .nav.is-scrolled::after{opacity:.55}
 .nav-inner{
@@ -880,27 +880,30 @@ p{margin:0 0 1em}
 .brand-card.its .brand-head::before{background:var(--green)}
 .brand-card.iwc .brand-head::before{background:var(--blue)}
 .brand-card .brand-mark{
-  display:inline-flex;align-items:center;gap:14px;
-  margin-bottom:14px;
+  display:flex;align-items:center;
+  min-height:64px;
+  margin-bottom:18px;
 }
-.brand-card .brand-mark .logo-spot{
-  width:54px;height:54px;border-radius:12px;
-  display:flex;align-items:center;justify-content:center;
-  background:var(--ivoire);
-  font-family:var(--serif);font-style:italic;font-size:24px;font-weight:500;
+.brand-card.its .brand-mark img{
+  max-height:46px;max-width:240px;
+  width:auto;height:auto;
+  object-fit:contain;
+  display:block;
 }
-.brand-card.its .logo-spot{background:rgba(11,127,131,.08);color:var(--green)}
-.brand-card.iwc .logo-spot{background:rgba(43,101,200,.08);color:var(--blue)}
-.brand-card .brand-mark .logo-spot img{max-width:46px;max-height:46px;object-fit:contain;border-radius:6px}
-.brand-card .brand-mark .brand-id{display:flex;flex-direction:column}
-.brand-card .brand-mark .brand-name{
-  font-family:var(--serif);font-weight:500;font-size:24px;
-  color:var(--encre);line-height:1.1;
+.brand-card.iwc .brand-mark img{
+  max-height:72px;max-width:72px;
+  width:auto;height:auto;
+  object-fit:contain;
+  display:block;
+  border-radius:12px;
 }
 .brand-card .brand-mark .brand-kicker{
   font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
   color:var(--cuivre-deep);
-  margin-top:4px;
+  margin-left:18px;
+  padding-left:18px;
+  border-left:1px solid var(--line);
+  line-height:1.3;
 }
 .brand-card .brand-head h2{
   font-family:var(--serif);font-weight:500;
