@@ -1606,3 +1606,34 @@ p{margin:0 0 1em}
   }
 }
 
+/* ==========================================================================
+   ÉQUIPE & RÉSEAU — partenaires experts
+   ========================================================================== */
+.partners-grid{
+  align-items:stretch;
+}
+
+.partners-grid .partner-card{
+  height:100%;
+  min-height:420px;
+}
+
+.partner-card-lexelians .roster{
+  margin-bottom:14px;
+}
+
+.partner-card-lexelians .btn,
+.partner-card-akp .btn{
+  margin-top:auto;
+}
+
+@media(max-width:900px){
+  .partners-grid .partner-card{
+    min-height:auto;
+  }
+
+  .partner-card-lexelians .roster{
+    margin-bottom:0;
+  }
+}
+
