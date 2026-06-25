@@ -23,8 +23,7 @@ footer.innerHTML = `
     </div>
     <div>
       <h3>Nous joindre</h3>
-      <a href="tel:+33628781059">06 28 78 10 59</a>
-      <a href="mailto:gvilleneuve@cse-zen.com">gvilleneuve@cse-zen.com</a>
+      <a href="mailto:contact@cse-zen.com">contact@cse-zen.com</a>
       <span>11 avenue de l'Opéra<br>75001 Paris</span>
     </div>
   </div>
