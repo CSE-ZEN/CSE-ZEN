@@ -329,7 +329,7 @@ p{margin:0 0 1em}
   max-width:150px;
   object-fit:contain;
   opacity:.72;
-  filter:grayscale(1);
+  filter:none;
   transition:opacity .25s ease,filter .25s ease,transform .25s ease;
 }
 .trust .client-logo:hover{opacity:1;filter:none;transform:translateY(-1px)}
