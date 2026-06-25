@@ -1637,3 +1637,54 @@ p{margin:0 0 1em}
   }
 }
 
+/* ==========================================================================
+   SOLUTIONS DIGITALES — responsive brand cards
+   ========================================================================== */
+@media(max-width:600px){
+  .brand-card .brand-head{
+    padding:28px 24px 22px;
+  }
+
+  .brand-card .brand-mark{
+    align-items:flex-start;
+    gap:14px;
+    min-height:auto;
+  }
+
+  .brand-card .brand-mark .brand-kicker{
+    margin-left:0;
+    padding-left:14px;
+    font-size:10px;
+    letter-spacing:.10em;
+    line-height:1.35;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+
+  .brand-card.its .brand-mark img{
+    max-width:150px;
+    max-height:42px;
+  }
+
+  .brand-card .brand-head h2{
+    font-size:22px;
+  }
+
+  .brand-card .brand-body{
+    padding:24px;
+  }
+}
+
+@media(max-width:390px){
+  .brand-card .brand-mark{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .brand-card .brand-mark .brand-kicker{
+    border-left:0;
+    padding-left:0;
+  }
+}
+
