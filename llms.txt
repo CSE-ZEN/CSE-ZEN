@@ -1,0 +1,39 @@
+# CSE ZEN
+
+> CSE ZEN est un cabinet français qui accompagne les comités sociaux et économiques (CSE) et leurs élus à travers quatre pôles complémentaires : juridique (CSE ZEN Avocats, avec Lexelians Avocats), comptable (CSE ZEN Comptabilité, avec AKP Conseils), formation (CSE ZEN Formation) et solutions digitales (CSE ZEN Solutions Digitales, avec Into The Shift). CSE ZEN aide les élus à comprendre leurs obligations légales, préparer leurs consultations et réunions, et sécuriser la gestion de leur comité.
+
+Ce fichier suit la convention [llms.txt](https://llmstxt.org) et référence les pages clés du site pour faciliter leur compréhension et leur citation par les assistants IA. Toutes les URLs sont sous https://www.cse-zen.com.
+
+## Présentation
+
+- [Accueil](https://www.cse-zen.com/): présentation de CSE ZEN et de ses quatre pôles.
+- [Notre offre](https://www.cse-zen.com/notre-offre.html): détail des quatre pôles d'accompagnement.
+- [Équipe & réseau](https://www.cse-zen.com/equipe-reseau.html): l'équipe CSE ZEN et ses partenaires (Lexelians Avocats, AKP Conseils).
+- [Contact](https://www.cse-zen.com/contact.html): coordonnées et prise de contact.
+
+## Nos pôles
+
+- [CSE ZEN Avocats](https://www.cse-zen.com/pole-avocats.html): accompagnement juridique du CSE, en partenariat avec Lexelians Avocats.
+- [CSE ZEN Comptabilité](https://www.cse-zen.com/pole-comptabilite.html): expertise comptable du CSE, en partenariat avec AKP Conseils.
+- [Formations CSE](https://www.cse-zen.com/formations.html): catalogue de formations pour les élus (dont la formation SSCT).
+- [Solutions digitales](https://www.cse-zen.com/solutions-digitales.html): outils digitaux pour le CSE, dont Into The Shift (simulations comportementales anonymes pour la QVCT, sans login ni traçage) et Inclusive Way Campus.
+
+## Ressources CSE — guides de référence
+
+- [Toutes les ressources](https://www.cse-zen.com/ressources.html): index filtrable de tous les guides et articles.
+- [QVCT et CSE](https://www.cse-zen.com/resources/qvct-cse.html): obligations légales, Code du travail et méthode pour agir sur la qualité de vie et des conditions de travail.
+- [Risques psychosociaux (RPS)](https://www.cse-zen.com/resources/risques-psychosociaux-cse.html): signaux d'alerte, DUERP, droit d'alerte et méthode pour qualifier une situation.
+- [Formation SSCT du CSE](https://www.cse-zen.com/resources/formation-ssct-cse.html): durée légale, financement par l'employeur et contenu du programme.
+- [Harcèlement au travail](https://www.cse-zen.com/resources/harcelement-cse.html): définitions légales, charge de la preuve, référent CSE et procédure d'enquête.
+- [CSSCT](https://www.cse-zen.com/resources/cssct-cse.html): seuil de 300 salariés, composition et missions déléguées par le CSE.
+- [Réorganisation et CSE](https://www.cse-zen.com/resources/reorganisation-cse.html): consultation obligatoire, délais légaux et expertise.
+- [Consultations obligatoires du CSE](https://www.cse-zen.com/resources/article-consultations-obligatoires.html): les 3 blocs de consultation récurrente, la BDESE et les délais légaux.
+- [Droit d'alerte économique](https://www.cse-zen.com/resources/article-droit-alerte-economique.html): conditions de déclenchement et procédure en 3 étapes.
+- [Trésorier du CSE](https://www.cse-zen.com/resources/article-tresorier-cse.html): budget de fonctionnement, budget ASC et obligations comptables.
+- [Négociation collective et CSE](https://www.cse-zen.com/resources/article-negociation-cse.html): articulation entre le CSE et la négociation annuelle obligatoire (NAO).
+
+## Optional
+
+- [Ressources — QVCT (tag)](https://www.cse-zen.com/resource-tags/qvct.html)
+- [Ressources — RPS (tag)](https://www.cse-zen.com/resource-tags/rps.html)
+- [Ressources — SSCT (tag)](https://www.cse-zen.com/resource-tags/ssct.html)
