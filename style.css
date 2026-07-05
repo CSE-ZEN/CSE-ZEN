@@ -1745,6 +1745,27 @@ body{
     max-width:220px;
   }
 
+  .hero-card{
+    padding:20px 16px;
+  }
+
+  .hero-stats{
+    gap:0 4px;
+  }
+
+  .hero-stat{
+    padding:4px 6px;
+  }
+
+  .hero-stat strong{
+    font-size:24px;
+    white-space:normal;
+  }
+
+  .hero-stat span{
+    font-size:11px;
+  }
+
   .brand-card .brand-head{
     padding:26px 22px 22px;
   }
@@ -1808,3 +1829,21 @@ body{
 .tag-cloud{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
 .tag-cloud a{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(196,149,106,.12);color:var(--cuivre-deep);font-size:13px;text-decoration:none;font-weight:700}
 @media(max-width:900px){.resource-layout{grid-template-columns:1fr}.resource-toc,.resource-side-card{position:static}.seo-list,.related-grid{grid-template-columns:1fr}}
+
+@media(max-width:380px){
+  .hero-stats{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+  .hero-stat{
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.10);
+    padding:10px 4px;
+  }
+  .hero-stat:last-child{
+    border-bottom:0;
+  }
+  .hero-stat strong{
+    font-size:30px;
+  }
+}
