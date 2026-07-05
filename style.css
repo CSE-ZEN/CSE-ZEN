@@ -126,7 +126,7 @@ p{margin:0 0 1em}
    HEADER
    ========================================================================== */
 .nav{
-  position:relative;z-index:100;
+  position:sticky;top:0;z-index:100;
   background:rgba(255,255,255,.92);
   backdrop-filter:blur(20px) saturate(180%);
   -webkit-backdrop-filter:blur(20px) saturate(180%);
@@ -1695,10 +1695,12 @@ p{margin:0 0 1em}
 /* ==========================================================================
    MOBILE — anti-coupure iPhone
    ========================================================================== */
-html,
-body{
+html{
   max-width:100%;
   overflow-x:hidden;
+}
+body{
+  max-width:100%;
 }
 
 @media(max-width:600px){
