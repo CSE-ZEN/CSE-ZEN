@@ -1,29 +1,32 @@
-
 const footer = document.getElementById('site-footer');
+const footerIsNestedPage = window.location.pathname.includes('/resources/') || window.location.pathname.includes('/resource-tags/');
+const footerBasePath = footerIsNestedPage ? '../' : '';
 footer.innerHTML = `
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <img src="assets/logo-cse-zen.jpg" alt="CSE ZEN" class="footer-logo">
+      <img src="${footerBasePath}assets/logo-cse-zen.jpg" alt="CSE ZEN" class="footer-logo">
       <p>Accompagnement juridique, économique, formation et solutions opérationnelles pour les Comités Sociaux et Économiques.</p>
     </div>
     <div>
       <h3>Notre offre</h3>
-      <a href="pole-avocats.html">CSE ZEN Avocats</a>
-      <a href="pole-comptabilite.html">CSE ZEN Comptabilité</a>
-      <a href="formations.html">CSE ZEN Formation</a>
-      <a href="solutions-digitales.html">CSE ZEN Solutions</a>
+      <a href="${footerBasePath}pole-avocats.html">CSE ZEN Avocats</a>
+      <a href="${footerBasePath}pole-comptabilite.html">CSE ZEN Comptabilité</a>
+      <a href="${footerBasePath}formations.html">CSE ZEN Formation</a>
+      <a href="${footerBasePath}solutions-digitales.html">CSE ZEN Solutions</a>
     </div>
     <div>
-      <h3>Cabinet</h3>
-      <a href="equipe-reseau.html">Équipe & réseau</a>
-      <a href="ressources.html">Ressources</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://www.linkedin.com/company/cselegal/" target="_blank" rel="noopener">LinkedIn</a>
+      <h3>Ressources CSE</h3>
+      <a href="${footerBasePath}ressources.html">Hub ressources</a>
+      <a href="${footerBasePath}resources/qvct-cse.html">QVCT</a>
+      <a href="${footerBasePath}resources/risques-psychosociaux-cse.html">RPS</a>
+      <a href="${footerBasePath}resources/formation-ssct-cse.html">Formation SSCT</a>
     </div>
     <div>
       <h3>Nous joindre</h3>
       <a href="mailto:contact@cse-zen.com">contact@cse-zen.com</a>
+      <a href="${footerBasePath}contact.html">Contact</a>
+      <a href="https://www.linkedin.com/company/cselegal/" target="_blank" rel="noopener">LinkedIn</a>
       <span>11 avenue de l'Opéra<br>75001 Paris</span>
     </div>
   </div>
