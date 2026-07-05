@@ -23,29 +23,21 @@
   </div>
 </section>
 
-
 <section class="section section-ivoire">
   <div class="container">
-    <div class="section-header">
-      <span class="thread"></span>
-      <div class="kicker">À la une</div>
-      <h2 class="section-title">Nos dossiers les plus consultés</h2>
-      <p class="section-desc">Comprenez vos obligations, découvrez les bonnes pratiques et trouvez des pistes d’action concrètes pour votre CSE.</p>
-    </div>
-    <div class="article-grid">
-      <a class="article-card" href="resources/qvct-cse.html"><div class="card-body"><span class="tag blue">QVCT</span><h3>QVCT CSE</h3><p>Conditions de travail, dialogue social, prévention et accompagnement des élus.</p><span class="read-cta">Lire la page <span class="arr">→</span></span></div></a>
-      <a class="article-card" href="resources/risques-psychosociaux-cse.html"><div class="card-body"><span class="tag amber">RPS</span><h3>RPS CSE</h3><p>Stress, burn-out, charge mentale, signaux faibles et rôle du CSE.</p><span class="read-cta">Lire la page <span class="arr">→</span></span></div></a>
-      <a class="article-card" href="resources/formation-ssct-cse.html"><div class="card-body"><span class="tag">SSCT</span><h3>Formation SSCT</h3><p>Formation, CSSCT, enquêtes, inspections et prévention terrain.</p><span class="read-cta">Lire la page <span class="arr">→</span></span></div></a>
-    </div>
-    <div class="tag-cloud"><a href="resources/index.html">Tous les guides</a><a href="resource-tags/qvct.html">QVCT</a><a href="resource-tags/rps.html">RPS</a><a href="resource-tags/ssct.html">SSCT</a></div>
-  </div>
-</section>
 
-<section class="section">
-  <div class="container">
-    <div class="article-grid">
+    <div class="resource-filters" role="group" aria-label="Filtrer les ressources par thématique">
+      <button class="filter-pill is-active" data-filter="all" type="button">Tous <span class="filter-count"></span></button>
+      <button class="filter-pill" data-filter="qvct" type="button">QVCT</button>
+      <button class="filter-pill" data-filter="rps" type="button">RPS</button>
+      <button class="filter-pill" data-filter="ssct" type="button">SSCT</button>
+      <button class="filter-pill" data-filter="juridique" type="button">Juridique</button>
+      <button class="filter-pill" data-filter="fonctionnement" type="button">Fonctionnement</button>
+    </div>
 
-      <a class="article-card" href="resources/article-consultations-obligatoires.html">
+    <div class="article-grid resource-grid" id="resource-grid">
+
+      <a class="article-card" data-cat="juridique" href="resources/article-consultations-obligatoires.html">
         <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&q=80')"></div>
         <div class="card-body">
           <span class="tag red">Juridique</span>
@@ -56,10 +48,43 @@
         </div>
       </a>
 
-      <a class="article-card" href="resources/formation-ssct-cse.html">
+      <a class="article-card" data-cat="juridique" href="resources/reorganisation-cse.html">
+        <div class="card-image card-image--motif" data-motif="Réorg."></div>
+        <div class="card-body">
+          <span class="tag red">Juridique</span>
+          <h3>Réorganisation et CSE</h3>
+          <p>Consultation obligatoire, délais légaux et expertise pour préparer un avis argumenté du CSE.</p>
+          <div class="card-meta"><span>Dossier</span><span class="dot"></span><span>Consultation</span></div>
+          <span class="read-cta">Lire le dossier <span class="arr" aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <a class="article-card" data-cat="qvct" href="resources/qvct-cse.html">
+        <div class="card-image card-image--motif" data-motif="QVCT"></div>
+        <div class="card-body">
+          <span class="tag blue">QVCT</span>
+          <h3>QVCT et CSE</h3>
+          <p>Obligations légales, articles du Code du travail et méthode pour agir sur la qualité de vie et des conditions de travail.</p>
+          <div class="card-meta"><span>Dossier</span><span class="dot"></span><span>Référence</span></div>
+          <span class="read-cta">Lire le dossier <span class="arr" aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <a class="article-card" data-cat="rps" href="resources/risques-psychosociaux-cse.html">
+        <div class="card-image card-image--motif" data-motif="RPS"></div>
+        <div class="card-body">
+          <span class="tag amber">RPS</span>
+          <h3>Risques psychosociaux</h3>
+          <p>Signaux d'alerte, DUERP, droit d'alerte et méthode pour qualifier une situation avant qu'elle ne s'aggrave.</p>
+          <div class="card-meta"><span>Dossier</span><span class="dot"></span><span>Référence</span></div>
+          <span class="read-cta">Lire le dossier <span class="arr" aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <a class="article-card" data-cat="ssct" href="resources/formation-ssct-cse.html">
         <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80')"></div>
         <div class="card-body">
-          <span class="tag blue">Formation</span>
+          <span class="tag green">SSCT</span>
           <h3>Formation SSCT : ce que les élus doivent savoir</h3>
           <p>Durée, financement, contenu et bénéfices concrets pour exercer son mandat.</p>
           <div class="card-meta"><span>5 min de lecture</span><span class="dot"></span><span>Mandat</span></div>
@@ -67,10 +92,10 @@
         </div>
       </a>
 
-      <a class="article-card" href="resources/harcelement-cse.html">
+      <a class="article-card" data-cat="ssct" href="resources/harcelement-cse.html">
         <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80')"></div>
         <div class="card-body">
-          <span class="tag amber">SSCT</span>
+          <span class="tag green">SSCT</span>
           <h3>Harcèlement au travail : quel rôle pour le CSE ?</h3>
           <p>Réagir sans se substituer à l'enquête, sécuriser l'alerte et protéger le collectif.</p>
           <div class="card-meta"><span>6 min de lecture</span><span class="dot"></span><span>Prévention</span></div>
@@ -78,10 +103,21 @@
         </div>
       </a>
 
-      <a class="article-card" href="resources/article-droit-alerte-economique.html">
+      <a class="article-card" data-cat="ssct" href="resources/cssct-cse.html">
+        <div class="card-image card-image--motif" data-motif="CSSCT"></div>
+        <div class="card-body">
+          <span class="tag green">SSCT</span>
+          <h3>CSSCT</h3>
+          <p>Seuil de 300 salariés, composition, missions déléguées par le CSE et méthode de travail de la commission.</p>
+          <div class="card-meta"><span>Dossier</span><span class="dot"></span><span>Référence</span></div>
+          <span class="read-cta">Lire le dossier <span class="arr" aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <a class="article-card" data-cat="fonctionnement" href="resources/article-droit-alerte-economique.html">
         <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80')"></div>
         <div class="card-body">
-          <span class="tag amber">Économie</span>
+          <span class="tag">Fonctionnement</span>
           <h3>Droit d'alerte économique : quand et comment l'activer ?</h3>
           <p>Identifier les signaux faibles et structurer une démarche rigoureuse.</p>
           <div class="card-meta"><span>5 min de lecture</span><span class="dot"></span><span>Alerte</span></div>
@@ -89,7 +125,7 @@
         </div>
       </a>
 
-      <a class="article-card" href="resources/article-tresorier-cse.html">
+      <a class="article-card" data-cat="fonctionnement" href="resources/article-tresorier-cse.html">
         <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1554224155-1696413565d3?w=900&q=80')"></div>
         <div class="card-body">
           <span class="tag">Fonctionnement</span>
@@ -100,10 +136,10 @@
         </div>
       </a>
 
-      <a class="article-card" href="resources/article-negociation-cse.html">
+      <a class="article-card" data-cat="fonctionnement" href="resources/article-negociation-cse.html">
         <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80')"></div>
         <div class="card-body">
-          <span class="tag blue">Négociation</span>
+          <span class="tag">Fonctionnement</span>
           <h3>Négociation collective : préparer le rapport de force</h3>
           <p>Clarifier les objectifs, documenter les demandes et sécuriser les échanges.</p>
           <div class="card-meta"><span>5 min de lecture</span><span class="dot"></span><span>Stratégie</span></div>
@@ -112,6 +148,9 @@
       </a>
 
     </div>
+
+    <p class="resource-more-link"><a href="resources/index.html">Explorer les dossiers thématiques complets (QVCT, RPS, SSCT…) →</a></p>
+
   </div>
 </section>
 

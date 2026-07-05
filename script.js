@@ -68,6 +68,29 @@ if (!prefersReduced && 'IntersectionObserver' in window) {
   document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => io.observe(el));
 }
 
+// Resource library filters (ressources.html) — client-side, no reload
+const filterBar = document.querySelector('.resource-filters');
+const resourceGrid = document.getElementById('resource-grid');
+if (filterBar && resourceGrid) {
+  const pills = filterBar.querySelectorAll('.filter-pill');
+  const cards = resourceGrid.querySelectorAll('.article-card');
+
+  const applyFilter = (filter) => {
+    cards.forEach(card => {
+      const match = filter === 'all' || card.getAttribute('data-cat') === filter;
+      card.classList.toggle('is-hidden', !match);
+    });
+  };
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('is-active'));
+      pill.classList.add('is-active');
+      applyFilter(pill.getAttribute('data-filter'));
+    });
+  });
+}
+
 // Very subtle parallax on hero copper glow (no animation if reduced motion)
 if (!prefersReduced) {
   const hero = document.querySelector('.hero');
