@@ -32,6 +32,6 @@ footer.innerHTML = `
   </div>
   <div class="container footer-bottom">
     <span>© 2026 CSE ZEN — Tous droits réservés</span>
-    <span><a href="${footerBasePath}cookie-policy.html">Politique de cookies</a> · Partenaire de confiance des élus du CSE et représentants du personnel</span>
+    <span><a href="${footerBasePath}cookie-policy.html">Politique de cookies</a> · Partenaire de confiance des élus CSE et représentants du personnel</span>
   </div>
 </footer>`;
