@@ -26,6 +26,7 @@ footer.innerHTML = `
       <h3>Nous joindre</h3>
       <a href="mailto:contact@cse-zen.com">contact@cse-zen.com</a>
       <a href="${footerBasePath}contact.html">Contact</a>
+      <a href="${footerBasePath}equipe-reseau.html">Équipe & réseau</a>
       <a href="https://www.linkedin.com/company/cselegal/" target="_blank" rel="noopener">LinkedIn</a>
       <span>11 avenue de l'Opéra<br>75001 Paris</span>
     </div>
