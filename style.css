@@ -1674,11 +1674,11 @@ p{margin:0 0 1em}
   min-height:420px;
 }
 
-.partner-card-lexelians .roster{
+.partner-card-avocats .roster{
   margin-bottom:14px;
 }
 
-.partner-card-lexelians .btn,
+.partner-card-avocats .btn,
 .partner-card-akp .btn{
   margin-top:auto;
 }
@@ -1688,7 +1688,7 @@ p{margin:0 0 1em}
     min-height:auto;
   }
 
-  .partner-card-lexelians .roster{
+  .partner-card-avocats .roster{
     margin-bottom:0;
   }
 }
@@ -1847,4 +1847,23 @@ body{
   .hero-stat strong{
     font-size:30px;
   }
+}
+/* Marques internes sans logo ni lien externe */
+.mini-brand,
+.offer-brand,
+.internal-brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .35rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(1.15rem, 2vw, 1.65rem);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: var(--ink, #17212b);
+}
+.mini-brand strong,
+.offer-brand strong,
+.internal-brand strong {
+  color: var(--red, #b33332);
+  font-weight: 700;
 }
