@@ -1,13 +1,13 @@
 # CSE ZEN
 
-> CSE ZEN est un cabinet français qui accompagne les comités sociaux et économiques (CSE), leurs élus et les représentants du personnel à travers quatre pôles complémentaires : juridique (CSE ZEN Avocats), comptable (CSE ZEN Comptabilité, avec AKP Conseils), formation (CSE ZEN Formation) et solutions digitales (CSE ZEN Solutions Digitales, avec Into The Shift). CSE ZEN aide les élus CSE et représentants du personnel à comprendre leurs obligations légales, préparer leurs consultations et réunions, et sécuriser la gestion de leur comité.
+> CSE ZEN est un cabinet français qui accompagne les comités sociaux et économiques (CSE), leurs élus et les représentants du personnel à travers cinq pôles complémentaires : juridique (CSE ZEN Avocats), comptable (CSE ZEN Comptabilité, avec AKP Conseils), formation (CSE ZEN Formation), solutions digitales (CSE ZEN Solutions Digitales, avec Into The Shift) et communication (CSE ZEN Communication). CSE ZEN aide les élus CSE et représentants du personnel à comprendre leurs obligations légales, préparer leurs consultations et réunions, et sécuriser la gestion de leur comité.
 
 Ce fichier suit la convention [llms.txt](https://llmstxt.org) et référence les pages clés du site pour faciliter leur compréhension et leur citation par les assistants IA. Toutes les URLs sont sous https://www.cse-zen.com.
 
 ## Présentation
 
-- [Accueil](https://www.cse-zen.com/): présentation de CSE ZEN et de ses quatre pôles.
-- [Notre offre](https://www.cse-zen.com/notre-offre.html): détail des quatre pôles d'accompagnement.
+- [Accueil](https://www.cse-zen.com/): présentation de CSE ZEN et de ses cinq pôles.
+- [Notre offre](https://www.cse-zen.com/notre-offre.html): détail des cinq pôles d'accompagnement.
 - [Équipe & réseau](https://www.cse-zen.com/equipe-reseau.html): l'équipe CSE ZEN, son pôle CSE ZEN Avocats et ses partenaires, dont AKP Conseils.
 - [Contact](https://www.cse-zen.com/contact.html): coordonnées et prise de contact.
 
@@ -17,6 +17,7 @@ Ce fichier suit la convention [llms.txt](https://llmstxt.org) et référence les
 - [CSE ZEN Comptabilité](https://www.cse-zen.com/pole-comptabilite.html): expertise comptable du CSE, en partenariat avec AKP Conseils.
 - [Formations CSE](https://www.cse-zen.com/formations.html): catalogue de formations pour les élus CSE et représentants du personnel (dont la formation SSCT).
 - [Solutions digitales](https://www.cse-zen.com/solutions-digitales.html): outils digitaux pour le CSE, dont Into The Shift (simulations comportementales anonymes pour la QVCT, sans login ni traçage) et Inclusive Way Campus.
+- [Communication](https://www.cse-zen.com/communication.html): supports imprimés et digitaux, vidéo et motion design, événementiel, création sur mesure et objets personnalisés pour informer, fédérer, valoriser et engager.
 
 ## Ressources CSE — guides de référence
 
