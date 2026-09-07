@@ -2218,3 +2218,47 @@ body{
   .poles-grid .pole-tile:nth-child(5),
   .poles-grid .pole-tile:nth-child(6){grid-column:span 2}
 }
+
+
+/* 2026-09-07 — Ajustements 6 pôles : grille 3 x 2, visuels Communication et Assistance */
+@media (min-width:1051px){
+  .poles-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:24px;
+    max-width:1180px;
+    margin-inline:auto;
+    align-items:stretch;
+  }
+  .poles-grid .pole-tile,
+  .poles-grid .pole-tile:nth-child(4),
+  .poles-grid .pole-tile:nth-child(5),
+  .poles-grid .pole-tile:nth-child(6){
+    grid-column:auto;
+    min-height:500px;
+    width:100%;
+  }
+}
+
+/* La carte Assistance reprend exactement la photo utilisée sur Notre offre,
+   avec un cadrage qui rend les mains et l'ordinateur immédiatement visibles. */
+.pole-tile-6::before{
+  background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80');
+  background-position:24% center;
+  background-size:cover;
+}
+
+/* Notre offre — Communication : pas d'aplat ivoire derrière le visuel. */
+.offer-band.copper .offer-visual{
+  background:transparent;
+  overflow:visible;
+  border-radius:0;
+}
+.offer-band.copper .offer-visual img{
+  width:100%;
+  height:auto;
+  max-height:220px;
+  object-fit:contain;
+  border-radius:14px;
+  display:block;
+}
