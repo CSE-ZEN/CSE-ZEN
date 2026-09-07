@@ -386,7 +386,8 @@ p{margin:0 0 1em}
 }
 .pole-tile{
   position:relative;
-  aspect-ratio:3 / 4.2;
+  min-height:500px;
+  height:100%;
   border-radius:var(--radius-lg);
   overflow:hidden;
   text-decoration:none;
@@ -1327,6 +1328,7 @@ p{margin:0 0 1em}
    ========================================================================== */
 @media(max-width:1100px){
   .poles-grid{grid-template-columns:repeat(2,1fr)}
+  .pole-tile{min-height:460px}
   .formation-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:1000px){
@@ -1366,6 +1368,7 @@ p{margin:0 0 1em}
   .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
 }
 @media(max-width:600px){
+  .pole-tile{min-height:430px}
   .villa-gallery{min-height:auto;display:grid;grid-template-columns:1fr;gap:18px}
   .villa-gallery img{position:relative;width:100%;height:220px;left:auto;right:auto;top:auto;bottom:auto}
   .villa-gallery img:nth-child(2){margin-top:0}
@@ -2121,7 +2124,8 @@ body{
 /* La carte Communication de l'accueil reprend désormais le visuel réel de l'offre. */
 .pole-tile-5::before{
   background-image:url('assets/communication/hero-communication-cse-zen.png');
-  background-position:center;
+  /* Cadrage volontaire sur l'équipe et le panda : évite le panneau de post-it. */
+  background-position:42% 72%;
   background-size:cover;
 }
 
