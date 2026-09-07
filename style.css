@@ -2351,3 +2351,94 @@ body{
 .community-actions{justify-content:center;margin-top:28px}
 @media(max-width:1100px){.community-formulas{grid-template-columns:repeat(3,minmax(0,1fr))}.community-formula:nth-child(4){grid-column:1 / 2}.community-included{grid-template-columns:1fr}}
 @media(max-width:760px){.community-formulas{grid-template-columns:1fr}.community-formula:nth-child(4){grid-column:auto}.community-formula h3{min-height:0}.community-included{padding:24px 20px}.community-included ul{grid-template-columns:1fr}.community-benefits{justify-content:flex-start;margin-top:26px}.communication-hero .actions{align-items:stretch}.communication-hero .actions .btn{width:100%;justify-content:center}}
+
+/* 2026-09-07 — Community Manager : enrichissement visuel des tags et formules */
+.community-benefits span{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.community-benefits span:hover{
+  transform:translateY(-2px);
+  border-color:rgba(22,140,140,.25);
+  box-shadow:0 9px 22px rgba(27,32,54,.07);
+}
+.benefit-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:25px;
+  height:25px;
+  flex:0 0 25px;
+  border-radius:8px;
+  background:rgba(22,140,140,.08);
+  color:#168c8c;
+}
+.benefit-icon svg,
+.included-icon svg,
+.formula-icon svg{
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.benefit-icon svg{width:15px;height:15px}
+
+.community-formula{
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.community-formula:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 40px rgba(27,32,54,.10);
+}
+.formula-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:58px;
+  height:58px;
+  margin:0 auto 17px;
+  padding:14px;
+  border-radius:18px;
+  background:rgba(37,143,101,.10);
+  color:#258f65;
+}
+.formula-confort .formula-icon{background:rgba(37,139,184,.11);color:#258bb8}
+.formula-premium .formula-icon{background:rgba(229,169,28,.13);color:#d59a0e}
+.formula-excellence .formula-icon{background:rgba(232,120,36,.12);color:#e87824}
+.formula-signature .formula-icon{background:rgba(118,86,155,.12);color:#76569b}
+.formula-icon svg{width:34px;height:34px;stroke-width:2}
+.community-formula h3{text-align:center}
+.community-formula .formula-network{text-align:center}
+
+.community-included li{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding-left:0;
+}
+.community-included li::before{display:none}
+.included-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:30px;
+  height:30px;
+  flex:0 0 30px;
+  padding:7px;
+  border-radius:9px;
+  background:rgba(22,140,140,.08);
+  color:#168c8c;
+}
+.included-icon svg{width:17px;height:17px}
+
+@media(max-width:760px){
+  .community-benefits{gap:8px}
+  .community-benefits span{font-size:12px;padding:9px 12px}
+  .benefit-icon{width:23px;height:23px;flex-basis:23px}
+  .formula-icon{width:54px;height:54px;margin-bottom:14px}
+}
