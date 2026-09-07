@@ -1326,6 +1326,71 @@ p{margin:0 0 1em}
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
+
+/* Assistance CSE — hero dédié */
+.assistance-hero{
+  padding:108px 0 84px;
+}
+.assistance-hero .container{
+  max-width:1180px;
+}
+.assistance-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(520px,1.1fr);
+  gap:72px;
+  align-items:stretch;
+}
+.assistance-hero-grid > div:first-child{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:24px 0;
+}
+.assistance-hero h1{
+  max-width:620px;
+}
+.assistance-hero p{
+  max-width:610px;
+}
+.assistance-hero-visual{
+  min-height:620px;
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 28px 70px rgba(27,32,54,.14);
+  border:1px solid rgba(196,149,106,.16);
+  position:relative;
+}
+.assistance-hero-visual::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(27,32,54,.02),rgba(27,32,54,.10));
+  pointer-events:none;
+}
+.assistance-hero-visual img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+@media(max-width:1000px){
+  .assistance-hero-grid{
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+  .assistance-hero-grid > div:first-child{padding:0;}
+  .assistance-hero-visual{min-height:460px;}
+}
+@media(max-width:600px){
+  .assistance-hero{padding:72px 0 54px;}
+  .assistance-hero-visual{
+    min-height:360px;
+    border-radius:20px;
+  }
+}
+
 @media(max-width:1100px){
   .poles-grid{grid-template-columns:repeat(2,1fr)}
   .formation-grid{grid-template-columns:repeat(2,1fr)}
