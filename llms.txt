@@ -1,6 +1,6 @@
 # CSE ZEN
 
-> CSE ZEN est un cabinet français qui accompagne les comités sociaux et économiques (CSE), leurs élus et les représentants du personnel à travers cinq pôles complémentaires : juridique (CSE ZEN Avocats), comptable (CSE ZEN Comptabilité, avec AKP Conseils), formation (CSE ZEN Formation), solutions digitales (CSE ZEN Solutions Digitales, avec Into The Shift) et communication (CSE ZEN Communication). CSE ZEN aide les élus CSE et représentants du personnel à comprendre leurs obligations légales, préparer leurs consultations et réunions, et sécuriser la gestion de leur comité.
+> CSE ZEN est un cabinet français qui accompagne les comités sociaux et économiques (CSE), leurs élus et les représentants du personnel à travers six pôles complémentaires : juridique (CSE ZEN Avocats), comptable (CSE ZEN Comptabilité, avec AKP Conseils), formation (CSE ZEN Formation), solutions digitales (CSE ZEN Solutions Digitales, avec Into The Shift) communication (CSE ZEN Communication) et assistance opérationnelle (CSE ZEN Assistance). CSE ZEN aide les élus CSE et représentants du personnel à comprendre leurs obligations légales, préparer leurs consultations et réunions, et sécuriser la gestion de leur comité.
 
 Ce fichier suit la convention [llms.txt](https://llmstxt.org) et référence les pages clés du site pour faciliter leur compréhension et leur citation par les assistants IA. Toutes les URLs sont sous https://www.cse-zen.com.
 
@@ -18,6 +18,7 @@ Ce fichier suit la convention [llms.txt](https://llmstxt.org) et référence les
 - [Formations CSE](https://www.cse-zen.com/formations.html): catalogue de formations pour les élus CSE et représentants du personnel (dont la formation SSCT).
 - [Solutions digitales](https://www.cse-zen.com/solutions-digitales.html): outils digitaux pour le CSE, dont Into The Shift (simulations comportementales anonymes pour la QVCT, sans login ni traçage) et Inclusive Way Campus.
 - [Communication](https://www.cse-zen.com/communication.html): supports imprimés et digitaux, vidéo et motion design, événementiel, création sur mesure et objets personnalisés pour informer, fédérer, valoriser et engager.
+- [Assistance CSE](https://www.cse-zen.com/assistance-cse.html): rédaction de procès-verbaux et comptes rendus de réunions et commissions, pour alléger les missions administratives du secrétariat du CSE.
 
 ## Ressources CSE — guides de référence
 

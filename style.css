@@ -632,6 +632,7 @@ p{margin:0 0 1em}
 .offer-band.blue::before{background:var(--blue)}
 .offer-band.green::before{background:var(--green)}
 .offer-band.copper::before{background:var(--cuivre)}
+.offer-band.teal::before{background:#168c8c}
 .offer-visual{
   min-height:200px;
   border-radius:var(--radius-lg);
@@ -2206,4 +2207,14 @@ body{
 }
 @media (max-width:760px){
   .communication-service-visual{aspect-ratio:1 / 1}
+}
+
+
+/* 2026-09-07 — Sixième pôle : CSE ZEN Assistance */
+.pole-tile-6::before{background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80');background-position:center}
+.pole-tile-6 .pole-bar{background:#168c8c}
+@media (min-width:1051px){
+  .poles-grid .pole-tile:nth-child(4),
+  .poles-grid .pole-tile:nth-child(5),
+  .poles-grid .pole-tile:nth-child(6){grid-column:span 2}
 }
