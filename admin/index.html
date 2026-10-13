@@ -10,6 +10,32 @@
   <link rel="icon" href="/assets/logo-cse-zen.jpg">
 </head>
 <body>
+  <!-- Bouton « Mode d'emploi » toujours visible dans l'espace d'édition -->
+  <button type="button" id="cz-aide-btn" aria-haspopup="dialog">? Mode d'emploi</button>
+  <div id="cz-aide-overlay" role="dialog" aria-modal="true" aria-label="Mode d'emploi" hidden>
+    <div class="cz-aide-box">
+      <button type="button" id="cz-aide-close" aria-label="Fermer le mode d'emploi">✕</button>
+      <iframe src="aide.html" title="Mode d'emploi"></iframe>
+    </div>
+  </div>
+  <style>
+    #cz-aide-btn { position: fixed; left: 18px; bottom: 18px; z-index: 9999; font: 600 14px 'DM Sans', system-ui, sans-serif; background: #1B2036; color: #fff; border: 0; border-radius: 999px; padding: 12px 18px; cursor: pointer; box-shadow: 0 4px 16px rgba(27,32,54,.25); }
+    #cz-aide-btn:hover { background: #0B6E72; }
+    #cz-aide-overlay { position: fixed; inset: 0; z-index: 10000; background: rgba(27,32,54,.45); display: flex; align-items: center; justify-content: center; padding: 24px; }
+    #cz-aide-overlay[hidden] { display: none; }
+    .cz-aide-box { position: relative; width: min(900px, 100%); height: min(88vh, 1000px); background: #F7F5F1; border-radius: 18px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+    .cz-aide-box iframe { width: 100%; height: 100%; border: 0; }
+    #cz-aide-close { position: absolute; top: 12px; right: 14px; z-index: 2; width: 40px; height: 40px; border-radius: 50%; border: 1px solid #E3DFD8; background: #fff; font-size: 18px; cursor: pointer; }
+  </style>
+  <script>
+    (function () {
+      var o = document.getElementById('cz-aide-overlay');
+      document.getElementById('cz-aide-btn').addEventListener('click', function () { o.hidden = false; });
+      document.getElementById('cz-aide-close').addEventListener('click', function () { o.hidden = true; });
+      o.addEventListener('click', function (e) { if (e.target === o) o.hidden = true; });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') o.hidden = true; });
+    })();
+  </script>
   <script src="https://unpkg.com/decap-cms@3.16.3/dist/decap-cms.js"></script>
   <script src="https://unpkg.com/liquidjs@10.29.0/dist/liquid.browser.min.js"></script>
   <script src="https://unpkg.com/marked@18.0.14/lib/marked.umd.js"></script>
