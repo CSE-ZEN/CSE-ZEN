@@ -1,12 +1,11 @@
 # Espace d'édition CSE ZEN (Decap CMS) — accessible sur /admin/
-# Définit ce que l'équipe CSE ZEN peut modifier.
+# Fichier généré puis ajusté à la main : il définit ce que l'équipe CSE ZEN peut modifier.
 
 backend:
   name: github
   repo: CSE-ZEN/CSE-ZEN
-  branch: cms                      # branche de test ; passera à "main" à la bascule
-  base_url: https://cse-zen-auth.broad-fog-84b6.workers.dev   # service de connexion (Cloudflare Worker)
-
+  branch: cms
+  base_url: https://cse-zen-auth.broad-fog-84b6.workers.dev
 locale: fr
 publish_mode: simple
 media_folder: assets/uploads
@@ -14,101 +13,2932 @@ public_folder: /assets/uploads
 site_url: https://www.cse-zen.com
 display_url: https://www.cse-zen.com
 logo_url: https://www.cse-zen.com/assets/logo-cse-zen.jpg
-
 collections:
-  - name: pages
-    label: Pages du site
-    editor:
-      preview: true
-    files:
-      - name: accueil
-        label: Accueil
-        file: _data/accueil.yml
+- name: articles
+  label: Articles
+  label_singular: article
+  folder: _articles
+  create: true
+  extension: md
+  format: frontmatter
+  slug: '{{fields.title}}'
+  summary: '{{title}} — {{date | date("DD/MM/YYYY")}}'
+  sortable_fields:
+  - date
+  - title
+  - categorie
+  view_groups:
+  - label: Catégorie
+    field: categorie
+  description: Les articles de la page Ressources. Un article publié apparaît automatiquement sur la page Ressources, dans
+    le plan du site et dans le flux LinkedIn.
+  fields:
+  - label: Titre de l'article
+    name: title
+    widget: string
+  - label: Chapô
+    name: chapo
+    widget: text
+    hint: 2 ou 3 phrases sous le titre, qui résument l'article.
+  - label: Catégorie
+    name: categorie
+    widget: select
+    options:
+    - label: QVCT
+      value: qvct
+    - label: RPS
+      value: rps
+    - label: SSCT
+      value: ssct
+    - label: Juridique
+      value: juridique
+    - label: Fonctionnement
+      value: fonctionnement
+    hint: Sert au filtre de la page Ressources.
+  - label: Étiquette au-dessus du titre
+    name: etiquette
+    widget: string
+    hint: 'Ex. : QVCT, Négociation, SSCT…'
+  - label: Image à la une
+    name: image
+    widget: image
+    required: false
+    hint: Photo au format paysage, utilisée sur la carte et pour l'aperçu LinkedIn.
+  - label: Texte de l'article
+    name: body
+    widget: markdown
+    buttons:
+    - bold
+    - italic
+    - link
+    - heading-two
+    - heading-three
+    - bulleted-list
+    - numbered-list
+    - quote
+    editor_components:
+    - image
+    - encadre
+    - lien-externe
+    hint: 'Utilisez « Titre 2 » pour les grandes parties : elles forment le sommaire « Dans cette page ».'
+  - label: Date de publication
+    name: date
+    widget: datetime
+    default: '{{now}}'
+    format: YYYY-MM-DD HH:mm
+    date_format: DD/MM/YYYY
+    time_format: HH:mm
+  - label: Type
+    name: type
+    widget: select
+    default: article
+    options:
+    - label: Article (« Lire l'article »)
+      value: article
+    - label: Dossier (« Lire le dossier »)
+      value: dossier
+  - label: Visible sur le site
+    name: published
+    widget: boolean
+    default: true
+    required: false
+    hint: Décochez pour garder l'article en brouillon (il n'apparaît nulle part sur le site).
+  - label: À la une sur l'accueil
+    name: a_la_une
+    widget: boolean
+    default: false
+    required: false
+  - label: Carte sur la page Ressources — titre
+    name: carte_titre
+    widget: string
+    required: false
+    hint: Laisser vide pour reprendre le titre de l'article.
+  - label: Carte — résumé
+    name: carte_resume
+    widget: text
+    required: false
+    hint: Laisser vide pour reprendre le chapô.
+  - label: Carte — étiquette
+    name: carte_etiquette
+    widget: string
+    required: false
+  - label: Carte — information 1
+    name: carte_info_1
+    widget: string
+    required: false
+    hint: 'Ex. : 5 min de lecture'
+  - label: Carte — information 2
+    name: carte_info_2
+    widget: string
+    required: false
+    hint: 'Ex. : Pratique CSE'
+  - label: Titre dans Google
+    name: titre_google
+    widget: string
+    required: false
+    hint: Environ 60 caractères. Laisser vide pour reprendre le titre.
+  - label: Description dans Google et LinkedIn
+    name: description
+    widget: text
+    hint: Environ 155 caractères.
+  - label: Texte du post LinkedIn
+    name: texte_linkedin
+    widget: text
+    required: false
+    hint: Utilisé pour la publication automatique sur la page LinkedIn de CSE ZEN, si elle est activée. Sinon, la description
+      ci-dessus est utilisée.
+  - label: Sommaire — libellés courts
+    name: sommaire
+    widget: list
+    required: false
+    field:
+      label: Libellé
+      name: libelle
+      widget: string
+    hint: 'Facultatif. Un libellé par grande partie, dans l''ordre. Vide : les titres des parties sont repris tels quels.'
+  - label: Pour aller plus loin
+    name: articles_lies
+    widget: list
+    required: false
+    summary: '{{fields.titre}}'
+    fields:
+    - label: Article
+      name: page
+      widget: relation
+      collection: articles
+      value_field: '{{slug}}'
+      search_fields:
+      - title
+      display_fields:
+      - title
+    - label: Titre affiché
+      name: titre
+      widget: string
+    - label: Phrase de présentation
+      name: texte
+      widget: string
+  - label: Afficher le bloc « Continuer la lecture »
+    name: continuer_lecture
+    widget: boolean
+    default: true
+    required: false
+  - label: llms_titre
+    name: llms_titre
+    widget: hidden
+    required: false
+  - label: llms_texte
+    name: llms_texte
+    widget: hidden
+    required: false
+- name: pages
+  label: Pages du site
+  editor:
+    preview: true
+  files:
+  - name: accueil
+    label: Accueil
+    file: _data/accueil.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Bandeau d'accueil (haut de page)
+      name: bandeau
+      widget: object
+      collapsed: false
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: surtitre
+        widget: string
+      - label: Grand titre
+        name: titre
+        widget: string
+        hint: 'Mettez entre astérisques les mots à afficher en italique. Exemple : Agissez en toute \*sérénité\* face aux
+          enjeux de votre mandat'
+      - label: Texte d'introduction
+        name: texte
+        widget: text
+      - label: Texte du bouton principal
+        name: bouton_principal
+        widget: string
+      - label: Texte du bouton secondaire
+        name: bouton_secondaire
+        widget: string
+      - label: Chiffres clés
+        name: chiffres
+        widget: list
+        allow_add: false
+        allow_remove: false
+        allow_reorder: false
+        summary: '{{fields.valeur}} {{fields.libelle}}'
         fields:
-          - label: Bandeau d'accueil (haut de page)
-            name: bandeau
-            widget: object
-            collapsed: false
-            fields:
-              - { label: Petit texte au-dessus du titre, name: surtitre, widget: string }
-              - { label: Grand titre, name: titre, widget: string, hint: "Mettez entre astérisques les mots à afficher en italique. Exemple : Agissez en toute \\*sérénité\\* face aux enjeux de votre mandat" }
-              - { label: Texte d'introduction, name: texte, widget: text }
-              - { label: Texte du bouton principal, name: bouton_principal, widget: string }
-              - { label: Texte du bouton secondaire, name: bouton_secondaire, widget: string }
-              - label: Chiffres clés
-                name: chiffres
-                widget: list
-                allow_add: false
-                allow_remove: false
-                allow_reorder: false
-                summary: "{{fields.valeur}} {{fields.libelle}}"
-                fields:
-                  - { label: Chiffre, name: valeur, widget: string }
-                  - { label: Libellé, name: libelle, widget: string }
-
-          - label: Les pôles — introduction
-            name: poles_intro
-            widget: object
-            fields:
-              - { label: Petit texte au-dessus du titre, name: surtitre, widget: string }
-              - { label: Titre, name: titre, widget: string, hint: "Mettez entre astérisques les mots à afficher en italique." }
-              - { label: Texte, name: texte, widget: text }
-
-          - label: Les pôles
-            name: poles
-            widget: list
-            hint: "L'ordre et le nombre de pôles sont gérés par l'administratrice du site."
-            allow_add: false
-            allow_remove: false
-            allow_reorder: false
-            summary: "{{fields.titre}}"
-            fields:
-              - { label: Titre du pôle, name: titre, widget: string }
-              - { label: Sous-titre, name: sous_titre, widget: text, hint: "Idéalement moins de 160 caractères pour que la carte reste lisible." }
-              - { label: Texte du bouton, name: bouton, widget: string }
-              - { label: Page de destination, name: page, widget: hidden }
-              - { label: Icône, name: icone, widget: hidden }
-
-          - label: Méthode
-            name: methode
-            widget: object
-            fields:
-              - { label: Petit texte au-dessus du titre, name: surtitre, widget: string }
-              - { label: Titre, name: titre, widget: string, hint: "Mettez entre astérisques les mots à afficher en italique." }
-              - { label: Texte, name: texte, widget: text }
-              - label: Cartes
-                name: cartes
-                widget: list
-                allow_add: false
-                allow_remove: false
-                allow_reorder: false
-                summary: "{{fields.titre}}"
-                fields:
-                  - { label: Titre, name: titre, widget: string }
-                  - { label: Texte, name: texte, widget: text }
-
-          - label: Qui sommes-nous
-            name: qui_sommes_nous
-            widget: object
-            fields:
-              - { label: Petit texte au-dessus du titre, name: surtitre, widget: string }
-              - { label: Titre, name: titre, widget: string }
-              - { label: Texte, name: texte, widget: text }
-              - label: Points forts
-                name: points
-                widget: list
-                allow_add: false
-                allow_remove: false
-                allow_reorder: false
-                summary: "{{fields.titre}}"
-                fields:
-                  - { label: Titre, name: titre, widget: string }
-                  - { label: Texte, name: texte, widget: string }
-
-          - label: Encadré contact (bas de page)
-            name: contact
-            widget: object
-            fields:
-              - { label: Titre, name: titre, widget: string }
-              - { label: Texte, name: texte, widget: text }
-              - { label: Texte du bouton, name: bouton, widget: string }
+        - label: Chiffre
+          name: valeur
+          widget: string
+        - label: Libellé
+          name: libelle
+          widget: string
+    - label: Les pôles — introduction
+      name: poles_intro
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: surtitre
+        widget: string
+      - label: Titre
+        name: titre
+        widget: string
+        hint: Mettez entre astérisques les mots à afficher en italique.
+      - label: Texte
+        name: texte
+        widget: text
+    - label: Les pôles
+      name: poles
+      widget: list
+      hint: L'ordre et le nombre de pôles sont gérés par l'administratrice du site.
+      allow_add: false
+      allow_remove: false
+      allow_reorder: false
+      summary: '{{fields.titre}}'
+      fields:
+      - label: Titre du pôle
+        name: titre
+        widget: string
+      - label: Sous-titre
+        name: sous_titre
+        widget: text
+        hint: Idéalement moins de 160 caractères pour que la carte reste lisible.
+      - label: Texte du bouton
+        name: bouton
+        widget: string
+      - label: Page de destination
+        name: page
+        widget: hidden
+      - label: Icône
+        name: icone
+        widget: hidden
+    - label: Méthode
+      name: methode
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: surtitre
+        widget: string
+      - label: Titre
+        name: titre
+        widget: string
+        hint: Mettez entre astérisques les mots à afficher en italique.
+      - label: Texte
+        name: texte
+        widget: text
+      - label: Cartes
+        name: cartes
+        widget: list
+        allow_add: false
+        allow_remove: false
+        allow_reorder: false
+        summary: '{{fields.titre}}'
+        fields:
+        - label: Titre
+          name: titre
+          widget: string
+        - label: Texte
+          name: texte
+          widget: text
+    - label: Qui sommes-nous
+      name: qui_sommes_nous
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: surtitre
+        widget: string
+      - label: Titre
+        name: titre
+        widget: string
+      - label: Texte
+        name: texte
+        widget: text
+      - label: Points forts
+        name: points
+        widget: list
+        allow_add: false
+        allow_remove: false
+        allow_reorder: false
+        summary: '{{fields.titre}}'
+        fields:
+        - label: Titre
+          name: titre
+          widget: string
+        - label: Texte
+          name: texte
+          widget: string
+    - label: Ressources (articles à la une)
+      name: ressources
+      widget: object
+      hint: Les 3 articles affichés sont les plus récents parmi ceux cochés « À la une sur l'accueil » dans la rubrique Articles.
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: surtitre
+        widget: string
+      - label: Titre
+        name: titre
+        widget: string
+    - label: Encadré contact (bas de page)
+      name: contact
+      widget: object
+      fields:
+      - label: Titre
+        name: titre
+        widget: string
+      - label: Texte
+        name: texte
+        widget: text
+      - label: Texte du bouton
+        name: bouton
+        widget: string
+    preview_path: index.html
+  - name: notre_offre
+    label: Notre offre
+    file: _data/pages/notre_offre.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — Notre offre
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Grand titre
+        name: f02
+        widget: text
+      - label: Texte
+        name: f03
+        widget: text
+    - label: Section 2
+      name: s02
+      widget: object
+      fields:
+      - label: Bloc 1 — Avocats
+        name: c01
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Petit texte au-dessus du titre
+          name: f02
+          widget: string
+        - label: Titre
+          name: f03
+          widget: string
+        - label: Texte 2
+          name: f04
+          widget: text
+        - label: Étiquette
+          name: f05
+          widget: string
+        - label: Étiquette 2
+          name: f06
+          widget: string
+        - label: Étiquette 3
+          name: f07
+          widget: string
+        - label: Étiquette 4
+          name: f08
+          widget: string
+      - label: Bloc 2 — CSE ZEN Expertises
+        name: c02
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image
+          name: f01
+          widget: object
+          fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Description de l'image (pour l'accessibilité et Google)
+            name: description
+            widget: string
+            required: false
+        - label: Petit texte au-dessus du titre
+          name: f02
+          widget: string
+        - label: Titre
+          name: f03
+          widget: string
+        - label: Texte
+          name: f04
+          widget: text
+        - label: Étiquette
+          name: f05
+          widget: string
+        - label: Étiquette 2
+          name: f06
+          widget: string
+        - label: Étiquette 3
+          name: f07
+          widget: string
+        - label: Étiquette 4
+          name: f08
+          widget: string
+      - label: Bloc 3 — CSE ZEN Formations sur-mesure
+        name: c03
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image
+          name: f01
+          widget: object
+          fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Description de l'image (pour l'accessibilité et Google)
+            name: description
+            widget: string
+            required: false
+        - label: Petit texte au-dessus du titre
+          name: f02
+          widget: string
+        - label: Titre
+          name: f03
+          widget: string
+        - label: Texte
+          name: f04
+          widget: text
+        - label: Étiquette
+          name: f05
+          widget: string
+        - label: Étiquette 2
+          name: f06
+          widget: string
+        - label: Étiquette 3
+          name: f07
+          widget: string
+        - label: Étiquette 4
+          name: f08
+          widget: string
+      - label: Bloc 4 — CSE ZEN Solutions digitales
+        name: c04
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image
+          name: f01
+          widget: object
+          fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Description de l'image (pour l'accessibilité et Google)
+            name: description
+            widget: string
+            required: false
+        - label: Petit texte au-dessus du titre
+          name: f02
+          widget: string
+        - label: Titre
+          name: f03
+          widget: string
+        - label: Texte
+          name: f04
+          widget: text
+        - label: Étiquette
+          name: f05
+          widget: string
+        - label: Étiquette 2
+          name: f06
+          widget: string
+        - label: Étiquette 3
+          name: f07
+          widget: string
+        - label: Étiquette 4
+          name: f08
+          widget: string
+      - label: Bloc 5 — CSE ZEN Communication
+        name: c05
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image
+          name: f01
+          widget: object
+          fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Description de l'image (pour l'accessibilité et Google)
+            name: description
+            widget: string
+            required: false
+        - label: Petit texte au-dessus du titre
+          name: f02
+          widget: string
+        - label: Titre
+          name: f03
+          widget: string
+        - label: Texte
+          name: f04
+          widget: text
+        - label: Étiquette
+          name: f05
+          widget: string
+        - label: Étiquette 2
+          name: f06
+          widget: string
+        - label: Étiquette 3
+          name: f07
+          widget: string
+        - label: Étiquette 4
+          name: f08
+          widget: string
+        - label: Étiquette 5
+          name: f09
+          widget: string
+      - label: Bloc 6 — CSE ZEN Assistance
+        name: c06
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image
+          name: f01
+          widget: object
+          fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Description de l'image (pour l'accessibilité et Google)
+            name: description
+            widget: string
+            required: false
+        - label: Petit texte au-dessus du titre
+          name: f02
+          widget: string
+        - label: Titre
+          name: f03
+          widget: string
+        - label: Texte
+          name: f04
+          widget: text
+        - label: Étiquette
+          name: f05
+          widget: string
+        - label: Étiquette 2
+          name: f06
+          widget: string
+        - label: Étiquette 3
+          name: f07
+          widget: string
+        - label: Étiquette 4
+          name: f08
+          widget: string
+        - label: Étiquette 5
+          name: f09
+          widget: string
+    - label: Section 3 — Un fonctionnement clair et lisible
+      name: s03
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: string
+      - label: Texte
+        name: f02
+        widget: text
+      - label: Texte 2
+        name: f03
+        widget: string
+      - label: Texte 3
+        name: f04
+        widget: text
+      - label: Texte 4
+        name: f05
+        widget: string
+    - label: Section 4 — Relier les pôles d’expertise aux sujets de terrain
+      name: s04
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: string
+      - label: Texte
+        name: f02
+        widget: text
+    preview_path: notre-offre.html
+  - name: formations
+    label: Formations
+    file: _data/pages/formations.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — CSE ZEN Formations sur-mesure
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Grand titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Étiquette
+        name: f04
+        widget: string
+      - label: Étiquette 2
+        name: f05
+        widget: string
+      - label: Étiquette 3
+        name: f06
+        widget: string
+      - label: Étiquette 4
+        name: f07
+        widget: string
+    - label: Section 2 — Catalogue
+      name: s02
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Texte 2
+        name: f04
+        widget: string
+      - label: Sous-titre
+        name: f05
+        widget: string
+      - label: Texte 3
+        name: f06
+        widget: text
+      - label: Texte 4
+        name: f07
+        widget: string
+      - label: Texte 5
+        name: f08
+        widget: string
+      - label: Texte 6
+        name: f09
+        widget: string
+      - label: Sous-titre 2
+        name: f10
+        widget: string
+      - label: Texte 7
+        name: f11
+        widget: text
+      - label: Texte 8
+        name: f12
+        widget: string
+      - label: Texte 9
+        name: f13
+        widget: string
+      - label: Texte 10
+        name: f14
+        widget: string
+      - label: Sous-titre 3
+        name: f15
+        widget: string
+      - label: Texte 11
+        name: f16
+        widget: text
+      - label: Texte 12
+        name: f17
+        widget: string
+      - label: Texte 13
+        name: f18
+        widget: string
+      - label: Bloc 1 — Secrétaire du CSE
+        name: c01
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte 2
+          name: f03
+          widget: text
+        - label: Texte 3
+          name: f04
+          widget: string
+        - label: Texte 4
+          name: f05
+          widget: string
+      - label: Bloc 2 — Trésorier du CSE
+        name: c02
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte 2
+          name: f03
+          widget: text
+        - label: Texte 3
+          name: f04
+          widget: string
+        - label: Texte 4
+          name: f05
+          widget: string
+      - label: Bloc 3 — Négociation collective
+        name: c03
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte 2
+          name: f03
+          widget: text
+        - label: Texte 3
+          name: f04
+          widget: string
+        - label: Texte 4
+          name: f05
+          widget: string
+      - label: Bloc 4 — RPS & QVCT
+        name: c04
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte 2
+          name: f03
+          widget: text
+        - label: Texte 3
+          name: f04
+          widget: string
+        - label: Texte 4
+          name: f05
+          widget: string
+      - label: Bloc 5 — DUERP
+        name: c05
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte 2
+          name: f03
+          widget: text
+        - label: Texte 3
+          name: f04
+          widget: string
+        - label: Texte 4
+          name: f05
+          widget: string
+      - label: Bloc 6 — Communication vers les salariés
+        name: c06
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte 2
+          name: f03
+          widget: text
+        - label: Texte 3
+          name: f04
+          widget: string
+        - label: Texte 4
+          name: f05
+          widget: string
+      - label: Bloc 7 — Droit disciplinaire
+        name: c07
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte 2
+          name: f03
+          widget: text
+        - label: Texte 3
+          name: f04
+          widget: string
+        - label: Texte 4
+          name: f05
+          widget: string
+      - label: Bloc 8 — Droit d'alerte
+        name: c08
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte 2
+          name: f03
+          widget: text
+        - label: Texte 3
+          name: f04
+          widget: string
+        - label: Texte 4
+          name: f05
+          widget: string
+      - label: Bloc 9 — Restructurations / PSE
+        name: c09
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte 2
+          name: f03
+          widget: text
+        - label: Texte 3
+          name: f04
+          widget: string
+        - label: Texte 4
+          name: f05
+          widget: string
+    - label: Section 3 — Lieu de formation
+      name: s03
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Texte 2
+        name: f04
+        widget: text
+      - label: Texte du bouton
+        name: f05
+        widget: string
+      - label: Image
+        name: f06
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+      - label: Image 2
+        name: f07
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+    - label: Section 4 — Compléter la formation par des ressources pratiques
+      name: s04
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: string
+      - label: Texte
+        name: f02
+        widget: text
+    preview_path: formations.html
+  - name: communication
+    label: Communication
+    file: _data/pages/communication.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — Pôle communication
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Grand titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Texte du bouton
+        name: f04
+        widget: string
+      - label: Texte du bouton 2
+        name: f05
+        widget: string
+      - label: Image
+        name: f06
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+    - label: Section 2 — Service phare
+      name: s02
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Texte 2
+        name: f04
+        widget: string
+      - label: Texte 3
+        name: f05
+        widget: string
+      - label: Texte 4
+        name: f06
+        widget: string
+      - label: Texte 5
+        name: f07
+        widget: string
+      - label: Texte 6
+        name: f08
+        widget: string
+      - label: Texte 7
+        name: f09
+        widget: string
+      - label: Texte 8
+        name: f10
+        widget: string
+      - label: Texte 9
+        name: f11
+        widget: string
+      - label: Texte 10
+        name: f12
+        widget: string
+      - label: Sous-titre
+        name: f13
+        widget: string
+      - label: Texte 11
+        name: f14
+        widget: text
+      - label: Texte 12
+        name: f15
+        widget: string
+      - label: Point de liste
+        name: f16
+        widget: text
+      - label: Point de liste 2
+        name: f17
+        widget: text
+      - label: Point de liste 3
+        name: f18
+        widget: text
+      - label: Point de liste 4
+        name: f19
+        widget: text
+      - label: Texte 13
+        name: f20
+        widget: string
+      - label: Sous-titre 2
+        name: f21
+        widget: string
+      - label: Texte 14
+        name: f22
+        widget: string
+      - label: Point de liste 5
+        name: f23
+        widget: text
+      - label: Point de liste 6
+        name: f24
+        widget: text
+      - label: Point de liste 7
+        name: f25
+        widget: text
+      - label: Point de liste 8
+        name: f26
+        widget: text
+      - label: Texte 15
+        name: f27
+        widget: string
+      - label: Sous-titre 3
+        name: f28
+        widget: string
+      - label: Texte 16
+        name: f29
+        widget: string
+      - label: Point de liste 9
+        name: f30
+        widget: text
+      - label: Point de liste 10
+        name: f31
+        widget: text
+      - label: Point de liste 11
+        name: f32
+        widget: text
+      - label: Point de liste 12
+        name: f33
+        widget: text
+      - label: Texte 17
+        name: f34
+        widget: string
+      - label: Sous-titre 4
+        name: f35
+        widget: string
+      - label: Texte 18
+        name: f36
+        widget: text
+      - label: Point de liste 13
+        name: f37
+        widget: text
+      - label: Point de liste 14
+        name: f38
+        widget: text
+      - label: Point de liste 15
+        name: f39
+        widget: text
+      - label: Point de liste 16
+        name: f40
+        widget: text
+      - label: Texte 19
+        name: f41
+        widget: string
+      - label: Sous-titre 5
+        name: f42
+        widget: string
+      - label: Texte 20
+        name: f43
+        widget: text
+      - label: Point de liste 17
+        name: f44
+        widget: text
+      - label: Point de liste 18
+        name: f45
+        widget: text
+      - label: Point de liste 19
+        name: f46
+        widget: text
+      - label: Point de liste 20
+        name: f47
+        widget: text
+      - label: Petit texte au-dessus du titre 2
+        name: f48
+        widget: string
+      - label: Sous-titre 6
+        name: f49
+        widget: string
+      - label: Texte 21
+        name: f50
+        widget: string
+      - label: Texte 22
+        name: f51
+        widget: string
+      - label: Texte 23
+        name: f52
+        widget: string
+      - label: Texte 24
+        name: f53
+        widget: string
+      - label: Bloc 1 — Interlocuteur dédié (sauf formule Essentiel)
+        name: c01
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Texte 2
+          name: f02
+          widget: string
+      - label: Texte du bouton
+        name: f55
+        widget: string
+    - label: Section 3 — Et aussi
+      name: s03
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Bloc 1 — Supports imprimés
+        name: c01
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image
+          name: f01
+          widget: object
+          fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Description de l'image (pour l'accessibilité et Google)
+            name: description
+            widget: string
+            required: false
+        - label: Texte
+          name: f02
+          widget: string
+        - label: Sous-titre
+          name: f03
+          widget: string
+        - label: Texte 2
+          name: f04
+          widget: text
+      - label: Bloc 2 — Supports digitaux
+        name: c02
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image
+          name: f01
+          widget: object
+          fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Description de l'image (pour l'accessibilité et Google)
+            name: description
+            widget: string
+            required: false
+        - label: Texte
+          name: f02
+          widget: string
+        - label: Sous-titre
+          name: f03
+          widget: string
+        - label: Texte 2
+          name: f04
+          widget: text
+      - label: Bloc 3 — Vidéos & motion design
+        name: c03
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image
+          name: f01
+          widget: object
+          fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Description de l'image (pour l'accessibilité et Google)
+            name: description
+            widget: string
+            required: false
+        - label: Texte
+          name: f02
+          widget: string
+        - label: Sous-titre
+          name: f03
+          widget: string
+        - label: Texte 2
+          name: f04
+          widget: text
+      - label: Bloc 4 — Événementiel
+        name: c04
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image
+          name: f01
+          widget: object
+          fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Description de l'image (pour l'accessibilité et Google)
+            name: description
+            widget: string
+            required: false
+        - label: Texte
+          name: f02
+          widget: string
+        - label: Sous-titre
+          name: f03
+          widget: string
+        - label: Texte 2
+          name: f04
+          widget: text
+      - label: Bloc 5 — Création sur mesure
+        name: c05
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image
+          name: f01
+          widget: object
+          fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Description de l'image (pour l'accessibilité et Google)
+            name: description
+            widget: string
+            required: false
+        - label: Texte
+          name: f02
+          widget: string
+        - label: Sous-titre
+          name: f03
+          widget: string
+        - label: Texte 2
+          name: f04
+          widget: text
+      - label: Bloc 6 — Objets personnalisés
+        name: c06
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image
+          name: f01
+          widget: object
+          fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Description de l'image (pour l'accessibilité et Google)
+            name: description
+            widget: string
+            required: false
+        - label: Texte
+          name: f02
+          widget: string
+        - label: Sous-titre
+          name: f03
+          widget: string
+        - label: Texte 2
+          name: f04
+          widget: text
+    - label: Section 4 — Notre approche
+      name: s04
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Texte 2
+        name: f04
+        widget: string
+      - label: Texte 3
+        name: f05
+        widget: string
+      - label: Texte 4
+        name: f06
+        widget: string
+      - label: Texte 5
+        name: f07
+        widget: string
+    - label: Section 5 — Votre projet
+      name: s05
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Texte du bouton
+        name: f04
+        widget: string
+    preview_path: communication.html
+  - name: solutions_digitales
+    label: Solutions digitales
+    file: _data/pages/solutions_digitales.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — Solutions digitales
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Grand titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Image
+        name: f04
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+      - label: Image 2
+        name: f05
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+    - label: Section 2 — Deux marques, une logique
+      name: s02
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Image
+        name: f04
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+      - label: Titre 2
+        name: f05
+        widget: string
+      - label: Texte 2
+        name: f06
+        widget: text
+      - label: Texte 3
+        name: f07
+        widget: string
+      - label: Bloc 1 — Objectiver les pratiques avant une consultation sa
+        name: c01
+        widget: object
+        collapsed: true
+        fields:
+        - label: Point de liste
+          name: f01
+          widget: text
+        - label: Point de liste 2
+          name: f02
+          widget: text
+        - label: Point de liste 3
+          name: f03
+          widget: text
+        - label: Point de liste 4
+          name: f04
+          widget: text
+        - label: Point de liste 5
+          name: f05
+          widget: text
+      - label: Texte 4
+        name: f09
+        widget: string
+      - label: Bloc 2 — Santé-sécurité, prévention des accidents et règles
+        name: c02
+        widget: object
+        collapsed: true
+        fields:
+        - label: Point de liste
+          name: f01
+          widget: text
+        - label: Point de liste 2
+          name: f02
+          widget: text
+        - label: Point de liste 3
+          name: f03
+          widget: text
+        - label: Point de liste 4
+          name: f04
+          widget: text
+      - label: Texte 5
+        name: f11
+        widget: text
+      - label: Étiquette
+        name: f12
+        widget: string
+      - label: Étiquette 2
+        name: f13
+        widget: string
+      - label: Étiquette 3
+        name: f14
+        widget: string
+      - label: Étiquette 4
+        name: f15
+        widget: string
+      - label: Étiquette 5
+        name: f16
+        widget: string
+      - label: Étiquette 6
+        name: f17
+        widget: string
+      - label: Image 2
+        name: f18
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+      - label: Titre 3
+        name: f19
+        widget: string
+      - label: Texte 6
+        name: f20
+        widget: text
+      - label: Bloc 3 — Parcours accessibles en ligne. Formats courts et o
+        name: c03
+        widget: object
+        collapsed: true
+        fields:
+        - label: Point de liste
+          name: f01
+          widget: text
+        - label: Point de liste 2
+          name: f02
+          widget: text
+        - label: Point de liste 3
+          name: f03
+          widget: text
+        - label: Point de liste 4
+          name: f04
+          widget: text
+      - label: Texte 7
+        name: f22
+        widget: string
+      - label: Bloc 4 — Prévenir les agissements sexistes et le harcèlemen
+        name: c04
+        widget: object
+        collapsed: true
+        fields:
+        - label: Point de liste
+          name: f01
+          widget: text
+        - label: Point de liste 2
+          name: f02
+          widget: text
+        - label: Point de liste 3
+          name: f03
+          widget: text
+        - label: Point de liste 4
+          name: f04
+          widget: text
+        - label: Point de liste 5
+          name: f05
+          widget: text
+        - label: Point de liste 6
+          name: f06
+          widget: text
+      - label: Image 3
+        name: f24
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+      - label: Étiquette 7
+        name: f25
+        widget: string
+      - label: Étiquette 8
+        name: f26
+        widget: string
+      - label: Étiquette 9
+        name: f27
+        widget: string
+      - label: Étiquette 10
+        name: f28
+        widget: string
+    - label: Section 3 — Usages possibles
+      name: s03
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Texte 2
+        name: f04
+        widget: text
+      - label: Texte 3
+        name: f05
+        widget: text
+    - label: 'Section 4 — Construire une solution digitale pour votre CSE et vos '
+      name: s04
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: string
+      - label: Texte
+        name: f02
+        widget: text
+      - label: Texte du bouton
+        name: f03
+        widget: string
+      - label: Texte du bouton 2
+        name: f04
+        widget: string
+    preview_path: solutions-digitales.html
+  - name: pole_avocats
+    label: Pôle avocats
+    file: _data/pages/pole_avocats.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — Pôle juridique
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Grand titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Texte 2
+        name: f04
+        widget: string
+    - label: Section 2 — Sécuriser les décisions, protéger les élus et représent
+      name: s02
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: text
+      - label: Texte
+        name: f02
+        widget: text
+      - label: Point de liste
+        name: f03
+        widget: text
+      - label: Point de liste 2
+        name: f04
+        widget: text
+      - label: Point de liste 3
+        name: f05
+        widget: text
+      - label: Point de liste 4
+        name: f06
+        widget: text
+      - label: Point de liste 5
+        name: f07
+        widget: text
+      - label: Point de liste 6
+        name: f08
+        widget: text
+      - label: Sous-titre
+        name: f09
+        widget: string
+      - label: Texte 2
+        name: f10
+        widget: text
+      - label: Texte 3
+        name: f11
+        widget: string
+      - label: Bloc 1 — 170+
+        name: c01
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+      - label: Texte 4
+        name: f13
+        widget: string
+      - label: Bloc 2 — 4
+        name: c02
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+      - label: Texte 5
+        name: f15
+        widget: string
+      - label: Bloc 3 — 24h
+        name: c03
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+      - label: Texte 6
+        name: f17
+        widget: string
+      - label: Bloc 4 — 100%
+        name: c04
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+    - label: Section 3 — Qui sommes-nous ?
+      name: s03
+      widget: object
+      fields:
+      - label: Image
+        name: f01
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+      - label: Petit texte au-dessus du titre
+        name: f02
+        widget: string
+      - label: Titre
+        name: f03
+        widget: string
+      - label: Texte
+        name: f04
+        widget: text
+      - label: Point de liste
+        name: f05
+        widget: text
+      - label: Point de liste 2
+        name: f06
+        widget: text
+      - label: Point de liste 3
+        name: f07
+        widget: text
+      - label: Point de liste 4
+        name: f08
+        widget: text
+    - label: Section 4 — Notre savoir-faire
+      name: s04
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Bloc 1 — Consultations et décisions CSE
+        name: c01
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image de fond
+          name: f01
+          widget: image
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte
+          name: f03
+          widget: text
+        - label: Point de liste
+          name: f04
+          widget: text
+        - label: Point de liste 2
+          name: f05
+          widget: text
+        - label: Point de liste 3
+          name: f06
+          widget: text
+      - label: Bloc 2 — Défense des élus et représentants
+        name: c02
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image de fond
+          name: f01
+          widget: image
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte
+          name: f03
+          widget: text
+        - label: Point de liste
+          name: f04
+          widget: text
+        - label: Point de liste 2
+          name: f05
+          widget: text
+        - label: Point de liste 3
+          name: f06
+          widget: text
+      - label: Bloc 3 — Conseil stratégique
+        name: c03
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image de fond
+          name: f01
+          widget: image
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte
+          name: f03
+          widget: text
+        - label: Point de liste
+          name: f04
+          widget: text
+        - label: Point de liste 2
+          name: f05
+          widget: text
+        - label: Point de liste 3
+          name: f06
+          widget: text
+    - label: Section 5 — Situations sensibles
+      name: s05
+      widget: object
+      fields:
+      - label: Image
+        name: f01
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+      - label: Petit texte au-dessus du titre
+        name: f02
+        widget: string
+      - label: Titre
+        name: f03
+        widget: string
+      - label: Texte
+        name: f04
+        widget: text
+      - label: Point de liste
+        name: f05
+        widget: text
+      - label: Point de liste 2
+        name: f06
+        widget: text
+      - label: Point de liste 3
+        name: f07
+        widget: text
+      - label: Point de liste 4
+        name: f08
+        widget: text
+    - label: Section 6 — Expertises ciblées
+      name: s06
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Sous-titre
+        name: f03
+        widget: string
+      - label: Texte
+        name: f04
+        widget: text
+      - label: Sous-titre 2
+        name: f05
+        widget: string
+      - label: Texte 2
+        name: f06
+        widget: text
+      - label: Sous-titre 3
+        name: f07
+        widget: string
+      - label: Texte 3
+        name: f08
+        widget: text
+    - label: Section 7 — Besoin d'un appui juridique pour votre CSE ?
+      name: s07
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: string
+      - label: Texte
+        name: f02
+        widget: text
+      - label: Texte du bouton
+        name: f03
+        widget: string
+      - label: Texte du bouton 2
+        name: f04
+        widget: string
+    preview_path: pole-avocats.html
+  - name: pole_comptabilite
+    label: Pôle expertises (comptabilité)
+    file: _data/pages/pole_comptabilite.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — Pôle économique & financier
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Grand titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Image
+        name: f04
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+    - label: Section 2 — Transformer les données complexes en leviers d'action
+      name: s02
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: string
+      - label: Texte
+        name: f02
+        widget: text
+      - label: Point de liste
+        name: f03
+        widget: text
+      - label: Point de liste 2
+        name: f04
+        widget: text
+      - label: Point de liste 3
+        name: f05
+        widget: text
+      - label: Point de liste 4
+        name: f06
+        widget: text
+      - label: Point de liste 5
+        name: f07
+        widget: text
+      - label: Point de liste 6
+        name: f08
+        widget: text
+      - label: Sous-titre
+        name: f09
+        widget: string
+      - label: Texte 2
+        name: f10
+        widget: text
+      - label: Texte 3
+        name: f11
+        widget: string
+      - label: Bloc 1 — 5
+        name: c01
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+      - label: Texte 4
+        name: f13
+        widget: string
+      - label: Bloc 2 — 3
+        name: c02
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+      - label: Texte 5
+        name: f15
+        widget: string
+      - label: Bloc 3 — 360°
+        name: c03
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+      - label: Texte 6
+        name: f17
+        widget: string
+      - label: Bloc 4 — 0€
+        name: c04
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+    - label: Section 3 — Notre approche
+      name: s03
+      widget: object
+      fields:
+      - label: Image
+        name: f01
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+      - label: Petit texte au-dessus du titre
+        name: f02
+        widget: string
+      - label: Titre
+        name: f03
+        widget: string
+      - label: Texte
+        name: f04
+        widget: text
+      - label: Point de liste
+        name: f05
+        widget: text
+      - label: Point de liste 2
+        name: f06
+        widget: text
+      - label: Point de liste 3
+        name: f07
+        widget: text
+      - label: Point de liste 4
+        name: f08
+        widget: text
+    - label: Section 4 — Champs d'intervention
+      name: s04
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Bloc 1 — Situation économique et financière
+        name: c01
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image de fond
+          name: f01
+          widget: image
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte
+          name: f03
+          widget: text
+        - label: Point de liste
+          name: f04
+          widget: text
+        - label: Point de liste 2
+          name: f05
+          widget: text
+        - label: Point de liste 3
+          name: f06
+          widget: text
+      - label: Bloc 2 — Politique sociale
+        name: c02
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image de fond
+          name: f01
+          widget: image
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte
+          name: f03
+          widget: text
+        - label: Point de liste
+          name: f04
+          widget: text
+        - label: Point de liste 2
+          name: f05
+          widget: text
+        - label: Point de liste 3
+          name: f06
+          widget: text
+      - label: Bloc 3 — Participation
+        name: c03
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image de fond
+          name: f01
+          widget: image
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte
+          name: f03
+          widget: text
+        - label: Point de liste
+          name: f04
+          widget: text
+        - label: Point de liste 2
+          name: f05
+          widget: text
+        - label: Point de liste 3
+          name: f06
+          widget: text
+    - label: Section 5 — Orientations stratégiques
+      name: s05
+      widget: object
+      fields:
+      - label: Image
+        name: f01
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+      - label: Petit texte au-dessus du titre
+        name: f02
+        widget: string
+      - label: Titre
+        name: f03
+        widget: string
+      - label: Texte
+        name: f04
+        widget: text
+      - label: Point de liste
+        name: f05
+        widget: text
+      - label: Point de liste 2
+        name: f06
+        widget: text
+      - label: Point de liste 3
+        name: f07
+        widget: text
+      - label: Point de liste 4
+        name: f08
+        widget: text
+    - label: Section 6 — Ce que cela apporte
+      name: s06
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: string
+      - label: Bloc 1 — Comprendre
+        name: c01
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+      - label: Texte 2
+        name: f05
+        widget: string
+      - label: Bloc 2 — Questionner
+        name: c02
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+      - label: Texte 3
+        name: f07
+        widget: string
+      - label: Bloc 3 — Argumenter
+        name: c03
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+      - label: Texte 4
+        name: f09
+        widget: string
+      - label: Bloc 4 — Négocier
+        name: c04
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+    - label: Section 7 — Besoin d'éclairer une consultation économique ?
+      name: s07
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: string
+      - label: Texte
+        name: f02
+        widget: text
+      - label: Texte du bouton
+        name: f03
+        widget: string
+      - label: Texte du bouton 2
+        name: f04
+        widget: string
+    preview_path: pole-comptabilite.html
+  - name: assistance
+    label: Assistance CSE
+    file: _data/pages/assistance.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — Pôle assistance
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Grand titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Texte du bouton
+        name: f04
+        widget: string
+      - label: Image
+        name: f05
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+    - label: Section 2 — Un service opérationnel
+      name: s02
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Bloc 1 — Procès-verbaux de réunions CSE
+        name: c01
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte 2
+          name: f03
+          widget: text
+      - label: Bloc 2 — Comptes rendus de commissions
+        name: c02
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte 2
+          name: f03
+          widget: text
+      - label: Bloc 3 — Plusieurs niveaux de restitution
+        name: c03
+        widget: object
+        collapsed: true
+        fields:
+        - label: Texte
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte 2
+          name: f03
+          widget: text
+    - label: Section 3 — Pour le secrétaire du CSE
+      name: s03
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Texte 2
+        name: f04
+        widget: string
+      - label: Texte 3
+        name: f05
+        widget: string
+      - label: Texte 4
+        name: f06
+        widget: text
+      - label: Texte 5
+        name: f07
+        widget: string
+    - label: Section 4 — CSE ZEN Assistance
+      name: s04
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Texte du bouton
+        name: f04
+        widget: string
+    preview_path: assistance-cse.html
+  - name: equipe_reseau
+    label: Équipe & réseau
+    file: _data/pages/equipe_reseau.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — Équipe & réseau
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Grand titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+    - label: Section 2 — Direction CSE ZEN
+      name: s02
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: string
+      - label: Bloc 1 — Grégory Villeneuve
+        name: c01
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image
+          name: f01
+          widget: object
+          fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Description de l'image (pour l'accessibilité et Google)
+            name: description
+            widget: string
+            required: false
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte
+          name: f03
+          widget: text
+      - label: Bloc 2 — Sandra Legretard
+        name: c02
+        widget: object
+        collapsed: true
+        fields:
+        - label: Image
+          name: f01
+          widget: object
+          fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Description de l'image (pour l'accessibilité et Google)
+            name: description
+            widget: string
+            required: false
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte
+          name: f03
+          widget: text
+    - label: Section 3 — Partenaires experts
+      name: s03
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: string
+      - label: Texte
+        name: f02
+        widget: string
+      - label: Texte 2
+        name: f03
+        widget: string
+      - label: Sous-titre
+        name: f04
+        widget: string
+      - label: Texte 3
+        name: f05
+        widget: text
+      - label: Texte du bouton
+        name: f06
+        widget: string
+      - label: Image
+        name: f07
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+      - label: Sous-titre 2
+        name: f08
+        widget: string
+      - label: Texte 4
+        name: f09
+        widget: text
+      - label: Texte du bouton 2
+        name: f10
+        widget: string
+    - label: Section 4 — Formateurs & experts
+      name: s04
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: string
+      - label: Texte
+        name: f02
+        widget: string
+      - label: Texte 2
+        name: f03
+        widget: text
+    - label: Section 5 — Construire le bon dispositif pour vos élus et représent
+      name: s05
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: string
+      - label: Texte
+        name: f02
+        widget: text
+      - label: Texte du bouton
+        name: f03
+        widget: string
+      - label: Texte du bouton 2
+        name: f04
+        widget: string
+    preview_path: equipe-reseau.html
+  - name: ressources
+    label: Ressources (liste des articles)
+    file: _data/pages/ressources.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — Ressources
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Grand titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+    - label: Section 2 — Tous
+      name: s02
+      widget: object
+      fields:
+      - label: Texte du bouton
+        name: f01
+        widget: string
+      - label: Texte du bouton 2
+        name: f02
+        widget: string
+      - label: Texte du bouton 3
+        name: f03
+        widget: string
+      - label: Texte du bouton 4
+        name: f04
+        widget: string
+      - label: Texte du bouton 5
+        name: f05
+        widget: string
+      - label: Texte du bouton 6
+        name: f06
+        widget: string
+      - label: Texte
+        name: f07
+        widget: text
+    preview_path: ressources.html
+  - name: guides
+    label: Tous les guides (resources/)
+    file: _data/pages/guides.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — Ressources
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Grand titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Texte 2
+        name: f04
+        widget: text
+    - label: Section 3 — Autres sujets CSE
+      name: s03
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+      - label: Bloc 1 — Consultations CSE
+        name: c01
+        widget: object
+        collapsed: true
+        fields:
+        - label: Étiquette
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte
+          name: f03
+          widget: text
+        - label: Texte 2
+          name: f04
+          widget: string
+      - label: Bloc 2 — Droit d’alerte
+        name: c02
+        widget: object
+        collapsed: true
+        fields:
+        - label: Étiquette
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte
+          name: f03
+          widget: text
+        - label: Texte 2
+          name: f04
+          widget: string
+      - label: Bloc 3 — Trésorier CSE
+        name: c03
+        widget: object
+        collapsed: true
+        fields:
+        - label: Étiquette
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte
+          name: f03
+          widget: text
+        - label: Texte 2
+          name: f04
+          widget: string
+      - label: Bloc 4 — Négociation
+        name: c04
+        widget: object
+        collapsed: true
+        fields:
+        - label: Étiquette
+          name: f01
+          widget: string
+        - label: Sous-titre
+          name: f02
+          widget: string
+        - label: Texte
+          name: f03
+          widget: text
+        - label: Texte 2
+          name: f04
+          widget: string
+    preview_path: resources/index.html
+  - name: contact
+    label: Contact
+    file: _data/pages/contact.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — Contact
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Grand titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+    - label: Section 2 — Adresse
+      name: s02
+      widget: object
+      fields:
+      - label: Image
+        name: f01
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Description de l'image (pour l'accessibilité et Google)
+          name: description
+          widget: string
+          required: false
+      - label: Texte
+        name: f02
+        widget: string
+      - label: Texte 2
+        name: f03
+        widget: string
+      - label: Texte 3
+        name: f04
+        widget: string
+      - label: Texte 4
+        name: f05
+        widget: string
+      - label: Titre
+        name: f06
+        widget: string
+      - label: Texte 5
+        name: f07
+        widget: text
+      - label: Texte du bouton
+        name: f08
+        widget: string
+    - label: Section 3 — Dans quels cas contacter CSE ZEN ?
+      name: s03
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: string
+      - label: Texte
+        name: f02
+        widget: text
+      - label: Texte 2
+        name: f03
+        widget: text
+    preview_path: contact.html
+  - name: cookies
+    label: Politique cookies
+    file: _data/pages/cookies.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — Confidentialité
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+      - label: Grand titre
+        name: f02
+        widget: string
+      - label: Texte
+        name: f03
+        widget: text
+    - label: Section 2 — Cookies utilisés
+      name: s02
+      widget: object
+      fields:
+      - label: Titre
+        name: f01
+        widget: string
+      - label: Texte
+        name: f02
+        widget: text
+      - label: Texte 2
+        name: f03
+        widget: text
+      - label: Titre 2
+        name: f04
+        widget: string
+      - label: Texte 3
+        name: f05
+        widget: text
+      - label: Titre 3
+        name: f06
+        widget: string
+      - label: Texte 4
+        name: f07
+        widget: text
+      - label: Titre 4
+        name: f08
+        widget: string
+      - label: Texte 5
+        name: f09
+        widget: text
+    preview_path: cookie-policy.html
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: '-'
