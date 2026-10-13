@@ -6,7 +6,7 @@ backend:
   repo: CSE-ZEN/CSE-ZEN
   branch: cms                      # branche de test ; passera à "main" à la bascule
   base_url: https://api.netlify.com
-  site_domain: A-REMPLIR.netlify.app   # nom du site Netlify servant uniquement à la connexion
+  site_domain: thunderous-gaufre-2cefae.netlify.app   # site Netlify servant uniquement à la connexion
 
 locale: fr
 publish_mode: simple
