@@ -30,12 +30,9 @@ collections:
   view_groups:
   - label: Catégorie
     field: categorie
-  description: 'Les articles de la page Ressources du site. ÉCRIRE : cliquez sur « + article », remplissez les champs (le
-    petit « i » donne la consigne), puis « Publier ». BROUILLON ou RETIRER DU SITE : décochez « Visible sur le site » puis
-    « Publier » ; l''article disparaît du site mais reste ici, prêt à être remis en ligne. SUPPRIMER : bouton rouge « Supprimer
-    l''entrée » en haut de l''article (suppression définitive depuis l''interface ; si besoin, Carole peut le récupérer).
-    LINKEDIN : une fois l''article publié, bouton « Préparer le post sur la page LinkedIn de CSE ZEN » dans l''article. Le
-    site se met à jour environ 1 minute après chaque publication.'
+  description: Tous les articles du site, déjà écrits ou à venir. Cliquez sur un titre pour le modifier, ou sur « + article
+    » pour en écrire un nouveau. Un article publié s'affiche automatiquement sur la page Ressources, sur la page « Tous les
+    guides » et, s'il est coché « À la une », sur l'accueil.
   fields:
   - label: Titre de l'article
     name: title
@@ -210,6 +207,134 @@ collections:
     name: llms_texte
     widget: hidden
     required: false
+- name: ressources_pages
+  label: 'Ressources : textes des pages'
+  label_singular: page
+  description: 'Les articles s''affichent tout seuls sur ces deux pages. Ici, on modifie uniquement les textes du haut de
+    page (titre, introduction, filtres). Pour les articles eux-mêmes, allez dans « Ressources : les articles ».'
+  editor:
+    preview: true
+  files:
+  - name: ressources
+    label: 'Page « Ressources » : titre, introduction et filtres'
+    file: _data/pages/ressources.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — Ressources
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+        hint: Quelques mots, affichés en petites capitales au-dessus du titre.
+      - label: Grand titre
+        name: f02
+        widget: string
+        hint: 'Pour mettre des mots en italique, entourez-les d''astérisques : Agissez en toute \*sérénité\*'
+      - label: Texte
+        name: f03
+        widget: text
+        hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit normalement.'
+    - label: Section 2 — Tous
+      name: s02
+      widget: object
+      fields:
+      - label: Texte du bouton
+        name: f01
+        widget: string
+        hint: Texte court, idéalement 2 à 4 mots.
+      - label: Texte du bouton 2
+        name: f02
+        widget: string
+        hint: Texte court, idéalement 2 à 4 mots.
+      - label: Texte du bouton 3
+        name: f03
+        widget: string
+        hint: Texte court, idéalement 2 à 4 mots.
+      - label: Texte du bouton 4
+        name: f04
+        widget: string
+        hint: Texte court, idéalement 2 à 4 mots.
+      - label: Texte du bouton 5
+        name: f05
+        widget: string
+        hint: Texte court, idéalement 2 à 4 mots.
+      - label: Texte du bouton 6
+        name: f06
+        widget: string
+        hint: Texte court, idéalement 2 à 4 mots.
+      - label: Texte
+        name: f07
+        widget: text
+        hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit normalement.'
+    preview_path: ressources.html
+  - name: guides
+    label: 'Page « Tous les guides » : titre et introduction'
+    file: _data/pages/guides.yml
+    fields:
+    - label: Référencement Google
+      name: seo
+      widget: object
+      collapsed: true
+      fields:
+      - label: Titre dans l'onglet et dans Google
+        name: titre
+        widget: string
+        hint: Environ 60 caractères maximum.
+      - label: Description dans Google
+        name: description
+        widget: text
+        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
+    - label: Section 1 — Ressources
+      name: s01
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+        hint: Quelques mots, affichés en petites capitales au-dessus du titre.
+      - label: Grand titre
+        name: f02
+        widget: string
+        hint: 'Pour mettre des mots en italique, entourez-les d''astérisques : Agissez en toute \*sérénité\*'
+      - label: Texte
+        name: f03
+        widget: text
+        hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit normalement.'
+      - label: Texte 2
+        name: f04
+        widget: text
+        hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit normalement.'
+    - label: Section 3 — Autres sujets CSE
+      name: s03
+      widget: object
+      fields:
+      - label: Petit texte au-dessus du titre
+        name: f01
+        widget: string
+        hint: Quelques mots, affichés en petites capitales au-dessus du titre.
+      - label: Titre
+        name: f02
+        widget: string
+        hint: 'Pour mettre des mots en italique, entourez-les d''astérisques : Agissez en toute \*sérénité\*'
+      - label: Texte
+        name: f03
+        widget: text
+        hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit normalement.'
+    preview_path: resources/index.html
 - name: pages
   label: Pages du site
   editor:
@@ -3250,126 +3375,6 @@ collections:
         widget: string
         hint: Texte court, idéalement 2 à 4 mots.
     preview_path: equipe-reseau.html
-  - name: ressources
-    label: 'Ressources : titre, introduction et filtres de la page'
-    file: _data/pages/ressources.yml
-    fields:
-    - label: Référencement Google
-      name: seo
-      widget: object
-      collapsed: true
-      fields:
-      - label: Titre dans l'onglet et dans Google
-        name: titre
-        widget: string
-        hint: Environ 60 caractères maximum.
-      - label: Description dans Google
-        name: description
-        widget: text
-        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
-    - label: Section 1 — Ressources
-      name: s01
-      widget: object
-      fields:
-      - label: Petit texte au-dessus du titre
-        name: f01
-        widget: string
-        hint: Quelques mots, affichés en petites capitales au-dessus du titre.
-      - label: Grand titre
-        name: f02
-        widget: string
-        hint: 'Pour mettre des mots en italique, entourez-les d''astérisques : Agissez en toute \*sérénité\*'
-      - label: Texte
-        name: f03
-        widget: text
-        hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit normalement.'
-    - label: Section 2 — Tous
-      name: s02
-      widget: object
-      fields:
-      - label: Texte du bouton
-        name: f01
-        widget: string
-        hint: Texte court, idéalement 2 à 4 mots.
-      - label: Texte du bouton 2
-        name: f02
-        widget: string
-        hint: Texte court, idéalement 2 à 4 mots.
-      - label: Texte du bouton 3
-        name: f03
-        widget: string
-        hint: Texte court, idéalement 2 à 4 mots.
-      - label: Texte du bouton 4
-        name: f04
-        widget: string
-        hint: Texte court, idéalement 2 à 4 mots.
-      - label: Texte du bouton 5
-        name: f05
-        widget: string
-        hint: Texte court, idéalement 2 à 4 mots.
-      - label: Texte du bouton 6
-        name: f06
-        widget: string
-        hint: Texte court, idéalement 2 à 4 mots.
-      - label: Texte
-        name: f07
-        widget: text
-        hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit normalement.'
-    preview_path: ressources.html
-  - name: guides
-    label: 'Ressources : page « Tous les guides »'
-    file: _data/pages/guides.yml
-    fields:
-    - label: Référencement Google
-      name: seo
-      widget: object
-      collapsed: true
-      fields:
-      - label: Titre dans l'onglet et dans Google
-        name: titre
-        widget: string
-        hint: Environ 60 caractères maximum.
-      - label: Description dans Google
-        name: description
-        widget: text
-        hint: Environ 155 caractères maximum. Sert aussi pour l'aperçu LinkedIn.
-    - label: Section 1 — Ressources
-      name: s01
-      widget: object
-      fields:
-      - label: Petit texte au-dessus du titre
-        name: f01
-        widget: string
-        hint: Quelques mots, affichés en petites capitales au-dessus du titre.
-      - label: Grand titre
-        name: f02
-        widget: string
-        hint: 'Pour mettre des mots en italique, entourez-les d''astérisques : Agissez en toute \*sérénité\*'
-      - label: Texte
-        name: f03
-        widget: text
-        hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit normalement.'
-      - label: Texte 2
-        name: f04
-        widget: text
-        hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit normalement.'
-    - label: Section 3 — Autres sujets CSE
-      name: s03
-      widget: object
-      fields:
-      - label: Petit texte au-dessus du titre
-        name: f01
-        widget: string
-        hint: Quelques mots, affichés en petites capitales au-dessus du titre.
-      - label: Titre
-        name: f02
-        widget: string
-        hint: 'Pour mettre des mots en italique, entourez-les d''astérisques : Agissez en toute \*sérénité\*'
-      - label: Texte
-        name: f03
-        widget: text
-        hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit normalement.'
-    preview_path: resources/index.html
   - name: contact
     label: Contact
     file: _data/pages/contact.yml
@@ -3537,11 +3542,7 @@ collections:
         widget: text
         hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit normalement.'
     preview_path: cookie-policy.html
-  description: 'Les textes et images des pages du site. MODIFIER : ouvrez une page, changez le texte, vérifiez l''aperçu à
-    droite, puis « Publier » ; le site est à jour environ 1 minute après. ANNULER : il n''y a pas de bouton « annuler » ;
-    en cas d''erreur, retapez l''ancien texte, ou demandez à Carole de restaurer la version précédente. Les pages ne peuvent
-    pas être supprimées et leur mise en page reste fixe : vous ne modifiez que le contenu. Les textes du haut de la page Ressources
-    (titre, introduction, filtres) sont dans « Ressources : titre, introduction et filtres de la page ».'
+  description: 'Les textes et images des autres pages du site : accueil, offre, pôles, formations, équipe, contact…'
 slug:
   encoding: ascii
   clean_accents: true
