@@ -1,0 +1,115 @@
+# Espace d'édition CSE ZEN (Decap CMS) — accessible sur /admin/
+# Définit ce que l'équipe CSE ZEN peut modifier.
+
+backend:
+  name: github
+  repo: CSE-ZEN/CSE-ZEN
+  branch: cms                      # branche de test ; passera à "main" à la bascule
+  base_url: https://api.netlify.com
+  site_domain: thunderous-gaufre-2cefae.netlify.app   # site Netlify servant uniquement à la connexion
+
+locale: fr
+publish_mode: simple
+media_folder: assets/uploads
+public_folder: /assets/uploads
+site_url: https://www.cse-zen.com
+display_url: https://www.cse-zen.com
+logo_url: https://www.cse-zen.com/assets/logo-cse-zen.jpg
+
+collections:
+  - name: pages
+    label: Pages du site
+    editor:
+      preview: true
+    files:
+      - name: accueil
+        label: Accueil
+        file: _data/accueil.yml
+        fields:
+          - label: Bandeau d'accueil (haut de page)
+            name: bandeau
+            widget: object
+            collapsed: false
+            fields:
+              - { label: Petit texte au-dessus du titre, name: surtitre, widget: string }
+              - { label: Grand titre, name: titre, widget: string, hint: "Mettez entre astérisques les mots à afficher en italique. Exemple : Agissez en toute \\*sérénité\\* face aux enjeux de votre mandat" }
+              - { label: Texte d'introduction, name: texte, widget: text }
+              - { label: Texte du bouton principal, name: bouton_principal, widget: string }
+              - { label: Texte du bouton secondaire, name: bouton_secondaire, widget: string }
+              - label: Chiffres clés
+                name: chiffres
+                widget: list
+                allow_add: false
+                allow_remove: false
+                allow_reorder: false
+                summary: "{{fields.valeur}} {{fields.libelle}}"
+                fields:
+                  - { label: Chiffre, name: valeur, widget: string }
+                  - { label: Libellé, name: libelle, widget: string }
+
+          - label: Les pôles — introduction
+            name: poles_intro
+            widget: object
+            fields:
+              - { label: Petit texte au-dessus du titre, name: surtitre, widget: string }
+              - { label: Titre, name: titre, widget: string, hint: "Mettez entre astérisques les mots à afficher en italique." }
+              - { label: Texte, name: texte, widget: text }
+
+          - label: Les pôles
+            name: poles
+            widget: list
+            hint: "L'ordre et le nombre de pôles sont gérés par l'administratrice du site."
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            summary: "{{fields.titre}}"
+            fields:
+              - { label: Titre du pôle, name: titre, widget: string }
+              - { label: Sous-titre, name: sous_titre, widget: text, hint: "Idéalement moins de 160 caractères pour que la carte reste lisible." }
+              - { label: Texte du bouton, name: bouton, widget: string }
+              - { label: Page de destination, name: page, widget: hidden }
+              - { label: Icône, name: icone, widget: hidden }
+
+          - label: Méthode
+            name: methode
+            widget: object
+            fields:
+              - { label: Petit texte au-dessus du titre, name: surtitre, widget: string }
+              - { label: Titre, name: titre, widget: string, hint: "Mettez entre astérisques les mots à afficher en italique." }
+              - { label: Texte, name: texte, widget: text }
+              - label: Cartes
+                name: cartes
+                widget: list
+                allow_add: false
+                allow_remove: false
+                allow_reorder: false
+                summary: "{{fields.titre}}"
+                fields:
+                  - { label: Titre, name: titre, widget: string }
+                  - { label: Texte, name: texte, widget: text }
+
+          - label: Qui sommes-nous
+            name: qui_sommes_nous
+            widget: object
+            fields:
+              - { label: Petit texte au-dessus du titre, name: surtitre, widget: string }
+              - { label: Titre, name: titre, widget: string }
+              - { label: Texte, name: texte, widget: text }
+              - label: Points forts
+                name: points
+                widget: list
+                allow_add: false
+                allow_remove: false
+                allow_reorder: false
+                summary: "{{fields.titre}}"
+                fields:
+                  - { label: Titre, name: titre, widget: string }
+                  - { label: Texte, name: texte, widget: string }
+
+          - label: Encadré contact (bas de page)
+            name: contact
+            widget: object
+            fields:
+              - { label: Titre, name: titre, widget: string }
+              - { label: Texte, name: texte, widget: text }
+              - { label: Texte du bouton, name: bouton, widget: string }
