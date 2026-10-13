@@ -140,12 +140,17 @@ collections:
     name: description
     widget: text
     hint: Environ 155 caractères.
+  - label: Publier aussi sur LinkedIn
+    name: linkedin
+    widget: boolean
+    default: false
+    required: false
+    hint: Facultatif. Cochez seulement si cet article doit être posté sur la page LinkedIn de CSE ZEN (une fois la publication automatique activée).
   - label: Texte du post LinkedIn
     name: texte_linkedin
     widget: text
     required: false
-    hint: Utilisé pour la publication automatique sur la page LinkedIn de CSE ZEN, si elle est activée. Sinon, la description
-      ci-dessus est utilisée.
+    hint: Utilisé seulement si la case ci-dessus est cochée. Vide, c'est la description Google qui est reprise.
   - label: Sommaire — libellés courts
     name: sommaire
     widget: list
