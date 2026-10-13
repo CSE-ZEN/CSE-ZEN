@@ -30,7 +30,9 @@ collections:
   view_groups:
   - label: Catégorie
     field: categorie
-  description: "Ce sont les articles de la page Ressources du site. Cliquez sur « + article » pour en écrire un : il apparaîtra automatiquement en tête de la page Ressources. Les textes du haut de la page Ressources (titre, introduction, filtres) se modifient dans « Pages du site »."
+  description: 'Ce sont les articles de la page Ressources du site. Cliquez sur « + article » pour en écrire un : il apparaîtra
+    automatiquement en tête de la page Ressources. Les textes du haut de la page Ressources (titre, introduction, filtres)
+    se modifient dans « Pages du site ».'
   fields:
   - label: Titre de l'article
     name: title
@@ -140,17 +142,17 @@ collections:
     name: description
     widget: text
     hint: Environ 155 caractères.
-  - label: Publier aussi sur LinkedIn
-    name: linkedin
-    widget: boolean
-    default: false
-    required: false
-    hint: Facultatif. Cochez seulement si cet article doit être posté sur la page LinkedIn de CSE ZEN (une fois la publication automatique activée).
   - label: Texte du post LinkedIn
     name: texte_linkedin
     widget: text
     required: false
-    hint: Utilisé seulement si la case ci-dessus est cochée. Vide, c'est la description Google qui est reprise.
+    hint: Texte du post LinkedIn. Vide, c'est la description Google qui est reprise.
+  - label: Partager sur la page LinkedIn de CSE ZEN
+    name: partage_linkedin
+    widget: linkedin-share
+    required: false
+    hint: Facultatif. Une fois l'article publié, ce bouton copie le texte ci-dessus et le lien de l'article, puis ouvre la
+      page LinkedIn de CSE ZEN pour créer le post (il faut être administrateur de la page).
   - label: Sommaire — libellés courts
     name: sommaire
     widget: list
