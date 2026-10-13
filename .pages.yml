@@ -1,0 +1,90 @@
+# Réglages de l'espace d'édition (Pages CMS) — https://pagescms.org
+# Définit ce que l'équipe CSE ZEN peut modifier depuis app.pagescms.org.
+
+content:
+  - name: accueil
+    label: Accueil
+    type: file
+    path: _data/accueil.yml
+    format: yaml
+    fields:
+      - name: bandeau
+        label: Bandeau d'accueil (haut de page)
+        type: object
+        fields:
+          - { name: surtitre, label: Petit texte au-dessus du titre, type: string }
+          - { name: titre_debut, label: Titre — début, type: string }
+          - { name: titre_accent, label: Titre — mot mis en valeur (italique), type: string }
+          - { name: titre_fin, label: Titre — fin, type: string }
+          - { name: texte, label: Texte d'introduction, type: text }
+          - { name: bouton_principal, label: Texte du bouton principal, type: string }
+          - { name: bouton_secondaire, label: Texte du bouton secondaire, type: string }
+          - name: chiffres
+            label: Chiffres clés
+            type: object
+            list: { min: 3, max: 3 }
+            fields:
+              - { name: valeur, label: Chiffre, type: string }
+              - { name: libelle, label: Libellé, type: string }
+
+      - name: poles_intro
+        label: Les pôles — introduction
+        type: object
+        fields:
+          - { name: surtitre, label: Petit texte au-dessus du titre, type: string }
+          - { name: titre_debut, label: Titre — début, type: string }
+          - { name: titre_accent, label: Titre — partie mise en valeur (italique), type: string }
+          - { name: titre_fin, label: Titre — fin, type: string }
+          - { name: texte, label: Texte, type: text }
+
+      - name: poles
+        label: Les pôles
+        description: L'ordre et le nombre de pôles sont gérés par l'administratrice du site.
+        type: object
+        list: { min: 6, max: 6 }
+        fields:
+          - { name: titre, label: Titre du pôle, type: string, required: true }
+          - { name: sous_titre, label: Sous-titre, type: text, description: "Idéalement moins de 160 caractères pour que la carte reste lisible." }
+          - { name: bouton, label: Texte du bouton, type: string }
+          - { name: page, label: Page de destination, type: string, readonly: true }
+          - { name: icone, label: Icône, type: string, hidden: true }
+
+      - name: methode
+        label: Méthode
+        type: object
+        fields:
+          - { name: surtitre, label: Petit texte au-dessus du titre, type: string }
+          - { name: titre_debut, label: Titre — début, type: string }
+          - { name: titre_accent, label: Titre — mot mis en valeur (italique), type: string }
+          - { name: titre_fin, label: Titre — fin, type: string }
+          - { name: texte, label: Texte, type: text }
+          - name: cartes
+            label: Cartes
+            type: object
+            list: { min: 3, max: 3 }
+            fields:
+              - { name: titre, label: Titre, type: string }
+              - { name: texte, label: Texte, type: text }
+
+      - name: qui_sommes_nous
+        label: Qui sommes-nous
+        type: object
+        fields:
+          - { name: surtitre, label: Petit texte au-dessus du titre, type: string }
+          - { name: titre, label: Titre, type: string }
+          - { name: texte, label: Texte, type: text }
+          - name: points
+            label: Points forts
+            type: object
+            list: { min: 3, max: 3 }
+            fields:
+              - { name: titre, label: Titre, type: string }
+              - { name: texte, label: Texte, type: string }
+
+      - name: contact
+        label: Encadré contact (bas de page)
+        type: object
+        fields:
+          - { name: titre, label: Titre, type: string }
+          - { name: texte, label: Texte, type: text }
+          - { name: bouton, label: Texte du bouton, type: string }
