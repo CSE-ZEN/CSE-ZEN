@@ -12,6 +12,7 @@
 "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80"
 "carte_info_1": "5 min de lecture"
 "carte_info_2": "Alerte"
+"guide": "pratique"
 "type": "article"
 "llms_titre": "Droit d'alerte économique"
 "llms_texte": "conditions de déclenchement et procédure en 3 étapes."

@@ -12,6 +12,7 @@
 "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80"
 "carte_info_1": "Dossier"
 "carte_info_2": "Référence"
+"guide": "reference"
 "type": "dossier"
 "llms_titre": "QVCT et CSE"
 "llms_texte": "obligations légales, Code du travail et méthode pour agir sur la qualité de vie et des conditions de travail."

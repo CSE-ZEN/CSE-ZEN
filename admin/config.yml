@@ -98,6 +98,16 @@ collections:
       value: article
     - label: Dossier (« Lire le dossier »)
       value: dossier
+  - label: Rubrique dans « Tous les guides »
+    name: guide
+    widget: select
+    default: pratique
+    options:
+    - label: Guide de référence (QVCT, RPS, SSCT…)
+      value: reference
+    - label: Guide juridique et pratique
+      value: pratique
+    hint: Classement de l'article sur la page « Tous les guides ».
   - label: Visible sur le site
     name: published
     widget: boolean
@@ -3355,98 +3365,6 @@ collections:
         name: f03
         widget: text
         hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit normalement.'
-      - label: Bloc 1 — Consultations CSE
-        name: c01
-        widget: object
-        collapsed: true
-        fields:
-        - label: Étiquette
-          name: f01
-          widget: string
-          hint: Un ou deux mots.
-        - label: Sous-titre
-          name: f02
-          widget: string
-          hint: 'Pour mettre des mots en italique, entourez-les d''astérisques : Agissez en toute \*sérénité\*'
-        - label: Texte
-          name: f03
-          widget: text
-          hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit
-            normalement.'
-        - label: Texte 2
-          name: f04
-          widget: string
-          hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit
-            normalement.'
-      - label: Bloc 2 — Droit d’alerte
-        name: c02
-        widget: object
-        collapsed: true
-        fields:
-        - label: Étiquette
-          name: f01
-          widget: string
-          hint: Un ou deux mots.
-        - label: Sous-titre
-          name: f02
-          widget: string
-          hint: 'Pour mettre des mots en italique, entourez-les d''astérisques : Agissez en toute \*sérénité\*'
-        - label: Texte
-          name: f03
-          widget: text
-          hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit
-            normalement.'
-        - label: Texte 2
-          name: f04
-          widget: string
-          hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit
-            normalement.'
-      - label: Bloc 3 — Trésorier CSE
-        name: c03
-        widget: object
-        collapsed: true
-        fields:
-        - label: Étiquette
-          name: f01
-          widget: string
-          hint: Un ou deux mots.
-        - label: Sous-titre
-          name: f02
-          widget: string
-          hint: 'Pour mettre des mots en italique, entourez-les d''astérisques : Agissez en toute \*sérénité\*'
-        - label: Texte
-          name: f03
-          widget: text
-          hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit
-            normalement.'
-        - label: Texte 2
-          name: f04
-          widget: string
-          hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit
-            normalement.'
-      - label: Bloc 4 — Négociation
-        name: c04
-        widget: object
-        collapsed: true
-        fields:
-        - label: Étiquette
-          name: f01
-          widget: string
-          hint: Un ou deux mots.
-        - label: Sous-titre
-          name: f02
-          widget: string
-          hint: 'Pour mettre des mots en italique, entourez-les d''astérisques : Agissez en toute \*sérénité\*'
-        - label: Texte
-          name: f03
-          widget: text
-          hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit
-            normalement.'
-        - label: Texte 2
-          name: f04
-          widget: string
-          hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit
-            normalement.'
     preview_path: resources/index.html
   - name: contact
     label: Contact

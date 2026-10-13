@@ -12,6 +12,7 @@
 "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=900&q=80"
 "carte_info_1": "Dossier"
 "carte_info_2": "Référence"
+"guide": "reference"
 "type": "dossier"
 "llms_titre": "CSSCT"
 "llms_texte": "seuil de 300 salariés, composition et missions déléguées par le CSE."

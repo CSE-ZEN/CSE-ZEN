@@ -12,6 +12,7 @@
 "image": "https://images.unsplash.com/photo-1554224155-1696413565d3?w=900&q=80"
 "carte_info_1": "4 min de lecture"
 "carte_info_2": "Gestion"
+"guide": "pratique"
 "type": "article"
 "llms_titre": "Trésorier du CSE"
 "llms_texte": "budget de fonctionnement, budget ASC et obligations comptables."

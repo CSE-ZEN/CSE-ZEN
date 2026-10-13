@@ -12,6 +12,7 @@
 "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80"
 "carte_info_1": "6 min de lecture"
 "carte_info_2": "Prévention"
+"guide": "reference"
 "type": "article"
 "llms_titre": "Harcèlement au travail"
 "llms_texte": "définitions légales, charge de la preuve, référent CSE et procédure d'enquête."

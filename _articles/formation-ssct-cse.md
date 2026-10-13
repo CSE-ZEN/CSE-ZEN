@@ -12,6 +12,7 @@
 "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80"
 "carte_info_1": "5 min de lecture"
 "carte_info_2": "Mandat"
+"guide": "reference"
 "type": "article"
 "llms_titre": "Formation SSCT du CSE"
 "llms_texte": "durée légale, financement par l'employeur et contenu du programme."

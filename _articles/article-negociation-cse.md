@@ -12,6 +12,7 @@
 "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80"
 "carte_info_1": "5 min de lecture"
 "carte_info_2": "Stratégie"
+"guide": "pratique"
 "type": "article"
 "llms_titre": "Négociation collective et CSE"
 "llms_texte": "articulation entre le CSE et la négociation annuelle obligatoire (NAO)."

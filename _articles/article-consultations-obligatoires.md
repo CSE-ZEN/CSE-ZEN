@@ -12,6 +12,7 @@
 "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&q=80"
 "carte_info_1": "4 min de lecture"
 "carte_info_2": "Pratique CSE"
+"guide": "pratique"
 "type": "article"
 "llms_titre": "Consultations obligatoires du CSE"
 "llms_texte": "les 3 blocs de consultation récurrente, la BDESE et les délais légaux."

@@ -12,6 +12,7 @@
 "image": "https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=900&q=80"
 "carte_info_1": "Dossier"
 "carte_info_2": "Référence"
+"guide": "reference"
 "type": "dossier"
 "llms_titre": "Risques psychosociaux (RPS)"
 "llms_texte": "signaux d'alerte, DUERP, droit d'alerte et méthode pour qualifier une situation."

@@ -12,6 +12,7 @@
 "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80"
 "carte_info_1": "Dossier"
 "carte_info_2": "Consultation"
+"guide": "reference"
 "type": "dossier"
 "llms_titre": "Réorganisation et CSE"
 "llms_texte": "consultation obligatoire, délais légaux et expertise."
