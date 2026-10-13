@@ -10,8 +10,8 @@ Ce fichier suit la convention [llms.txt](https://llmstxt.org) et référence les
 
 ## Présentation
 
-- [Accueil](https://www.cse-zen.com/): présentation de CSE ZEN et de ses cinq pôles.
-- [Notre offre](https://www.cse-zen.com/notre-offre.html): détail des cinq pôles d'accompagnement.
+- [Accueil](https://www.cse-zen.com/): présentation de CSE ZEN et de ses six pôles.
+- [Notre offre](https://www.cse-zen.com/notre-offre.html): détail des six pôles d'accompagnement.
 - [Équipe & réseau](https://www.cse-zen.com/equipe-reseau.html): l'équipe CSE ZEN, son pôle CSE ZEN Avocats et ses partenaires, dont AKP Conseils.
 - [Contact](https://www.cse-zen.com/contact.html): coordonnées et prise de contact.
 
@@ -36,9 +36,3 @@ Ce fichier suit la convention [llms.txt](https://llmstxt.org) et référence les
 {%- for a in autres %}
 - [{{ a.llms_titre | default: a.carte_titre | default: a.title }}]({{ site.url }}{{ a.url }}): {{ a.llms_texte | default: a.description }}
 {%- endfor %}
-
-## Optional
-
-- [Ressources — QVCT (tag)](https://www.cse-zen.com/resource-tags/qvct.html)
-- [Ressources — RPS (tag)](https://www.cse-zen.com/resource-tags/rps.html)
-- [Ressources — SSCT (tag)](https://www.cse-zen.com/resource-tags/ssct.html)

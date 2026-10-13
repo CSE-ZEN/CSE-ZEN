@@ -4,7 +4,7 @@
 backend:
   name: github
   repo: CSE-ZEN/CSE-ZEN
-  branch: cms
+  branch: main
   base_url: https://cse-zen-auth.broad-fog-84b6.workers.dev
 locale: fr
 publish_mode: simple

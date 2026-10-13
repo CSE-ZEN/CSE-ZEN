@@ -63,21 +63,6 @@ layout: null
   </url>
 {%- endfor %}
   <url>
-    <loc>https://www.cse-zen.com/resource-tags/qvct.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.cse-zen.com/resource-tags/rps.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.cse-zen.com/resource-tags/ssct.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <priority>0.4</priority>
-  </url>
-  <url>
     <loc>https://www.cse-zen.com/cookie-policy.html</loc>
     <lastmod>2026-07-06</lastmod>
     <priority>0.3</priority>
