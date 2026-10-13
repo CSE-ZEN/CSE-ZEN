@@ -4,9 +4,7 @@
 
 bandeau:
   surtitre: "Partenaire de confiance des CSE et des représentants du personnel"
-  titre_debut: "Agissez en toute"
-  titre_accent: "sérénité"
-  titre_fin: "face aux enjeux de votre mandat"
+  titre: "Agissez en toute *sérénité* face aux enjeux de votre mandat"
   texte: "CSE ZEN réunit avocats, experts-comptables, formateurs certifiés, solutions digitales et expertise en communication pour offrir aux élus CSE et représentants du personnel un accompagnement complet, exigeant et sur-mesure."
   bouton_principal: "Prendre rendez-vous"
   bouton_secondaire: "Découvrir l'offre"
@@ -20,9 +18,7 @@ bandeau:
 
 poles_intro:
   surtitre: "Notre offre"
-  titre_debut: "6 pôles au service de"
-  titre_accent: "votre CSE et de ses représentants"
-  titre_fin: ""
+  titre: "6 pôles au service de *votre CSE et de ses représentants*"
   texte: "Un écosystème complet pour sécuriser vos décisions, accompagner le fonctionnement quotidien du CSE, protéger vos élus et représentants du personnel, et renforcer votre pouvoir d'agir."
 
 poles:
@@ -59,9 +55,7 @@ poles:
 
 methode:
   surtitre: "Méthode"
-  titre_debut: "Un accompagnement"
-  titre_accent: "structuré"
-  titre_fin: ", pas une hotline"
+  titre: "Un accompagnement *structuré*, pas une hotline"
   texte: "Ligne directe, réactivité, expertise pluridisciplinaire, outils partagés, forfait illimité et sans engagement."
   cartes:
     - titre: "Ligne directe"

@@ -13,9 +13,7 @@ content:
         type: object
         fields:
           - { name: surtitre, label: Petit texte au-dessus du titre, type: string }
-          - { name: titre_debut, label: Titre — début, type: string }
-          - { name: titre_accent, label: Titre — mot mis en valeur (italique), type: string }
-          - { name: titre_fin, label: Titre — fin, type: string }
+          - { name: titre, label: Titre, type: string, description: "Mettez entre astérisques les mots à afficher en italique. Exemple : Agissez en toute *sérénité* face aux enjeux de votre mandat" }
           - { name: texte, label: Texte d'introduction, type: text }
           - { name: bouton_principal, label: Texte du bouton principal, type: string }
           - { name: bouton_secondaire, label: Texte du bouton secondaire, type: string }
@@ -32,9 +30,7 @@ content:
         type: object
         fields:
           - { name: surtitre, label: Petit texte au-dessus du titre, type: string }
-          - { name: titre_debut, label: Titre — début, type: string }
-          - { name: titre_accent, label: Titre — partie mise en valeur (italique), type: string }
-          - { name: titre_fin, label: Titre — fin, type: string }
+          - { name: titre, label: Titre, type: string, description: "Mettez entre astérisques les mots à afficher en italique. Exemple : Agissez en toute *sérénité* face aux enjeux de votre mandat" }
           - { name: texte, label: Texte, type: text }
 
       - name: poles
@@ -54,9 +50,7 @@ content:
         type: object
         fields:
           - { name: surtitre, label: Petit texte au-dessus du titre, type: string }
-          - { name: titre_debut, label: Titre — début, type: string }
-          - { name: titre_accent, label: Titre — mot mis en valeur (italique), type: string }
-          - { name: titre_fin, label: Titre — fin, type: string }
+          - { name: titre, label: Titre, type: string, description: "Mettez entre astérisques les mots à afficher en italique. Exemple : Agissez en toute *sérénité* face aux enjeux de votre mandat" }
           - { name: texte, label: Texte, type: text }
           - name: cartes
             label: Cartes

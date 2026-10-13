@@ -26,7 +26,7 @@
       <span class="thread"></span>
       {%- assign b = site.data.accueil.bandeau %}
       <div class="eyebrow">{{ b.surtitre | escape }}</div>
-      <h1>{{ b.titre_debut | escape }} <em>{{ b.titre_accent | escape }}</em>{% assign c = b.titre_fin | slice: 0 %}{% if b.titre_fin == "" %}{% elsif c == "," or c == "." %}{{ b.titre_fin | escape }}{% else %} {{ b.titre_fin | escape }}{% endif %}</h1>
+      <h1>{%- assign parts = b.titre | split: "*" -%}{%- for x in parts -%}{%- assign r = forloop.index0 | modulo: 2 -%}{%- if r == 1 -%}<em>{{ x | escape }}</em>{%- else -%}{{ x | escape }}{%- endif -%}{%- endfor -%}</h1>
       <p class="lede">{{ b.texte | escape }}</p>
       <div class="actions">
         <a class="btn btn-primary" href="contact.html">{{ b.bouton_principal | escape }} <span class="arr" aria-hidden="true">→</span></a>
@@ -64,7 +64,7 @@
       <span class="thread center"></span>
       {%- assign pi = site.data.accueil.poles_intro %}
       <div class="kicker">{{ pi.surtitre | escape }}</div>
-      <h2 class="section-title">{{ pi.titre_debut | escape }} <em>{{ pi.titre_accent | escape }}</em>{% assign c = pi.titre_fin | slice: 0 %}{% if pi.titre_fin == "" %}{% elsif c == "," or c == "." %}{{ pi.titre_fin | escape }}{% else %} {{ pi.titre_fin | escape }}{% endif %}</h2>
+      <h2 class="section-title">{%- assign parts = pi.titre | split: "*" -%}{%- for x in parts -%}{%- assign r = forloop.index0 | modulo: 2 -%}{%- if r == 1 -%}<em>{{ x | escape }}</em>{%- else -%}{{ x | escape }}{%- endif -%}{%- endfor -%}</h2>
       <p class="section-desc">{{ pi.texte | escape }}</p>
     </div>
 
@@ -99,7 +99,7 @@
       <span class="thread center"></span>
       {%- assign m = site.data.accueil.methode %}
       <div class="eyebrow">{{ m.surtitre | escape }}</div>
-      <h2 class="section-title">{{ m.titre_debut | escape }} <em>{{ m.titre_accent | escape }}</em>{% assign c = m.titre_fin | slice: 0 %}{% if m.titre_fin == "" %}{% elsif c == "," or c == "." %}{{ m.titre_fin | escape }}{% else %} {{ m.titre_fin | escape }}{% endif %}</h2>
+      <h2 class="section-title">{%- assign parts = m.titre | split: "*" -%}{%- for x in parts -%}{%- assign r = forloop.index0 | modulo: 2 -%}{%- if r == 1 -%}<em>{{ x | escape }}</em>{%- else -%}{{ x | escape }}{%- endif -%}{%- endfor -%}</h2>
       <p class="section-desc">{{ m.texte | escape }}</p>
     </div>
     <div class="grid-3">
