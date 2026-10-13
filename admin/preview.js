@@ -155,6 +155,42 @@
     return { site: siteWith({}), page: data, content: html };
   }));
 
+
+  // Bouton « Préparer le post LinkedIn » pour l'équipe CSE ZEN
+  var LINKEDIN_PAGE = 'https://www.linkedin.com/company/cselegal/admin/page-posts/published/?share=true';
+  var LinkedInShare = createClass({
+    getInitialState: function () { return { msg: '' }; },
+    go: function () {
+      var self = this;
+      var entry = this.props.entry;
+      var slug = entry && entry.get('slug');
+      var data = entry ? entry.get('data') : null;
+      if (!slug || (entry.get('newRecord'))) {
+        this.setState({ msg: "Publiez d'abord l'article sur le site, puis revenez ici." });
+        return;
+      }
+      var url = 'https://www.cse-zen.com/resources/' + slug + '.html';
+      var texte = (data && (data.get('texte_linkedin') || data.get('description') || data.get('title'))) || '';
+      var post = texte + '\n\n' + url;
+      var done = function () {
+        self.setState({ msg: "Texte et lien copiés. Dans LinkedIn, cliquez dans le post et collez-les (Ctrl+V). L'aperçu de l'article s'affiche tout seul." });
+        window.open(LINKEDIN_PAGE, '_blank', 'noopener');
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(post).then(done, function () { self.setState({ msg: 'Copiez ce texte : ' + post }); window.open(LINKEDIN_PAGE, '_blank', 'noopener'); });
+      } else {
+        this.setState({ msg: 'Copiez ce texte : ' + post }); window.open(LINKEDIN_PAGE, '_blank', 'noopener');
+      }
+    },
+    render: function () {
+      return h('div', { className: this.props.classNameWrapper, style: { padding: '14px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'flex-start' } },
+        h('button', { type: 'button', onClick: this.go, style: { background: '#0A66C2', color: '#fff', border: 0, borderRadius: '8px', padding: '11px 18px', fontSize: '15px', fontWeight: 600, cursor: 'pointer' } }, 'Préparer le post sur la page LinkedIn de CSE ZEN'),
+        this.state.msg ? h('span', { style: { fontSize: '13px', color: '#1B2036', lineHeight: 1.5 } }, this.state.msg) : null
+      );
+    }
+  });
+  CMS.registerWidget('linkedin-share', LinkedInShare, function () { return null; });
+
   // Blocs spéciaux dans le texte des articles
   CMS.registerEditorComponent({
     id: 'encadre',
