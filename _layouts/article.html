@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.titre_google | default: page.title | escape }}</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  {%- include seo.html titre=page.title description=page.description image=page.image type="article" canonical=true %}
+  <meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%d' }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-active="Ressources">
+  <div id="site-header"></div>
+  <main><section class="page-hero"><div class="container article"><span class="thread"></span><span class="tag">{{ page.etiquette | escape }}</span><h1>{{ page.title | escape }}</h1><p>{{ page.chapo | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p></div></section><section class="section"><div class="container resource-layout"><article class="article">
+
+{{ content }}
+{%- if page.articles_lies and page.articles_lies.size > 0 %}
+<h2>Pour aller plus loin</h2><div class="related-grid">{% for l in page.articles_lies %}<a href="{{ l.page }}.html">{{ l.titre | escape }}<span>{{ l.texte | escape }}</span></a>{% endfor %}</div>
+{%- endif %}
+<div class="actions"><a class="btn btn-primary" href="../contact.html">Parler à CSE ZEN</a><a class="btn btn-light" href="../ressources.html">Retour aux ressources</a><a class="btn btn-light" href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url | append: page.url | cgi_escape }}" target="_blank" rel="noopener">Partager sur LinkedIn</a></div></article><aside class="resource-toc"><h2>Dans cette page</h2>
+{%- assign morceaux = content | split: '<h2 id="' -%}
+{%- assign nb_sommaire = page.sommaire | size -%}
+{%- for morceau in morceaux offset: 1 -%}
+  {%- assign i = forloop.index0 -%}
+  {%- if nb_sommaire > 0 and i >= nb_sommaire -%}{%- break -%}{%- endif -%}
+  {%- assign ancre = morceau | split: '"' | first -%}
+  {%- assign libelle = page.sommaire[i] -%}
+  {%- if libelle == nil or libelle == '' -%}
+    {%- assign libelle = morceau | split: '</h2>' | first | remove_first: ancre | remove_first: '">' | strip_html | strip -%}
+  {%- endif -%}
+<a href="#{{ ancre }}">{{ libelle }}</a>
+{%- endfor -%}
+<a href="../notre-offre.html">Notre offre</a><a href="../formations.html">Formations CSE</a><a href="../solutions-digitales.html">Solutions digitales</a><a href="../pole-avocats.html">Pôle avocats</a></aside></div></section>
+{%- if page.continuer_lecture %}
+<section class="section soft"><div class="container"><div class="section-heading"><div class="kicker">Ressources associées</div><h2>Continuer la lecture</h2><p>Retrouvez aussi les guides sur la QVCT, les RPS, la SSCT, les consultations et le fonctionnement du CSE.</p></div><div class="tag-cloud"><a href="index.html">Tous les guides</a><a href="qvct-cse.html">QVCT CSE</a><a href="risques-psychosociaux-cse.html">RPS CSE</a><a href="formation-ssct-cse.html">Formation SSCT</a><a href="../contact.html">Demander un échange</a></div></div></section>
+{%- endif %}
+</main>
+  <div id="site-footer"></div>
+  <script src="../header.js"></script>
+  <script src="../footer.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>

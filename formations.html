@@ -1,160 +1,147 @@
-<!doctype html>
+---
+# Textes modifiables : _data/pages/formations.yml (espace d'édition)
+---
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Formations CSE — CSE ZEN</title>
-<meta name="description" content="Catalogue des formations CSE ZEN.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>{{ site.data.pages.formations.seo.titre | escape }}</title>
+<meta content="{{ site.data.pages.formations.seo.description | escape }}" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+{%- include seo.html titre=site.data.pages.formations.seo.titre description=site.data.pages.formations.seo.description canonical=true %}
 </head>
 <body data-active="Formations">
 <div id="site-header"></div>
 <main>
-
 <section class="page-hero">
-  <div class="container">
-    <span class="thread"></span>
-    <div class="kicker">CSE ZEN Formations sur-mesure</div>
-    <h1>Des formations CSE <em>concrètes</em>, certifiées et adaptées au terrain</h1>
-    <p>Un catalogue conçu pour aider les élus CSE et représentants du personnel à exercer leur mandat, comprendre leurs prérogatives et agir face aux situations sensibles.</p>
-    <div class="pill-list" style="margin-top:32px">
-      <span class="pill">Qualiopi</span>
-      <span class="pill">Agréé DREETS</span>
-      <span class="pill">SSCT</span>
-      <span class="pill">Économique</span>
-    </div>
-  </div>
+<div class="container">
+<span class="thread"></span>
+<div class="kicker">{{ site.data.pages.formations.s01.f01 | escape }}</div>
+<h1>{{ site.data.pages.formations.s01.f02 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h1>
+<p>{{ site.data.pages.formations.s01.f03 | escape }}</p>
+<div class="pill-list" style="margin-top:32px">
+<span class="pill">{{ site.data.pages.formations.s01.f04 | escape }}</span>
+<span class="pill">{{ site.data.pages.formations.s01.f05 | escape }}</span>
+<span class="pill">{{ site.data.pages.formations.s01.f06 | escape }}</span>
+<span class="pill">{{ site.data.pages.formations.s01.f07 | escape }}</span>
+</div>
+</div>
 </section>
-
 <section class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="thread center"></span>
-      <div class="kicker">Catalogue</div>
-      <h2 class="section-title">Un programme pour chaque <em>moment du mandat</em></h2>
-      <p class="section-desc">SSCT, économique, référent harcèlement, secrétaire, trésorier — des formations courtes, denses, immédiatement utiles aux élus et représentants du personnel.</p>
-    </div>
-
-    <div class="formation-grid">
-      <article class="formation-card is-blue">
-        <span class="icon-cell">S</span>
-        <h3>SSCT</h3>
-        <p>Santé, sécurité et conditions de travail. 5 jours pour un premier mandat, 3 jours en renouvellement.</p>
-        <div class="formation-meta"><span class="tag-sm">5 jours</span><span class="tag-sm">DREETS</span></div>
-      </article>
-
-      <article class="formation-card is-amber">
-        <span class="icon-cell">É</span>
-        <h3>Formation économique</h3>
-        <p>Comprendre les comptes, la stratégie, la politique sociale et les informations-consultations.</p>
-        <div class="formation-meta"><span class="tag-sm">5 jours</span><span class="tag-sm">Qualiopi</span></div>
-      </article>
-
-      <article class="formation-card is-red">
-        <span class="icon-cell">R</span>
-        <h3>Référent harcèlement</h3>
-        <p>Identifier les situations, qualifier les faits, orienter et sécuriser les alertes.</p>
-        <div class="formation-meta"><span class="tag-sm">2 jours</span><span class="tag-sm">Qualiopi</span></div>
-      </article>
-
-      <article class="formation-card">
-        <span class="icon-cell">S</span>
-        <h3>Secrétaire du CSE</h3>
-        <p>Ordre du jour, procès-verbal, coordination de l'instance et relations avec l'employeur.</p>
-        <div class="formation-meta"><span class="tag-sm">2 jours</span><span class="tag-sm">Fonctionnement</span></div>
-      </article>
-
-      <article class="formation-card">
-        <span class="icon-cell">T</span>
-        <h3>Trésorier du CSE</h3>
-        <p>Budgets, obligations comptables, justificatifs, règles ASC et fonctionnement.</p>
-        <div class="formation-meta"><span class="tag-sm">2 jours</span><span class="tag-sm">Fonctionnement</span></div>
-      </article>
-
-      <article class="formation-card">
-        <span class="icon-cell">N</span>
-        <h3>Négociation collective</h3>
-        <p>Préparer les échanges, structurer les revendications et sécuriser le rapport de force.</p>
-        <div class="formation-meta"><span class="tag-sm">2 jours</span><span class="tag-sm">Négociation</span></div>
-      </article>
-
-      <article class="formation-card">
-        <span class="icon-cell">P</span>
-        <h3>RPS &amp; QVCT</h3>
-        <p>Comprendre les risques psychosociaux, agir sur les conditions de travail et mobiliser les leviers CSE.</p>
-        <div class="formation-meta"><span class="tag-sm">2 jours</span><span class="tag-sm">SSCT</span></div>
-      </article>
-
-      <article class="formation-card">
-        <span class="icon-cell">D</span>
-        <h3>DUERP</h3>
-        <p>Lire, challenger et utiliser le document unique comme outil de prévention.</p>
-        <div class="formation-meta"><span class="tag-sm">1 jour</span><span class="tag-sm">SSCT</span></div>
-      </article>
-
-      <article class="formation-card">
-        <span class="icon-cell">C</span>
-        <h3>Communication vers les salariés</h3>
-        <p>Informer clairement, rendre visibles les actions du CSE et renforcer le lien avec les salariés.</p>
-        <div class="formation-meta"><span class="tag-sm">1 jour</span><span class="tag-sm">Lien collectif</span></div>
-      </article>
-
-      <article class="formation-card">
-        <span class="icon-cell">D</span>
-        <h3>Droit disciplinaire</h3>
-        <p>Comprendre les procédures, accompagner les salariés et repérer les points d'alerte.</p>
-        <div class="formation-meta"><span class="tag-sm">1 jour</span><span class="tag-sm">Juridique</span></div>
-      </article>
-
-      <article class="formation-card">
-        <span class="icon-cell">A</span>
-        <h3>Droit d'alerte</h3>
-        <p>Savoir quand et comment mobiliser les différents droits d'alerte du CSE.</p>
-        <div class="formation-meta"><span class="tag-sm">1 jour</span><span class="tag-sm">Juridique</span></div>
-      </article>
-
-      <article class="formation-card">
-        <span class="icon-cell">R</span>
-        <h3>Restructurations / PSE</h3>
-        <p>Comprendre les étapes, les documents, les risques et les leviers d'action.</p>
-        <div class="formation-meta"><span class="tag-sm">2 jours</span><span class="tag-sm">Stratégique</span></div>
-      </article>
-    </div>
-  </div>
+<div class="container">
+<div class="section-header">
+<span class="thread center"></span>
+<div class="kicker">{{ site.data.pages.formations.s02.f01 | escape }}</div>
+<h2 class="section-title">{{ site.data.pages.formations.s02.f02 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h2>
+<p class="section-desc">{{ site.data.pages.formations.s02.f03 | escape }}</p>
+</div>
+<div class="formation-grid">
+<article class="formation-card is-blue">
+<span class="icon-cell">{{ site.data.pages.formations.s02.f04 | escape }}</span>
+<h3>{{ site.data.pages.formations.s02.f05 | escape }}</h3>
+<p>{{ site.data.pages.formations.s02.f06 | escape }}</p>
+<div class="formation-meta"><span class="tag-sm">{{ site.data.pages.formations.s02.f07 | escape }}</span><span class="tag-sm">{{ site.data.pages.formations.s02.f08 | escape }}</span></div>
+</article>
+<article class="formation-card is-amber">
+<span class="icon-cell">{{ site.data.pages.formations.s02.f09 | escape }}</span>
+<h3>{{ site.data.pages.formations.s02.f10 | escape }}</h3>
+<p>{{ site.data.pages.formations.s02.f11 | escape }}</p>
+<div class="formation-meta"><span class="tag-sm">{{ site.data.pages.formations.s02.f12 | escape }}</span><span class="tag-sm">{{ site.data.pages.formations.s02.f13 | escape }}</span></div>
+</article>
+<article class="formation-card is-red">
+<span class="icon-cell">{{ site.data.pages.formations.s02.f14 | escape }}</span>
+<h3>{{ site.data.pages.formations.s02.f15 | escape }}</h3>
+<p>{{ site.data.pages.formations.s02.f16 | escape }}</p>
+<div class="formation-meta"><span class="tag-sm">{{ site.data.pages.formations.s02.f17 | escape }}</span><span class="tag-sm">{{ site.data.pages.formations.s02.f18 | escape }}</span></div>
+</article>
+<article class="formation-card">
+<span class="icon-cell">{{ site.data.pages.formations.s02.c01.f01 | escape }}</span>
+<h3>{{ site.data.pages.formations.s02.c01.f02 | escape }}</h3>
+<p>{{ site.data.pages.formations.s02.c01.f03 | escape }}</p>
+<div class="formation-meta"><span class="tag-sm">{{ site.data.pages.formations.s02.c01.f04 | escape }}</span><span class="tag-sm">{{ site.data.pages.formations.s02.c01.f05 | escape }}</span></div>
+</article>
+<article class="formation-card">
+<span class="icon-cell">{{ site.data.pages.formations.s02.c02.f01 | escape }}</span>
+<h3>{{ site.data.pages.formations.s02.c02.f02 | escape }}</h3>
+<p>{{ site.data.pages.formations.s02.c02.f03 | escape }}</p>
+<div class="formation-meta"><span class="tag-sm">{{ site.data.pages.formations.s02.c02.f04 | escape }}</span><span class="tag-sm">{{ site.data.pages.formations.s02.c02.f05 | escape }}</span></div>
+</article>
+<article class="formation-card">
+<span class="icon-cell">{{ site.data.pages.formations.s02.c03.f01 | escape }}</span>
+<h3>{{ site.data.pages.formations.s02.c03.f02 | escape }}</h3>
+<p>{{ site.data.pages.formations.s02.c03.f03 | escape }}</p>
+<div class="formation-meta"><span class="tag-sm">{{ site.data.pages.formations.s02.c03.f04 | escape }}</span><span class="tag-sm">{{ site.data.pages.formations.s02.c03.f05 | escape }}</span></div>
+</article>
+<article class="formation-card">
+<span class="icon-cell">{{ site.data.pages.formations.s02.c04.f01 | escape }}</span>
+<h3>{{ site.data.pages.formations.s02.c04.f02 | escape }}</h3>
+<p>{{ site.data.pages.formations.s02.c04.f03 | escape }}</p>
+<div class="formation-meta"><span class="tag-sm">{{ site.data.pages.formations.s02.c04.f04 | escape }}</span><span class="tag-sm">{{ site.data.pages.formations.s02.c04.f05 | escape }}</span></div>
+</article>
+<article class="formation-card">
+<span class="icon-cell">{{ site.data.pages.formations.s02.c05.f01 | escape }}</span>
+<h3>{{ site.data.pages.formations.s02.c05.f02 | escape }}</h3>
+<p>{{ site.data.pages.formations.s02.c05.f03 | escape }}</p>
+<div class="formation-meta"><span class="tag-sm">{{ site.data.pages.formations.s02.c05.f04 | escape }}</span><span class="tag-sm">{{ site.data.pages.formations.s02.c05.f05 | escape }}</span></div>
+</article>
+<article class="formation-card">
+<span class="icon-cell">{{ site.data.pages.formations.s02.c06.f01 | escape }}</span>
+<h3>{{ site.data.pages.formations.s02.c06.f02 | escape }}</h3>
+<p>{{ site.data.pages.formations.s02.c06.f03 | escape }}</p>
+<div class="formation-meta"><span class="tag-sm">{{ site.data.pages.formations.s02.c06.f04 | escape }}</span><span class="tag-sm">{{ site.data.pages.formations.s02.c06.f05 | escape }}</span></div>
+</article>
+<article class="formation-card">
+<span class="icon-cell">{{ site.data.pages.formations.s02.c07.f01 | escape }}</span>
+<h3>{{ site.data.pages.formations.s02.c07.f02 | escape }}</h3>
+<p>{{ site.data.pages.formations.s02.c07.f03 | escape }}</p>
+<div class="formation-meta"><span class="tag-sm">{{ site.data.pages.formations.s02.c07.f04 | escape }}</span><span class="tag-sm">{{ site.data.pages.formations.s02.c07.f05 | escape }}</span></div>
+</article>
+<article class="formation-card">
+<span class="icon-cell">{{ site.data.pages.formations.s02.c08.f01 | escape }}</span>
+<h3>{{ site.data.pages.formations.s02.c08.f02 | escape }}</h3>
+<p>{{ site.data.pages.formations.s02.c08.f03 | escape }}</p>
+<div class="formation-meta"><span class="tag-sm">{{ site.data.pages.formations.s02.c08.f04 | escape }}</span><span class="tag-sm">{{ site.data.pages.formations.s02.c08.f05 | escape }}</span></div>
+</article>
+<article class="formation-card">
+<span class="icon-cell">{{ site.data.pages.formations.s02.c09.f01 | escape }}</span>
+<h3>{{ site.data.pages.formations.s02.c09.f02 | escape }}</h3>
+<p>{{ site.data.pages.formations.s02.c09.f03 | escape }}</p>
+<div class="formation-meta"><span class="tag-sm">{{ site.data.pages.formations.s02.c09.f04 | escape }}</span><span class="tag-sm">{{ site.data.pages.formations.s02.c09.f05 | escape }}</span></div>
+</article>
+</div>
+</div>
 </section>
-
 <section class="section section-ivoire">
-  <div class="container">
-    <div class="villa-band villa-band-rich">
-      <div class="villa-copy">
-        <span class="thread"></span>
-        <div class="kicker">Lieu de formation</div>
-        <h2>La <em>Villa Zen</em></h2>
-        <p>Spécialement conçue pour vous évader et vous ressourcer à seulement 1h de Paris, la Villa Zen est entourée de forêt, dans une atmosphère apaisante et inspirante.</p>
-        <p>Vous pourrez y recharger vos batteries, partager des moments inoubliables, respirer et travailler en toute sérénité.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="contact.html">Demander un programme <span class="arr" aria-hidden="true">→</span></a>
-        </div>
-      </div>
-      <div class="villa-gallery" aria-label="Photos de la Villa Zen">
-        <img src="assets/villa-zen-piscine.jpeg" alt="Villa Zen avec piscine et jardin">
-        <img src="assets/villa-zen-foret.jpeg" alt="Villa Zen entourée de forêt">
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="villa-band villa-band-rich">
+<div class="villa-copy">
+<span class="thread"></span>
+<div class="kicker">{{ site.data.pages.formations.s03.f01 | escape }}</div>
+<h2>{{ site.data.pages.formations.s03.f02 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h2>
+<p>{{ site.data.pages.formations.s03.f03 | escape }}</p>
+<p>{{ site.data.pages.formations.s03.f04 | escape }}</p>
+<div class="actions">
+<a class="btn btn-primary" href="contact.html">{{ site.data.pages.formations.s03.f05 | escape }} <span aria-hidden="true" class="arr">→</span></a>
+</div>
+</div>
+<div aria-label="Photos de la Villa Zen" class="villa-gallery">
+<img alt="{{ site.data.pages.formations.s03.f06.description | escape }}" src="{{ site.data.pages.formations.s03.f06.image }}"/>
+<img alt="{{ site.data.pages.formations.s03.f07.description | escape }}" src="{{ site.data.pages.formations.s03.f07.image }}"/>
+</div>
+</div>
+</div>
 </section>
-
-
 <section class="section section-soft">
-  <div class="container article">
-    <h2>Compléter la formation par des ressources pratiques</h2>
-    <p>Les formations CSE gagnent en efficacité lorsqu’elles sont reliées à des cas concrets rencontrés en réunion, en commission ou lors d’une alerte. Pour préparer un programme ou prolonger une session, les élus et représentants du personnel peuvent consulter nos dossiers sur la <a href="resource-tags/ssct.html">santé, sécurité et conditions de travail</a>, la <a href="resource-tags/qvct.html">QVCT</a> et les <a href="resource-tags/rps.html">risques psychosociaux</a>. Ces ressources donnent des repères utiles avant de solliciter une formation SSCT, une formation économique ou un accompagnement plus ciblé.</p>
-  </div>
+<div class="container article">
+<h2>{{ site.data.pages.formations.s04.f01 | escape }}</h2>
+<p>{{ site.data.pages.formations.s04.f02 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+</div>
 </section>
-
 </main>
 <div id="site-footer"></div>
 <script src="header.js"></script>

@@ -1,160 +1,51 @@
-<!doctype html>
+---
+# Textes modifiables : _data/pages/ressources.yml (espace d'édition)
+---
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ressources CSE — CSE ZEN</title>
-<link rel="canonical" href="https://www.cse-zen.com/ressources.html">
-<meta name="description" content="Articles et ressources pratiques pour les élus CSE et représentants du personnel.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>{{ site.data.pages.ressources.seo.titre | escape }}</title>
+<link href="https://www.cse-zen.com/ressources.html" rel="canonical"/>
+<meta content="{{ site.data.pages.ressources.seo.description | escape }}" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+{%- include seo.html titre=site.data.pages.ressources.seo.titre description=site.data.pages.ressources.seo.description %}
 </head>
 <body data-active="Ressources">
 <div id="site-header"></div>
 <main>
-
 <section class="page-hero">
-  <div class="container">
-    <span class="thread"></span>
-    <div class="kicker">Ressources</div>
-    <h1>Articles, repères et guides pratiques pour les <em>élus CSE et représentants du personnel</em></h1>
-    <p>Retrouvez nos analyses, décryptages et conseils pratiques pour mieux exercer votre mandat, comprendre vos obligations et accompagner les salariés sur les sujets qui comptent.</p>
-  </div>
+<div class="container">
+<span class="thread"></span>
+<div class="kicker">{{ site.data.pages.ressources.s01.f01 | escape }}</div>
+<h1>{{ site.data.pages.ressources.s01.f02 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h1>
+<p>{{ site.data.pages.ressources.s01.f03 | escape }}</p>
+</div>
 </section>
-
 <section class="section section-ivoire">
-  <div class="container">
-
-    <div class="resource-filters" role="group" aria-label="Filtrer les ressources par thématique">
-      <button class="filter-pill is-active" data-filter="all" type="button">Tous <span class="filter-count"></span></button>
-      <button class="filter-pill" data-filter="qvct" type="button">QVCT</button>
-      <button class="filter-pill" data-filter="rps" type="button">RPS</button>
-      <button class="filter-pill" data-filter="ssct" type="button">SSCT</button>
-      <button class="filter-pill" data-filter="juridique" type="button">Juridique</button>
-      <button class="filter-pill" data-filter="fonctionnement" type="button">Fonctionnement</button>
+<div class="container">
+<div aria-label="Filtrer les ressources par thématique" class="resource-filters" role="group">
+<button class="filter-pill is-active" data-filter="all" type="button">{{ site.data.pages.ressources.s02.f01 | escape }} <span class="filter-count"></span></button>
+<button class="filter-pill" data-filter="qvct" type="button">{{ site.data.pages.ressources.s02.f02 | escape }}</button>
+<button class="filter-pill" data-filter="rps" type="button">{{ site.data.pages.ressources.s02.f03 | escape }}</button>
+<button class="filter-pill" data-filter="ssct" type="button">{{ site.data.pages.ressources.s02.f04 | escape }}</button>
+<button class="filter-pill" data-filter="juridique" type="button">{{ site.data.pages.ressources.s02.f05 | escape }}</button>
+<button class="filter-pill" data-filter="fonctionnement" type="button">{{ site.data.pages.ressources.s02.f06 | escape }}</button>
+</div>
+<div class="article-grid resource-grid" id="resource-grid">
+{%- assign articles = site.articles | sort: 'date' | reverse -%}
+{%- for a in articles %}
+{% include carte-article.html article=a base="resources/" filtre=true %}
+{%- endfor %}
     </div>
-
-    <div class="article-grid resource-grid" id="resource-grid">
-
-      <a class="article-card" data-cat="juridique" href="resources/article-consultations-obligatoires.html">
-        <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&q=80')"></div>
-        <div class="card-body">
-          <span class="tag red">Juridique</span>
-          <h3>Consultations obligatoires du CSE : comment se préparer ?</h3>
-          <p>Comprendre les enjeux, organiser les documents, poser les bonnes questions et formuler un avis utile.</p>
-          <div class="card-meta"><span>4 min de lecture</span><span class="dot"></span><span>Pratique CSE</span></div>
-          <span class="read-cta">Lire l'article <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="article-card" data-cat="juridique" href="resources/reorganisation-cse.html">
-        <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80')"></div>
-        <div class="card-body">
-          <span class="tag red">Juridique</span>
-          <h3>Réorganisation et CSE</h3>
-          <p>Consultation obligatoire, délais légaux et expertise pour préparer un avis argumenté du CSE.</p>
-          <div class="card-meta"><span>Dossier</span><span class="dot"></span><span>Consultation</span></div>
-          <span class="read-cta">Lire le dossier <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="article-card" data-cat="qvct" href="resources/qvct-cse.html">
-        <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80')"></div>
-        <div class="card-body">
-          <span class="tag blue">QVCT</span>
-          <h3>QVCT et CSE</h3>
-          <p>Obligations légales, articles du Code du travail et méthode pour agir sur la qualité de vie et des conditions de travail.</p>
-          <div class="card-meta"><span>Dossier</span><span class="dot"></span><span>Référence</span></div>
-          <span class="read-cta">Lire le dossier <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="article-card" data-cat="rps" href="resources/risques-psychosociaux-cse.html">
-        <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=900&q=80')"></div>
-        <div class="card-body">
-          <span class="tag amber">RPS</span>
-          <h3>Risques psychosociaux</h3>
-          <p>Signaux d'alerte, DUERP, droit d'alerte et méthode pour qualifier une situation avant qu'elle ne s'aggrave.</p>
-          <div class="card-meta"><span>Dossier</span><span class="dot"></span><span>Référence</span></div>
-          <span class="read-cta">Lire le dossier <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="article-card" data-cat="ssct" href="resources/formation-ssct-cse.html">
-        <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80')"></div>
-        <div class="card-body">
-          <span class="tag green">SSCT</span>
-          <h3>Formation SSCT : ce que les élus doivent savoir</h3>
-          <p>Durée, financement, contenu et bénéfices concrets pour exercer son mandat.</p>
-          <div class="card-meta"><span>5 min de lecture</span><span class="dot"></span><span>Mandat</span></div>
-          <span class="read-cta">Lire l'article <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="article-card" data-cat="ssct" href="resources/harcelement-cse.html">
-        <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80')"></div>
-        <div class="card-body">
-          <span class="tag green">SSCT</span>
-          <h3>Harcèlement au travail : quel rôle pour le CSE ?</h3>
-          <p>Réagir sans se substituer à l'enquête, sécuriser l'alerte et protéger le collectif.</p>
-          <div class="card-meta"><span>6 min de lecture</span><span class="dot"></span><span>Prévention</span></div>
-          <span class="read-cta">Lire l'article <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="article-card" data-cat="ssct" href="resources/cssct-cse.html">
-        <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=900&q=80')"></div>
-        <div class="card-body">
-          <span class="tag green">SSCT</span>
-          <h3>CSSCT</h3>
-          <p>Seuil de 300 salariés, composition, missions déléguées par le CSE et méthode de travail de la commission.</p>
-          <div class="card-meta"><span>Dossier</span><span class="dot"></span><span>Référence</span></div>
-          <span class="read-cta">Lire le dossier <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="article-card" data-cat="fonctionnement" href="resources/article-droit-alerte-economique.html">
-        <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80')"></div>
-        <div class="card-body">
-          <span class="tag">Fonctionnement</span>
-          <h3>Droit d'alerte économique : quand et comment l'activer ?</h3>
-          <p>Identifier les signaux faibles et structurer une démarche rigoureuse.</p>
-          <div class="card-meta"><span>5 min de lecture</span><span class="dot"></span><span>Alerte</span></div>
-          <span class="read-cta">Lire l'article <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="article-card" data-cat="fonctionnement" href="resources/article-tresorier-cse.html">
-        <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1554224155-1696413565d3?w=900&q=80')"></div>
-        <div class="card-body">
-          <span class="tag">Fonctionnement</span>
-          <h3>Trésorier du CSE : les bons réflexes de gestion</h3>
-          <p>Budgets, pièces justificatives, traçabilité et transparence auprès des élus.</p>
-          <div class="card-meta"><span>4 min de lecture</span><span class="dot"></span><span>Gestion</span></div>
-          <span class="read-cta">Lire l'article <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="article-card" data-cat="fonctionnement" href="resources/article-negociation-cse.html">
-        <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80')"></div>
-        <div class="card-body">
-          <span class="tag">Fonctionnement</span>
-          <h3>Négociation collective : préparer le rapport de force</h3>
-          <p>Clarifier les objectifs, documenter les demandes et sécuriser les échanges.</p>
-          <div class="card-meta"><span>5 min de lecture</span><span class="dot"></span><span>Stratégie</span></div>
-          <span class="read-cta">Lire l'article <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-    </div>
-
-    <p class="resource-more-link"><a href="resources/index.html">Explorer les dossiers thématiques complets (QVCT, RPS, SSCT…) →</a></p>
-
-  </div>
+<p class="resource-more-link">{{ site.data.pages.ressources.s02.f07 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+</div>
 </section>
-
 </main>
 <div id="site-footer"></div>
 <script src="header.js"></script>

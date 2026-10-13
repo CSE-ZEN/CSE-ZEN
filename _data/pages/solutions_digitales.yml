@@ -1,0 +1,79 @@
+# Contenu de la page solutions-digitales.html — modifié depuis l'espace d'édition (Decap CMS)
+"seo":
+  "titre": "CSE ZEN Solutions digitales — CSE ZEN"
+  "description": "Solutions digitales CSE ZEN : Into The Shift et Inclusive Way Campus."
+"s01":
+  "f01": "Solutions digitales"
+  "f02": "CSE ZEN *Solutions* digitales"
+  "f03": "Des outils pour sensibiliser, former et mesurer les pratiques sur les sujets clés des CSE : santé-sécurité, QVCT, RPS, prévention du burn-out et conditions de travail."
+  "f04":
+    "image": "assets/its-fond-blanc.png"
+    "description": "Into The Shift"
+  "f05":
+    "image": "assets/logo-inclusive-way-campus.png"
+    "description": "Inclusive Way Campus"
+"s02":
+  "f01": "Deux marques, une logique"
+  "f02": "Diagnostiquer, puis *former*"
+  "f03": "CSE ZEN combine diagnostic comportemental et e-learning pour passer de l'observation à l'action sur les sujets santé, sécurité, RPS et QVCT."
+  "f04":
+    "image": "assets/its-fond-blanc.png"
+    "description": "Into The Shift"
+  "f05": "Diagnostics comportementaux Into The Shift"
+  "f06": "Plutôt que de demander aux salariés *ce qu'ils pensent*, Into The Shift les confronte à des **situations professionnelles concrètes** et mesure leurs réflexes réels. Le CSE obtient une lecture collective anonyme des pratiques, pas une enquête déclarative de plus."
+  "f07": "Pour le CSE et la CSSCT"
+  "c01":
+    "f01": "Objectiver les pratiques avant une consultation santé-sécurité ou QVCT."
+    "f02": "Préparer une formation SSCT avec des données réelles du collectif."
+    "f03": "Mesurer l'évolution d'un climat de prévention dans le temps (avant / après)."
+    "f04": "Nourrir un avis ou un débrief CSE sans exposer les réponses individuelles."
+    "f05": "Repérer les signaux faibles avant qu'ils ne deviennent des dossiers."
+  "f09": "Thématiques couvertes"
+  "c02":
+    "f01": "Santé-sécurité, prévention des accidents et règles de l'art."
+    "f02": "QVCT, conditions de travail et charge mentale."
+    "f03": "RPS, harcèlement et signaux faibles."
+    "f04": "Prévention du burn-out et qualité du management."
+  "f11": "**Anonymat garanti.** Aucun compte répondant, aucun email, aucun login, aucun tracking d'IP. C'est ce qui permet aux salariés de répondre sincèrement sur des sujets sensibles."
+  "f12": "Santé-sécurité"
+  "f13": "QVCT"
+  "f14": "RPS"
+  "f15": "Burn-out"
+  "f16": "Management"
+  "f17": "Transformation"
+  "f18":
+    "image": "assets/iwc-transparent.png"
+    "description": "Inclusive Way Campus"
+  "f19": "Modules e-learning Inclusive Way Campus"
+  "f20": "Des modules courts et structurés pour former les élus et représentants du personnel, et sensibiliser les collectifs sur les sujets de prévention et de qualité de vie au travail."
+  "c03":
+    "f01": "Parcours accessibles en ligne."
+    "f02": "Formats courts et opérationnels."
+    "f03": "Quiz, mises en situation et ressources."
+    "f04": "Déploiement possible auprès des équipes."
+  "f22": "Exemples de modules"
+  "c04":
+    "f01": "Prévenir les agissements sexistes et le harcèlement sexuel."
+    "f02": "Déjouer les biais inconscients."
+    "f03": "Prévenir les micro-agressions."
+    "f04": "Stéréotypes de genre : et si on les déconstruisait ?"
+    "f05": "Comprendre l'inclusion et la diversité."
+    "f06": "Qualité de vie au travail."
+  "f24":
+    "image": "assets/module-prevenir-sexisme-harcelement-sexuel.png"
+    "description": "Module e-learning prévenir le sexisme et le harcèlement sexuel"
+  "f25": "SCORM"
+  "f26": "Micro-learning"
+  "f27": "Catalogue"
+  "f28": "Déploiement équipes"
+"s03":
+  "f01": "Usages possibles"
+  "f02": "Passer de la sensibilisation à *l'action*"
+  "f03": "**Préparer une formation**Identifier les représentations, réflexes et zones de fragilité avant une session."
+  "f04": "**Mesurer un climat de prévention**Repérer les pratiques observées sur les enjeux santé, sécurité, RPS ou QVCT."
+  "f05": "**Outiller les élus et représentants**Donner des supports concrets pour agir, dialoguer et alerter avec méthode."
+"s04":
+  "f01": "Construire une solution digitale pour votre CSE et vos représentants"
+  "f02": "Contactez CSE ZEN pour choisir le bon format : diagnostic, module e-learning, sensibilisation ou parcours mixte."
+  "f03": "Demander une présentation"
+  "f04": "Retour à l'offre"

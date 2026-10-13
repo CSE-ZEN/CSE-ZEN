@@ -6,8 +6,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CSE ZEN | Experts CSE et représentants du personnel</title>
-<meta name="description" content="CSE ZEN accompagne les CSE et représentants du personnel avec une offre juridique, comptable, formation, solutions digitales et communication.">
+<title>{{ site.data.accueil.seo.titre | escape }}</title>
+<meta name="description" content="{{ site.data.accueil.seo.description | escape }}">
+{%- include seo.html titre=site.data.accueil.seo.titre description=site.data.accueil.seo.description canonical=true %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -135,46 +136,18 @@
   <div class="container">
     <div class="section-header">
       <span class="thread center"></span>
-      <div class="kicker">Ressources</div>
-      <h2 class="section-title">Articles pratiques pour les élus CSE et représentants du personnel</h2>
+      <div class="kicker">{{ site.data.accueil.ressources.surtitre | escape }}</div>
+      <h2 class="section-title">{{ site.data.accueil.ressources.titre | escape }}</h2>
     </div>
     <div class="article-grid">
-      <a class="article-card" href="resources/article-consultations-obligatoires.html">
-        <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&q=80')"></div>
-        <div class="card-body">
-          <span class="tag red">Juridique</span>
-          <h3>Consultations obligatoires du CSE : comment se préparer ?</h3>
-          <p>Analyser les documents, formuler un avis utile et sécuriser les délais.</p>
-          <div class="card-meta">
-            <span>4 min de lecture</span><span class="dot"></span><span>Pratique CSE</span>
-          </div>
-          <span class="read-cta">Lire l'article <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-      <a class="article-card" href="resources/formation-ssct-cse.html">
-        <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80')"></div>
-        <div class="card-body">
-          <span class="tag blue">Formation</span>
-          <h3>Formation SSCT : ce que les élus doivent savoir</h3>
-          <p>Durée, financement, public concerné et intérêt concret pour agir.</p>
-          <div class="card-meta">
-            <span>5 min de lecture</span><span class="dot"></span><span>Mandat</span>
-          </div>
-          <span class="read-cta">Lire l'article <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-      <a class="article-card" href="resources/harcelement-cse.html">
-        <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80')"></div>
-        <div class="card-body">
-          <span class="tag amber">SSCT</span>
-          <h3>Harcèlement au travail : quel rôle pour le CSE ?</h3>
-          <p>Identifier les signaux, sécuriser l'alerte et préserver le rôle collectif.</p>
-          <div class="card-meta">
-            <span>6 min de lecture</span><span class="dot"></span><span>Prévention</span>
-          </div>
-          <span class="read-cta">Lire l'article <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
+      {%- assign articles = site.articles | sort: 'date' | reverse -%}
+      {%- assign nb = 0 -%}
+      {%- for a in articles -%}
+        {%- if a.a_la_une and nb < 3 %}
+{% include carte-article.html article=a base="resources/" %}
+          {%- assign nb = nb | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor %}
     </div>
   </div>
 </section>

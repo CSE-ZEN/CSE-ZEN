@@ -1,0 +1,101 @@
+# Contenu de la page pole-comptabilite.html — modifié depuis l'espace d'édition (Decap CMS)
+"seo":
+  "titre": "CSE ZEN Comptabilité — CSE ZEN"
+  "description": "Pôle comptabilité CSE ZEN avec AKP Conseils."
+"s01":
+  "f01": "Pôle économique & financier"
+  "f02": "CSE ZEN Comptabilité, avec *AKP* Conseils"
+  "f03": "Une expertise économique et financière pour permettre aux élus et représentants du personnel de comprendre les comptes, challenger les informations transmises et négocier à armes égales."
+  "f04":
+    "image": "assets/logo-akp.png"
+    "description": "AKP Conseils"
+"s02":
+  "f01": "Transformer les données complexes en *leviers d'action*"
+  "f02": "AKP Conseils accompagne les CSE dans l'analyse économique, financière et sociale de l'entreprise afin d'éclairer les décisions et les avis rendus par les élus et représentants du personnel."
+  "f03": "Situation économique et financière de l'entreprise."
+  "f04": "Politique sociale, conditions de travail et emploi."
+  "f05": "Orientations stratégiques et conséquences sur l'emploi."
+  "f06": "Examen du rapport sur la réserve spéciale de participation."
+  "f07": "Droit d'alerte économique."
+  "f08": "Appui aux consultations obligatoires."
+  "f09": "Objectif"
+  "f10": "Replacer l'entreprise dans son contexte, analyser les performances réelles, comprendre la répartition de la valeur et apprécier les conséquences sur l'emploi, les salaires et les conditions de travail."
+  "f11": "**5**"
+  "c01":
+    "f01": "Experts dédiés"
+  "f13": "**3**"
+  "c02":
+    "f01": "Consultations obligatoires"
+  "f15": "**360°**"
+  "c03":
+    "f01": "Vue économique & sociale"
+  "f17": "**0€**"
+  "c04":
+    "f01": "Reste à charge CSE"
+"s03":
+  "f01":
+    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80"
+    "description": "Analyse financière et documents comptables"
+  "f02": "Notre approche"
+  "f03": "Rendre les données lisibles pour décider à armes égales"
+  "f04": "AKP Conseils aide les élus et représentants du personnel à dépasser la lecture brute des comptes pour comprendre les choix de l'entreprise, leurs impacts et les marges de discussion possibles."
+  "f05": "Replacer l'entreprise dans son secteur et son environnement concurrentiel."
+  "f06": "Analyser les performances financières de l'entreprise et du groupe."
+  "f07": "Comprendre la répartition de la valeur entre actionnaires, investissements, salaires et emploi."
+  "f08": "Apprécier les conséquences des décisions sur l'activité, l'emploi et les conditions de travail."
+"s04":
+  "f01": "Champs d'intervention"
+  "f02": "Quatre lectures essentielles pour éclairer *vos avis*"
+  "f03": "Des analyses opérationnelles pour comprendre, questionner et négocier sur les sujets qui structurent la vie économique et sociale de l'entreprise."
+  "c01":
+    "f01": "https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=900&q=80"
+    "f02": "Situation économique et financière"
+    "f03": "Comprendre la santé réelle de l'entreprise et les choix économiques qui impactent le collectif."
+    "f04": "Analyse des performances."
+    "f05": "Lecture groupe, filiales et cash."
+    "f06": "Comparaison sectorielle et concurrentielle."
+  "c02":
+    "f01": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=900&q=80"
+    "f02": "Politique sociale"
+    "f03": "Rendre un avis éclairé sur l'emploi, les rémunérations, les conditions de travail et l'organisation."
+    "f04": "Analyse des effectifs et de l'emploi."
+    "f05": "Lecture des rémunérations et primes."
+    "f06": "Appui sur les NAO et accords sociaux."
+  "c03":
+    "f01": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&q=80"
+    "f02": "Participation"
+    "f03": "Défendre les droits des salariés en vérifiant les éléments de calcul et les impacts déclarés."
+    "f04": "Contrôle des éléments de participation."
+    "f05": "Compréhension de l'impact des choix comptables."
+    "f06": "Préparation d'une négociation plus favorable."
+"s05":
+  "f01":
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
+    "description": "Tableaux de bord et analyse stratégique"
+  "f02": "Orientations stratégiques"
+  "f03": "Anticiper les conséquences sur l'emploi et l'organisation"
+  "f04": "L'examen des orientations stratégiques permet au CSE de comprendre la trajectoire de l'entreprise et d'anticiper ses effets sur l'activité, les métiers, la sous-traitance et les emplois."
+  "f05": "Apprécier la cohérence de la stratégie présentée par la direction."
+  "f06": "Identifier les impacts sur les métiers, l'emploi et les conditions de travail."
+  "f07": "Questionner les hypothèses économiques et les choix d'investissement."
+  "f08": "Vérifier la qualité des informations issues de la BDESE."
+"s06":
+  "f01": "Ce que cela apporte"
+  "f02": "Des élus et représentants du personnel mieux armés pour dialoguer, alerter et négocier"
+  "f03": "**Comprendre**"
+  "c01":
+    "f01": "Donner du sens aux documents économiques, sociaux et financiers transmis au CSE."
+  "f05": "**Questionner**"
+  "c02":
+    "f01": "Identifier les incohérences, angles morts ou hypothèses fragiles dans les dossiers."
+  "f07": "**Argumenter**"
+  "c03":
+    "f01": "Appuyer les avis du CSE sur des constats économiques et sociaux objectivés."
+  "f09": "**Négocier**"
+  "c04":
+    "f01": "Transformer l'analyse en propositions concrètes pour les salariés et l'emploi."
+"s07":
+  "f01": "Besoin d'éclairer une consultation économique ?"
+  "f02": "CSE ZEN mobilise AKP Conseils pour objectiver les données et renforcer vos avis."
+  "f03": "Contacter CSE ZEN"
+  "f04": "Retour à l'offre"

@@ -1,14 +1,18 @@
-<!doctype html>
+---
+# Textes modifiables : _data/pages/solutions_digitales.yml (espace d'édition)
+---
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CSE ZEN Solutions digitales — CSE ZEN</title>
-<meta name="description" content="Solutions digitales CSE ZEN : Into The Shift et Inclusive Way Campus.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>{{ site.data.pages.solutions_digitales.seo.titre | escape }}</title>
+<meta content="{{ site.data.pages.solutions_digitales.seo.description | escape }}" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 <style>
   /* Ajustements locaux page Solutions digitales */
   .brand-card.iwc .brand-mark img{border-radius:0}
@@ -32,156 +36,143 @@
   }
   .brand-card .brand-body .anonymat-box strong{color:var(--green);font-weight:700}
 </style>
+{%- include seo.html titre=site.data.pages.solutions_digitales.seo.titre description=site.data.pages.solutions_digitales.seo.description canonical=true %}
 </head>
 <body data-active="Notre offre">
 <div id="site-header"></div>
 <main>
-
 <section class="page-hero">
-  <div class="container">
-    <span class="thread"></span>
-    <div class="kicker">Solutions digitales</div>
-    <h1>CSE ZEN <em>Solutions</em> digitales</h1>
-    <p>Des outils pour sensibiliser, former et mesurer les pratiques sur les sujets clés des CSE : santé-sécurité, QVCT, RPS, prévention du burn-out et conditions de travail.</p>
-    <div class="logo-row">
-      <a class="partner-logo-block" href="https://shiftstudio.intotheshift.io/home.html" target="_blank" rel="noopener" aria-label="Découvrir Into The Shift">
-        <img class="partner-logo" src="assets/its-fond-blanc.png" alt="Into The Shift">
-      </a>
-      <a class="partner-logo-block" href="https://inclusive-way-campus.meandyoutoo.app/" target="_blank" rel="noopener" aria-label="Découvrir Inclusive Way Campus">
-        <img class="partner-logo" src="assets/logo-inclusive-way-campus.png" alt="Inclusive Way Campus">
-      </a>
-    </div>
-  </div>
+<div class="container">
+<span class="thread"></span>
+<div class="kicker">{{ site.data.pages.solutions_digitales.s01.f01 | escape }}</div>
+<h1>{{ site.data.pages.solutions_digitales.s01.f02 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h1>
+<p>{{ site.data.pages.solutions_digitales.s01.f03 | escape }}</p>
+<div class="logo-row">
+<a aria-label="Découvrir Into The Shift" class="partner-logo-block" href="https://shiftstudio.intotheshift.io/home.html" rel="noopener" target="_blank">
+<img alt="{{ site.data.pages.solutions_digitales.s01.f04.description | escape }}" class="partner-logo" src="{{ site.data.pages.solutions_digitales.s01.f04.image }}"/>
+</a>
+<a aria-label="Découvrir Inclusive Way Campus" class="partner-logo-block" href="https://inclusive-way-campus.meandyoutoo.app/" rel="noopener" target="_blank">
+<img alt="{{ site.data.pages.solutions_digitales.s01.f05.description | escape }}" class="partner-logo" src="{{ site.data.pages.solutions_digitales.s01.f05.image }}"/>
+</a>
+</div>
+</div>
 </section>
-
 <section class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="thread center"></span>
-      <div class="kicker">Deux marques, une logique</div>
-      <h2 class="section-title">Diagnostiquer, puis <em>former</em></h2>
-      <p class="section-desc">CSE ZEN combine diagnostic comportemental et e-learning pour passer de l'observation à l'action sur les sujets santé, sécurité, RPS et QVCT.</p>
-    </div>
-
-    <div class="brand-duo">
-
-      <article class="brand-card its">
-        <div class="brand-head">
-          <div class="brand-mark">
-            <a href="https://shiftstudio.intotheshift.io/home.html" target="_blank" rel="noopener" aria-label="Découvrir Into The Shift">
-              <img src="assets/its-fond-blanc.png" alt="Into The Shift">
-            </a>
-            <span class="brand-kicker">Diagnostic<br>comportemental</span>
-          </div>
-          <h2>Diagnostics comportementaux Into The Shift</h2>
-        </div>
-        <div class="brand-body">
-          <p>Plutôt que de demander aux salariés <em>ce qu'ils pensent</em>, Into The Shift les confronte à des <strong>situations professionnelles concrètes</strong> et mesure leurs réflexes réels. Le CSE obtient une lecture collective anonyme des pratiques, pas une enquête déclarative de plus.</p>
-
-          <div class="sub-title">Pour le CSE et la CSSCT</div>
-          <ul class="list">
-            <li>Objectiver les pratiques avant une consultation santé-sécurité ou QVCT.</li>
-            <li>Préparer une formation SSCT avec des données réelles du collectif.</li>
-            <li>Mesurer l'évolution d'un climat de prévention dans le temps (avant / après).</li>
-            <li>Nourrir un avis ou un débrief CSE sans exposer les réponses individuelles.</li>
-            <li>Repérer les signaux faibles avant qu'ils ne deviennent des dossiers.</li>
-          </ul>
-
-          <div class="sub-title">Thématiques couvertes</div>
-          <ul class="list">
-            <li>Santé-sécurité, prévention des accidents et règles de l'art.</li>
-            <li>QVCT, conditions de travail et charge mentale.</li>
-            <li>RPS, harcèlement et signaux faibles.</li>
-            <li>Prévention du burn-out et qualité du management.</li>
-          </ul>
-
-          <div class="anonymat-box">
-            <span><strong>Anonymat garanti.</strong> Aucun compte répondant, aucun email, aucun login, aucun tracking d'IP. C'est ce qui permet aux salariés de répondre sincèrement sur des sujets sensibles.</span>
-          </div>
-
-          <div class="pill-list" style="margin-top:14px">
-            <span class="pill">Santé-sécurité</span>
-            <span class="pill">QVCT</span>
-            <span class="pill">RPS</span>
-            <span class="pill">Burn-out</span>
-            <span class="pill">Management</span>
-            <span class="pill">Transformation</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="brand-card iwc">
-        <div class="brand-head">
-          <div class="brand-mark">
-            <a href="https://inclusive-way-campus.meandyoutoo.app/" target="_blank" rel="noopener" aria-label="Découvrir Inclusive Way Campus">
-              <img src="assets/iwc-transparent.png" alt="Inclusive Way Campus">
-            </a>
-            <span class="brand-kicker">Plateforme<br>e-learning</span>
-          </div>
-          <h2>Modules e-learning Inclusive Way Campus</h2>
-        </div>
-        <div class="brand-body">
-          <p>Des modules courts et structurés pour former les élus et représentants du personnel, et sensibiliser les collectifs sur les sujets de prévention et de qualité de vie au travail.</p>
-          <ul class="list">
-            <li>Parcours accessibles en ligne.</li>
-            <li>Formats courts et opérationnels.</li>
-            <li>Quiz, mises en situation et ressources.</li>
-            <li>Déploiement possible auprès des équipes.</li>
-          </ul>
-
-          <div class="sub-title">Exemples de modules</div>
-          <ul class="list">
-            <li>Prévenir les agissements sexistes et le harcèlement sexuel.</li>
-            <li>Déjouer les biais inconscients.</li>
-            <li>Prévenir les micro-agressions.</li>
-            <li>Stéréotypes de genre : et si on les déconstruisait ?</li>
-            <li>Comprendre l'inclusion et la diversité.</li>
-            <li>Qualité de vie au travail.</li>
-          </ul>
-          <a href="https://inclusive-way-campus.meandyoutoo.app/" target="_blank" rel="noopener">
-            <img src="assets/module-prevenir-sexisme-harcelement-sexuel.png" alt="Module e-learning prévenir le sexisme et le harcèlement sexuel">
-          </a>
-          <div class="pill-list" style="margin-top:8px">
-            <span class="pill">SCORM</span>
-            <span class="pill">Micro-learning</span>
-            <span class="pill">Catalogue</span>
-            <span class="pill">Déploiement équipes</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
+<div class="container">
+<div class="section-header">
+<span class="thread center"></span>
+<div class="kicker">{{ site.data.pages.solutions_digitales.s02.f01 | escape }}</div>
+<h2 class="section-title">{{ site.data.pages.solutions_digitales.s02.f02 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h2>
+<p class="section-desc">{{ site.data.pages.solutions_digitales.s02.f03 | escape }}</p>
+</div>
+<div class="brand-duo">
+<article class="brand-card its">
+<div class="brand-head">
+<div class="brand-mark">
+<a aria-label="Découvrir Into The Shift" href="https://shiftstudio.intotheshift.io/home.html" rel="noopener" target="_blank">
+<img alt="{{ site.data.pages.solutions_digitales.s02.f04.description | escape }}" src="{{ site.data.pages.solutions_digitales.s02.f04.image }}"/>
+</a>
+<span class="brand-kicker">Diagnostic<br/>comportemental</span>
+</div>
+<h2>{{ site.data.pages.solutions_digitales.s02.f05 | escape }}</h2>
+</div>
+<div class="brand-body">
+<p>{{ site.data.pages.solutions_digitales.s02.f06 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+<div class="sub-title">{{ site.data.pages.solutions_digitales.s02.f07 | escape }}</div>
+<ul class="list">
+<li>{{ site.data.pages.solutions_digitales.s02.c01.f01 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c01.f02 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c01.f03 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c01.f04 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c01.f05 | escape }}</li>
+</ul>
+<div class="sub-title">{{ site.data.pages.solutions_digitales.s02.f09 | escape }}</div>
+<ul class="list">
+<li>{{ site.data.pages.solutions_digitales.s02.c02.f01 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c02.f02 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c02.f03 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c02.f04 | escape }}</li>
+</ul>
+<div class="anonymat-box">
+<span>{{ site.data.pages.solutions_digitales.s02.f11 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+</div>
+<div class="pill-list" style="margin-top:14px">
+<span class="pill">{{ site.data.pages.solutions_digitales.s02.f12 | escape }}</span>
+<span class="pill">{{ site.data.pages.solutions_digitales.s02.f13 | escape }}</span>
+<span class="pill">{{ site.data.pages.solutions_digitales.s02.f14 | escape }}</span>
+<span class="pill">{{ site.data.pages.solutions_digitales.s02.f15 | escape }}</span>
+<span class="pill">{{ site.data.pages.solutions_digitales.s02.f16 | escape }}</span>
+<span class="pill">{{ site.data.pages.solutions_digitales.s02.f17 | escape }}</span>
+</div>
+</div>
+</article>
+<article class="brand-card iwc">
+<div class="brand-head">
+<div class="brand-mark">
+<a aria-label="Découvrir Inclusive Way Campus" href="https://inclusive-way-campus.meandyoutoo.app/" rel="noopener" target="_blank">
+<img alt="{{ site.data.pages.solutions_digitales.s02.f18.description | escape }}" src="{{ site.data.pages.solutions_digitales.s02.f18.image }}"/>
+</a>
+<span class="brand-kicker">Plateforme<br/>e-learning</span>
+</div>
+<h2>{{ site.data.pages.solutions_digitales.s02.f19 | escape }}</h2>
+</div>
+<div class="brand-body">
+<p>{{ site.data.pages.solutions_digitales.s02.f20 | escape }}</p>
+<ul class="list">
+<li>{{ site.data.pages.solutions_digitales.s02.c03.f01 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c03.f02 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c03.f03 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c03.f04 | escape }}</li>
+</ul>
+<div class="sub-title">{{ site.data.pages.solutions_digitales.s02.f22 | escape }}</div>
+<ul class="list">
+<li>{{ site.data.pages.solutions_digitales.s02.c04.f01 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c04.f02 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c04.f03 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c04.f04 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c04.f05 | escape }}</li>
+<li>{{ site.data.pages.solutions_digitales.s02.c04.f06 | escape }}</li>
+</ul>
+<a href="https://inclusive-way-campus.meandyoutoo.app/" rel="noopener" target="_blank">
+<img alt="{{ site.data.pages.solutions_digitales.s02.f24.description | escape }}" src="{{ site.data.pages.solutions_digitales.s02.f24.image }}"/>
+</a>
+<div class="pill-list" style="margin-top:8px">
+<span class="pill">{{ site.data.pages.solutions_digitales.s02.f25 | escape }}</span>
+<span class="pill">{{ site.data.pages.solutions_digitales.s02.f26 | escape }}</span>
+<span class="pill">{{ site.data.pages.solutions_digitales.s02.f27 | escape }}</span>
+<span class="pill">{{ site.data.pages.solutions_digitales.s02.f28 | escape }}</span>
+</div>
+</div>
+</article>
+</div>
+</div>
 </section>
-
 <section class="section section-ivoire">
-  <div class="container">
-    <div class="section-header">
-      <span class="thread center"></span>
-      <div class="kicker">Usages possibles</div>
-      <h2 class="section-title">Passer de la sensibilisation à <em>l'action</em></h2>
-    </div>
-    <div class="grid-3">
-      <div class="feature"><strong>Préparer une formation</strong>Identifier les représentations, réflexes et zones de fragilité avant une session.</div>
-      <div class="feature"><strong>Mesurer un climat de prévention</strong>Repérer les pratiques observées sur les enjeux santé, sécurité, RPS ou QVCT.</div>
-      <div class="feature"><strong>Outiller les élus et représentants</strong>Donner des supports concrets pour agir, dialoguer et alerter avec méthode.</div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-header">
+<span class="thread center"></span>
+<div class="kicker">{{ site.data.pages.solutions_digitales.s03.f01 | escape }}</div>
+<h2 class="section-title">{{ site.data.pages.solutions_digitales.s03.f02 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h2>
+</div>
+<div class="grid-3">
+<div class="feature">{{ site.data.pages.solutions_digitales.s03.f03 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+<div class="feature">{{ site.data.pages.solutions_digitales.s03.f04 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+<div class="feature">{{ site.data.pages.solutions_digitales.s03.f05 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+</div>
+</div>
 </section>
-
 <section class="section section-dark">
-  <div class="container">
-    <div class="contact-box">
-      <h2>Construire une solution digitale pour votre CSE et vos représentants</h2>
-      <p>Contactez CSE ZEN pour choisir le bon format : diagnostic, module e-learning, sensibilisation ou parcours mixte.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="contact.html">Demander une présentation <span class="arr" aria-hidden="true">→</span></a>
-        <a class="btn btn-secondary" href="notre-offre.html">Retour à l'offre</a>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="contact-box">
+<h2>{{ site.data.pages.solutions_digitales.s04.f01 | escape }}</h2>
+<p>{{ site.data.pages.solutions_digitales.s04.f02 | escape }}</p>
+<div class="actions">
+<a class="btn btn-primary" href="contact.html">{{ site.data.pages.solutions_digitales.s04.f03 | escape }} <span aria-hidden="true" class="arr">→</span></a>
+<a class="btn btn-secondary" href="notre-offre.html">{{ site.data.pages.solutions_digitales.s04.f04 | escape }}</a>
+</div>
+</div>
+</div>
 </section>
-
 </main>
 <div id="site-footer"></div>
 <script src="header.js"></script>

@@ -1,0 +1,119 @@
+---
+"title": "Trésorier du CSE : budgets, comptabilité et bons réflexes de gestion"
+"titre_google": "Trésorier du CSE : les bons réflexes de gestion — CSE ZEN"
+"description": "Budget de fonctionnement et budget ASC du CSE : calcul, séparation, obligations comptables et bons réflexes du trésorier."
+"etiquette": "Fonctionnement"
+"chapo": "Budget de fonctionnement, budget ASC, obligations comptables et transparence, article L. 2315-61 et suivants du Code du travail."
+"date": "2026-07-05 10:40"
+"categorie": "fonctionnement"
+"carte_titre": "Trésorier du CSE : les bons réflexes de gestion"
+"carte_etiquette": "Fonctionnement"
+"carte_resume": "Budgets, pièces justificatives, traçabilité et transparence auprès des élus."
+"image": "https://images.unsplash.com/photo-1554224155-1696413565d3?w=900&q=80"
+"carte_info_1": "4 min de lecture"
+"carte_info_2": "Gestion"
+"type": "article"
+"llms_titre": "Trésorier du CSE"
+"llms_texte": "budget de fonctionnement, budget ASC et obligations comptables."
+"sommaire":
+- "Pourquoi une vigilance particulière"
+- "Les deux budgets"
+- "Le Code du travail"
+- "Erreurs fréquentes"
+- "Bonnes pratiques"
+- "Exemples concrets"
+- "Un cas rencontré"
+- "Ce que finance chaque budget"
+- "Le placement des excédents"
+- "Préparer la présentation des comptes"
+- "FAQ"
+"continuer_lecture": true
+"a_la_une": false
+---
+
+Le trésorier du CSE joue un rôle central dans la transparence financière de l’instance. Sa mission ne se limite pas à payer des factures : elle consiste à garantir une gestion claire, traçable et conforme aux deux budgets distincts dont dispose le comité, dans un cadre légal précis dont la méconnaissance expose personnellement les élus qui en ont la responsabilité.
+
+## Pourquoi cette fonction est plus exposée qu’il n’y paraît
+
+Trois raisons expliquent l’importance de bien maîtriser ce rôle. D’abord, une mauvaise gestion peut engager la responsabilité civile, voire pénale, du trésorier et des élus impliqués dans la décision de dépense, ce qui dépasse largement la simple question de bonne organisation administrative. Ensuite, la séparation entre les deux budgets — fonctionnement et activités sociales et culturelles — est une règle d’ordre public dont le non-respect peut être qualifié de détournement de fonds, même en l’absence d’intention malveillante. Enfin, le non-versement ou le retard de versement du budget par l’employeur constitue un délit d’entrave, ce qui donne au trésorier un levier légal réel pour faire respecter les obligations de financement.
+
+## Deux budgets, deux finalités, deux règles de calcul
+
+Le budget de fonctionnement, prévu à l’article L. 2315-61, est versé par l’employeur à hauteur de 0,20 % de la masse salariale brute dans les entreprises de 50 à 1 999 salariés, et 0,22 % au-delà de 2 000 salariés. Il finance les missions représentatives du CSE : expertises, formations, communication, frais bancaires, et non les activités sociales et culturelles. Le budget des activités sociales et culturelles (ASC), distinct, n’est pas encadré par un pourcentage fixe dans la loi ; en revanche, l’employeur ne peut jamais verser un montant inférieur à celui de l’année précédente, sauf accord d’entreprise contraire. Le Sénat estime que ce budget représente en moyenne 0,8 % de la masse salariale en France, un usage qui n’a pas de valeur légale contraignante mais qui donne un ordre de grandeur utile en négociation.
+
+## Ce que prévoit précisément le Code du travail
+
+- **Article L. 2315-61** — fixe le taux du budget de fonctionnement (0,20 % ou 0,22 % selon l’effectif) sur la base de la masse salariale brute issue de la DSN.
+- **Article L. 2315-65** — obligation de tenir une comptabilité, quelle que soit la taille du CSE.
+- **Seuils comptables** — comptabilité ultra-simplifiée jusqu’à 153 000 € de ressources annuelles ; comptabilité simplifiée avec expert-comptable au-delà ; nomination d’un commissaire aux comptes au-delà de 3,1 millions d’euros de ressources.
+- **Transferts entre budgets** — possibles par délibération du CSE, dans des conditions et limites fixées par décret, mais interdits pendant les trois années suivant une expertise dont le financement a été partagé à 20 % par le CSE.
+
+La masse salariale brute prise en compte exclut les indemnités versées à l’occasion de la rupture du contrat de travail à durée indéterminée, ce qui peut créer un écart entre l’ancienne base de calcul (compte 641 du plan comptable général) et la base actuelle issue de la déclaration sociale nominative.
+
+<aside>Le budget de fonctionnement et le budget ASC ne sont jamais interchangeables dans le sens d’une dépense mal affectée : une dépense sociale imputée par erreur sur le budget de fonctionnement peut être qualifiée de détournement de fonds, même sans intention frauduleuse.</aside>
+
+## Les erreurs fréquentes des trésoriers
+
+La première erreur consiste à confondre les deux budgets lors d’une dépense ponctuelle, par exemple en finançant un cadeau de fin d’année sur le budget de fonctionnement plutôt que sur le budget ASC. La deuxième erreur est de ne pas vérifier chaque année si le seuil des 153 000 € de ressources a été franchi, ce qui déclenche des obligations comptables renforcées. Une troisième erreur, fréquente en cas de changement de mandature, est de ne pas transmettre correctement les documents comptables au trésorier suivant, ce qui complique la présentation des comptes annuels et peut retarder leur approbation en réunion.
+
+## Les bonnes pratiques de gestion
+
+Une bonne pratique consiste à tenir une comptabilité à jour tout au long de l’année plutôt qu’à la reconstituer en fin d’exercice, avec des justificatifs systématiquement conservés pour chaque dépense. Il est également recommandé de présenter un point de situation financière à chaque réunion ordinaire du CSE, plutôt qu’une seule fois par an, pour permettre aux élus de suivre l’utilisation des deux budgets dans la durée. Enfin, en cas d’excédent significatif du budget de fonctionnement, il est utile d’examiner l’opportunité d’un transfert vers le budget ASC, dans les limites légales, plutôt que de laisser les sommes inutilisées d’année en année.
+
+## Exemples concrets rencontrés
+
+Dans un CSE de 60 salariés, le trésorier avait pris l’habitude de financer les pots de fin d’année sur le budget de fonctionnement, une pratique jamais remise en question jusqu’au changement de mandature. Le nouveau trésorier a corrigé cette imputation, en la basculant sur le budget ASC conformément à sa finalité légale.
+
+Dans un CSE de 800 salariés dont les ressources annuelles dépassaient 200 000 €, la comptabilité était restée ultra-simplifiée malgré le franchissement du seuil de 153 000 € plusieurs années auparavant. La régularisation a nécessité l’intervention d’un expert-comptable pour reconstituer les exercices précédents dans les règles applicables.
+
+## Un cas rencontré : sécuriser un budget de fonctionnement sous-versé
+
+Dans une entreprise de 130 salariés, le trésorier a constaté, en comparant le montant versé par l’employeur à la masse salariale déclarée en DSN, un écart significatif avec le taux légal de 0,20 % applicable. L’employeur, interrogé, a expliqué s’être basé sur une masse salariale erronée incluant par erreur une déduction excessive au titre d’indemnités de rupture.
+
+Le trésorier a formalisé un courrier détaillant le calcul correct, avec les montants précis issus de la DSN, et a demandé la régularisation du budget sur l’exercice en cours. L’employeur a corrigé le versement dans le mois suivant, évitant ainsi un contentieux qui aurait pu être qualifié de délit d’entrave en cas de refus persistant. Ce cas illustre l’intérêt, pour un trésorier, de vérifier systématiquement le calcul du budget plutôt que d’accepter sans contrôle le montant proposé par l’employeur.
+
+## Ce que finance concrètement chaque budget
+
+Le budget de fonctionnement couvre les dépenses liées à l’exercice des attributions économiques et professionnelles du CSE : honoraires d’experts, formations des élus au-delà de l’obligatoire, matériel de communication, frais de déplacement liés aux missions, frais bancaires et, selon les décisions du comité, une partie de la formation des délégués syndicaux ou des représentants de proximité lorsqu’ils existent. Le budget ASC finance, à l’inverse, tout ce qui bénéficie directement aux salariés à titre social ou culturel : chèques-cadeaux, billetterie, voyages, aides diverses, dans le respect du principe d’égalité de traitement entre les salariés, sans discrimination selon l’ancienneté ou le type de contrat.
+
+## La question du placement des excédents
+
+Lorsque le CSE dispose d’un excédent de trésorerie sur l’un ou l’autre budget, il peut le placer sur des comptes rémunérés pour générer des produits financiers complémentaires, dans le respect des règles de prudence applicables à la gestion de fonds représentant l’intérêt collectif des salariés. Le report d’un excédent de fonctionnement d’une année sur l’autre est possible sans limitation, ce qui permet de constituer une réserve pour des dépenses imprévues ou exceptionnelles, comme le financement d’une expertise coûteuse anticipée l’année suivante.
+
+## Comment préparer la présentation annuelle des comptes
+
+La présentation annuelle doit détailler l’utilisation de chaque budget séparément, avec un état de synthèse voté en réunion et consultable par les salariés. Il est utile de préparer, en amont, une comparaison avec l’exercice précédent pour identifier les évolutions significatives et anticiper les questions des élus, ainsi qu’un point sur les excédents et leur affectation envisagée pour l’exercice suivant.
+
+## Questions fréquentes
+
+### Le budget ASC est-il obligatoire ?
+
+Non, contrairement au budget de fonctionnement. Sa mise en place dépend d’un accord d’entreprise ou d’un usage.
+
+### Peut-on transférer le budget de fonctionnement vers l’ASC ?
+
+Oui, par délibération, dans les limites fixées par décret, sauf pendant les trois années suivant une expertise financée à 20 % par le CSE.
+
+### Que risque le CSE en cas de mauvaise gestion ?
+
+La responsabilité civile, voire pénale, des élus peut être engagée en cas d’utilisation non conforme des fonds.
+
+### Comment est calculée la masse salariale de référence ?
+
+Sur la base de la déclaration sociale nominative (DSN), en excluant les indemnités de rupture du contrat à durée indéterminée.
+
+### À partir de quel seuil un commissaire aux comptes est-il obligatoire ?
+
+Au-delà de 3,1 millions d’euros de ressources annuelles du CSE.
+
+### Le trésorier peut-il être tenu personnellement responsable ?
+
+Oui, en cas de faute de gestion caractérisée ou d’utilisation des fonds non conforme à leur finalité légale.
+
+### Le budget ASC peut-il être modulé selon les revenus des salariés ?
+
+Oui, le CSE peut adapter certains avantages selon des critères objectifs comme le revenu fiscal de référence ou la situation familiale, sans créer de discrimination injustifiée.
+
+### Que faire en cas de changement de trésorier en cours de mandat ?
+
+Une transmission formalisée des documents comptables et des justificatifs est indispensable pour garantir la continuité de la gestion et la présentation correcte des comptes annuels.

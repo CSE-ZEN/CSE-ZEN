@@ -2,6 +2,10 @@
 # Ce fichier est modifié depuis l'espace d'édition (Pages CMS).
 # Les champs « page » et « icone » sont gérés par l'administratrice du site.
 
+seo:
+  titre: "CSE ZEN | Experts CSE et représentants du personnel"
+  description: "CSE ZEN accompagne les CSE et représentants du personnel avec une offre juridique, comptable, formation, solutions digitales et communication."
+
 bandeau:
   surtitre: "Partenaire de confiance des CSE et des représentants du personnel"
   titre: "Agissez en toute *sérénité* face aux enjeux de votre mandat"
@@ -76,6 +80,10 @@ qui_sommes_nous:
       texte: "Assistance individuelle, défense du mandat et contentieux."
     - titre: "Renforcer le pouvoir d'agir"
       texte: "Outils, méthodes, formations et appuis opérationnels."
+
+ressources:
+  surtitre: "Ressources"
+  titre: "Articles pratiques pour les élus CSE et représentants du personnel"
 
 contact:
   titre: "Parlons de votre CSE et de vos représentants"

@@ -1,97 +1,96 @@
-<!doctype html>
+---
+# Textes modifiables : _data/pages/equipe_reseau.yml (espace d'édition)
+---
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Équipe & réseau — CSE ZEN</title>
-<meta name="description" content="Découvrez l'équipe et les partenaires CSE ZEN.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>{{ site.data.pages.equipe_reseau.seo.titre | escape }}</title>
+<meta content="{{ site.data.pages.equipe_reseau.seo.description | escape }}" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+{%- include seo.html titre=site.data.pages.equipe_reseau.seo.titre description=site.data.pages.equipe_reseau.seo.description canonical=true %}
 </head>
-<body data-active="Équipe & réseau">
+<body data-active="Équipe &amp; réseau">
 <div id="site-header"></div>
 <main>
-
 <section class="page-hero">
-  <div class="container">
-    <span class="thread"></span>
-    <div class="kicker">Équipe & réseau</div>
-    <h1>Une équipe <em>pluridisciplinaire</em> au service des élus CSE et représentants du personnel</h1>
-    <p>CSE ZEN coordonne son équipe interne, CSE ZEN Avocats, AKP Conseils et un réseau de formateurs et experts spécialisés.</p>
-  </div>
+<div class="container">
+<span class="thread"></span>
+<div class="kicker">{{ site.data.pages.equipe_reseau.s01.f01 | escape }}</div>
+<h1>{{ site.data.pages.equipe_reseau.s01.f02 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h1>
+<p>{{ site.data.pages.equipe_reseau.s01.f03 | escape }}</p>
+</div>
 </section>
-
 <section class="section">
-  <div class="container">
-    <div class="team-section-head">
-      <span class="thread"></span>
-      <h2>Direction CSE ZEN</h2>
-        </div>
-    <div class="team-grid">
-      <div class="person">
-        <div class="photo"><img src="assets/gregory-villeneuve.jpeg" alt="Grégory Villeneuve"></div>
-        <div class="info"><h3>Grégory Villeneuve</h3><p>Président — CSE ZEN</p></div>
-      </div>
-      <div class="person">
-        <div class="photo"><img src="assets/sandra-legretard.webp" alt="Sandra Legretard"></div>
-        <div class="info"><h3>Sandra Legretard</h3><p>Responsable partenariats — CSE ZEN</p></div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="team-section-head">
+<span class="thread"></span>
+<h2>{{ site.data.pages.equipe_reseau.s02.f01 | escape }}</h2>
+</div>
+<div class="team-grid">
+<div class="person">
+<div class="photo"><img alt="{{ site.data.pages.equipe_reseau.s02.c01.f01.description | escape }}" src="{{ site.data.pages.equipe_reseau.s02.c01.f01.image }}"/></div>
+<div class="info"><h3>{{ site.data.pages.equipe_reseau.s02.c01.f02 | escape }}</h3><p>{{ site.data.pages.equipe_reseau.s02.c01.f03 | escape }}</p></div>
+</div>
+<div class="person">
+<div class="photo"><img alt="{{ site.data.pages.equipe_reseau.s02.c02.f01.description | escape }}" src="{{ site.data.pages.equipe_reseau.s02.c02.f01.image }}"/></div>
+<div class="info"><h3>{{ site.data.pages.equipe_reseau.s02.c02.f02 | escape }}</h3><p>{{ site.data.pages.equipe_reseau.s02.c02.f03 | escape }}</p></div>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section section-ivoire">
-  <div class="container">
-    <div class="team-section-head">
-      <span class="thread"></span>
-      <h2>Partenaires experts</h2>
-      <span class="meta">Cabinets associés au quotidien</span>
-    </div>
-    <div class="grid-2 partners-grid">
-      <div class="partner-card partner-card-avocats">
-        <div class="mini-brand" aria-label="CSE ZEN Avocats">CSE ZEN <strong>Avocats</strong></div>
-        <h3>CSE ZEN Avocats</h3>
-        <p>Pôle juridique : assistance juridique, contentieux, droit du travail et stratégie d'instance pour accompagner les élus CSE et représentants du personnel dans leurs décisions sensibles.</p>
-        <a class="btn btn-light" href="pole-avocats.html">Voir le pôle avocats <span class="arr" aria-hidden="true">→</span></a>
-      </div>
-      <div class="partner-card partner-card-akp">
-        <img class="mini-logo" src="assets/logo-akp.png" alt="AKP Conseils">
-        <h3>AKP Conseils</h3>
-        <p>Partenaire du pôle comptable : expertise économique, financière et sociale pour aider les élus et représentants du personnel à comprendre les comptes, objectiver les données et renforcer leurs avis.</p>
-        <a class="btn btn-light" href="pole-comptabilite.html">Voir le pôle comptabilité <span class="arr" aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="team-section-head">
+<span class="thread"></span>
+<h2>{{ site.data.pages.equipe_reseau.s03.f01 | escape }}</h2>
+<span class="meta">{{ site.data.pages.equipe_reseau.s03.f02 | escape }}</span>
+</div>
+<div class="grid-2 partners-grid">
+<div class="partner-card partner-card-avocats">
+<div aria-label="CSE ZEN Avocats" class="mini-brand">{{ site.data.pages.equipe_reseau.s03.f03 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+<h3>{{ site.data.pages.equipe_reseau.s03.f04 | escape }}</h3>
+<p>{{ site.data.pages.equipe_reseau.s03.f05 | escape }}</p>
+<a class="btn btn-light" href="pole-avocats.html">{{ site.data.pages.equipe_reseau.s03.f06 | escape }} <span aria-hidden="true" class="arr">→</span></a>
+</div>
+<div class="partner-card partner-card-akp">
+<img alt="{{ site.data.pages.equipe_reseau.s03.f07.description | escape }}" class="mini-logo" src="{{ site.data.pages.equipe_reseau.s03.f07.image }}"/>
+<h3>{{ site.data.pages.equipe_reseau.s03.f08 | escape }}</h3>
+<p>{{ site.data.pages.equipe_reseau.s03.f09 | escape }}</p>
+<a class="btn btn-light" href="pole-comptabilite.html">{{ site.data.pages.equipe_reseau.s03.f10 | escape }} <span aria-hidden="true" class="arr">→</span></a>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section">
-  <div class="container">
-    <div class="team-section-head">
-      <span class="thread"></span>
-      <h2>Formateurs & experts</h2>
-      <span class="meta">Réseau d'intervenants spécialisés</span>
-    </div>
-    <div style="max-width:780px">
-      <p class="section-desc">Des intervenants spécialisés en droit du travail, SSCT, économie, communication, référents sexisme et harcèlement sexuel, et accompagnement des instances représentatives.</p>
-    </div>
-  </div>
+<div class="container">
+<div class="team-section-head">
+<span class="thread"></span>
+<h2>{{ site.data.pages.equipe_reseau.s04.f01 | escape }}</h2>
+<span class="meta">{{ site.data.pages.equipe_reseau.s04.f02 | escape }}</span>
+</div>
+<div style="max-width:780px">
+<p class="section-desc">{{ site.data.pages.equipe_reseau.s04.f03 | escape }}</p>
+</div>
+</div>
 </section>
-
 <section class="section section-dark">
-  <div class="container">
-    <div class="contact-box">
-      <h2>Construire le bon dispositif pour vos élus et représentants du personnel</h2>
-      <p>CSE ZEN mobilise l'équipe et le réseau adaptés à votre contexte, votre secteur et vos enjeux.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="contact.html">Échanger avec l'équipe <span class="arr" aria-hidden="true">→</span></a>
-        <a class="btn btn-secondary" href="notre-offre.html">Voir l'offre</a>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="contact-box">
+<h2>{{ site.data.pages.equipe_reseau.s05.f01 | escape }}</h2>
+<p>{{ site.data.pages.equipe_reseau.s05.f02 | escape }}</p>
+<div class="actions">
+<a class="btn btn-primary" href="contact.html">{{ site.data.pages.equipe_reseau.s05.f03 | escape }} <span aria-hidden="true" class="arr">→</span></a>
+<a class="btn btn-secondary" href="notre-offre.html">{{ site.data.pages.equipe_reseau.s05.f04 | escape }}</a>
+</div>
+</div>
+</div>
 </section>
-
 </main>
 <div id="site-footer"></div>
 <script src="header.js"></script>

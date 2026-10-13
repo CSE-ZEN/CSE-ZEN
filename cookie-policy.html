@@ -1,48 +1,49 @@
-<!doctype html>
+---
+# Textes modifiables : _data/pages/cookies.yml (espace d'édition)
+---
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Politique de cookies — CSE ZEN</title>
-  <meta name="description" content="Politique de cookies du site CSE ZEN : information sur les cookies strictement nécessaires et l’absence d’outil de mesure d’audience à ce stade.">
-  <link rel="canonical" href="https://www.cse-zen.com/cookie-policy.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>{{ site.data.pages.cookies.seo.titre | escape }}</title>
+<meta content="{{ site.data.pages.cookies.seo.description | escape }}" name="description"/>
+<link href="https://www.cse-zen.com/cookie-policy.html" rel="canonical"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+{%- include seo.html titre=site.data.pages.cookies.seo.titre description=site.data.pages.cookies.seo.description %}
 </head>
 <body data-active="">
-  <div id="site-header"></div>
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <span class="thread"></span>
-        <div class="kicker">Confidentialité</div>
-        <h1>Politique de cookies</h1>
-        <p>Usage des cookies et traceurs sur le site CSE ZEN.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container prose">
-        <h2>Cookies utilisés</h2>
-        <p>À ce stade, le site CSE ZEN n’utilise pas Google Analytics ni autre outil de mesure d’audience nécessitant le dépôt de cookies publicitaires ou statistiques.</p>
-        <p>Le site peut uniquement s’appuyer sur des éléments techniques nécessaires à son bon fonctionnement, à l’affichage des pages et à la sécurité de la navigation.</p>
-
-        <h2>Absence de cookies marketing</h2>
-        <p>Nous ne déposons pas de cookies publicitaires et ne réalisons pas de profilage publicitaire à partir de votre navigation sur ce site.</p>
-
-        <h2>Évolution de cette politique</h2>
-        <p>Si des outils de mesure d’audience, de suivi marketing ou des services tiers nécessitant un consentement sont ajoutés ultérieurement, cette page sera mise à jour et un mécanisme de consentement adapté sera mis en place.</p>
-
-        <h2>Contact</h2>
-        <p>Pour toute question concernant cette politique de cookies, vous pouvez nous écrire à <a href="mailto:contact@cse-zen.com">contact@cse-zen.com</a>.</p>
-      </div>
-    </section>
-  </main>
-  <div id="site-footer"></div>
-  <script src="header.js"></script>
-  <script src="footer.js"></script>
-  <script src="script.js"></script>
+<div id="site-header"></div>
+<main>
+<section class="page-hero">
+<div class="container">
+<span class="thread"></span>
+<div class="kicker">{{ site.data.pages.cookies.s01.f01 | escape }}</div>
+<h1>{{ site.data.pages.cookies.s01.f02 | escape }}</h1>
+<p>{{ site.data.pages.cookies.s01.f03 | escape }}</p>
+</div>
+</section>
+<section class="section">
+<div class="container prose">
+<h2>{{ site.data.pages.cookies.s02.f01 | escape }}</h2>
+<p>{{ site.data.pages.cookies.s02.f02 | escape }}</p>
+<p>{{ site.data.pages.cookies.s02.f03 | escape }}</p>
+<h2>{{ site.data.pages.cookies.s02.f04 | escape }}</h2>
+<p>{{ site.data.pages.cookies.s02.f05 | escape }}</p>
+<h2>{{ site.data.pages.cookies.s02.f06 | escape }}</h2>
+<p>{{ site.data.pages.cookies.s02.f07 | escape }}</p>
+<h2>{{ site.data.pages.cookies.s02.f08 | escape }}</h2>
+<p>{{ site.data.pages.cookies.s02.f09 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+</div>
+</section>
+</main>
+<div id="site-footer"></div>
+<script src="header.js"></script>
+<script src="footer.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,3 +1,7 @@
+---
+# Plan du site généré automatiquement (les articles sont ajoutés à chaque publication)
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -50,56 +54,14 @@
     <lastmod>2026-07-05</lastmod>
     <priority>0.6</priority>
   </url>
+{%- assign articles = site.articles | sort: 'date' | reverse %}
+{%- for a in articles %}
   <url>
-    <loc>https://www.cse-zen.com/resources/qvct-cse.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>{{ site.url }}{{ a.url }}</loc>
+    <lastmod>{{ a.date | date: '%Y-%m-%d' }}</lastmod>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.cse-zen.com/resources/risques-psychosociaux-cse.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.cse-zen.com/resources/formation-ssct-cse.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.cse-zen.com/resources/harcelement-cse.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.cse-zen.com/resources/cssct-cse.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.cse-zen.com/resources/reorganisation-cse.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.cse-zen.com/resources/article-consultations-obligatoires.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.cse-zen.com/resources/article-droit-alerte-economique.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.cse-zen.com/resources/article-tresorier-cse.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.cse-zen.com/resources/article-negociation-cse.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <priority>0.6</priority>
-  </url>
+{%- endfor %}
   <url>
     <loc>https://www.cse-zen.com/resource-tags/qvct.html</loc>
     <lastmod>2026-07-05</lastmod>

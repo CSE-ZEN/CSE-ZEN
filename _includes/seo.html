@@ -1,0 +1,18 @@
+{%- comment -%}
+  Balises d'aperçu pour LinkedIn, les réseaux sociaux et Google.
+  Paramètres : titre, description, image (facultatif), type (website|article), canonical (true pour ajouter la balise canonique)
+{%- endcomment -%}
+{%- assign seo_url = page.url | replace: '/index.html', '/' | prepend: site.url -%}
+{%- assign seo_img = include.image | default: '/assets/logo-cse-zen.jpg' -%}
+{%- unless seo_img contains '://' -%}{%- assign seo_img = seo_img | prepend: '/' | replace: '//', '/' | prepend: site.url -%}{%- endunless -%}
+{%- if include.canonical %}
+<link rel="canonical" href="{{ seo_url }}">
+{%- endif %}
+<meta property="og:site_name" content="CSE ZEN">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="{{ include.type | default: 'website' }}">
+<meta property="og:title" content="{{ include.titre | strip_html | escape }}">
+<meta property="og:description" content="{{ include.description | strip_html | escape }}">
+<meta property="og:url" content="{{ seo_url }}">
+<meta property="og:image" content="{{ seo_img }}">
+<meta name="twitter:card" content="summary_large_image">

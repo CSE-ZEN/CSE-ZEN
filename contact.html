@@ -1,74 +1,72 @@
-<!doctype html>
+---
+# Textes modifiables : _data/pages/contact.yml (espace d'édition)
+---
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact — CSE ZEN</title>
-  <meta name="description" content="Contactez CSE ZEN.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>{{ site.data.pages.contact.seo.titre | escape }}</title>
+<meta content="{{ site.data.pages.contact.seo.description | escape }}" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+{%- include seo.html titre=site.data.pages.contact.seo.titre description=site.data.pages.contact.seo.description canonical=true %}
 </head>
 <body data-active="Contact">
-  <div id="site-header"></div>
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <span class="thread"></span>
-        <div class="kicker">Contact</div>
-        <h1>Échangeons sur les besoins de <em>votre CSE et de vos représentants</em></h1>
-        <p>Premier échange sans engagement pour comprendre votre contexte, vos urgences et les expertises à mobiliser.</p>
-      </div>
-    </section>
-
-    <section class="section contact-section">
-      <div class="container">
-        <div class="contact-panel">
-          <div class="contact-panel-left">
-            <a class="contact-panel-logo" href="https://www.cse-zen.com/" target="_blank" rel="noopener" aria-label="CSE ZEN">
-              <img src="assets/logo-cse-zen-panda.jpg" alt="CSE ZEN">
-            </a>
-
-            <div class="contact-panel-address">
-              <strong>Adresse</strong>
-              <span>11 avenue de l'Opéra</span>
-              <span>75001 Paris</span>
-            </div>
-
-            <a class="contact-panel-linkedin" href="https://www.linkedin.com/company/cselegal/" target="_blank" rel="noopener" aria-label="LinkedIn CSE ZEN" title="LinkedIn CSE ZEN">
-              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.1 20.45H3.53V9H7.1v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/>
-              </svg>
-              <span>LinkedIn</span>
-            </a>
-          </div>
-
-          <div class="contact-panel-right">
-            <span class="thread"></span>
-            <h2>Nous écrire directement</h2>
-            <p>Pour nous présenter votre besoin, envoyez-nous un message avec le nom de votre CSE, votre contexte et les sujets à traiter.</p>
-            <div class="actions">
-              <a class="btn btn-primary" href="mailto:contact@cse-zen.com?subject=Demande%20de%20contact%20CSE%20ZEN">Contactez-nous</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section">
-      <div class="container article">
-        <h2>Dans quels cas contacter CSE ZEN ?</h2>
-        <p>Les élus CSE et représentants du personnel peuvent nous solliciter pour préparer une réunion importante, comprendre une consultation obligatoire, organiser une formation, obtenir un appui juridique ou économique, ou structurer une démarche de prévention sur les sujets de santé, sécurité et conditions de travail. L’objectif du premier échange est de qualifier rapidement le besoin : urgence, calendrier social, documents disponibles, niveau de risque et expertises à mobiliser.</p>
-        <p>Nous intervenons auprès de CSE de tailles différentes, avec une approche opérationnelle : rendre les obligations compréhensibles, aider les élus et représentants du personnel à poser les bonnes questions, sécuriser les étapes et transformer les sujets complexes en plan d’action. Vous pouvez aussi nous écrire pour un besoin de formation SSCT, de soutien sur les RPS, de préparation d’avis ou de mise en place d’un outil digital destiné aux représentants du personnel.</p>
-      </div>
-    </section>
-
-  </main>
-  <div id="site-footer"></div>
-  <script src="header.js"></script>
-  <script src="footer.js"></script>
-  <script src="script.js"></script>
+<div id="site-header"></div>
+<main>
+<section class="page-hero">
+<div class="container">
+<span class="thread"></span>
+<div class="kicker">{{ site.data.pages.contact.s01.f01 | escape }}</div>
+<h1>{{ site.data.pages.contact.s01.f02 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h1>
+<p>{{ site.data.pages.contact.s01.f03 | escape }}</p>
+</div>
+</section>
+<section class="section contact-section">
+<div class="container">
+<div class="contact-panel">
+<div class="contact-panel-left">
+<a aria-label="CSE ZEN" class="contact-panel-logo" href="https://www.cse-zen.com/" rel="noopener" target="_blank">
+<img alt="{{ site.data.pages.contact.s02.f01.description | escape }}" src="{{ site.data.pages.contact.s02.f01.image }}"/>
+</a>
+<div class="contact-panel-address">
+{{ site.data.pages.contact.s02.f02 | markdownify | remove: '<p>' | remove: '</p>' | strip }}
+<span>{{ site.data.pages.contact.s02.f03 | escape }}</span>
+<span>{{ site.data.pages.contact.s02.f04 | escape }}</span>
+</div>
+<a aria-label="LinkedIn CSE ZEN" class="contact-panel-linkedin" href="https://www.linkedin.com/company/cselegal/" rel="noopener" target="_blank" title="LinkedIn CSE ZEN">
+<svg aria-hidden="true" focusable="false" height="24" viewbox="0 0 24 24" width="24">
+<path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.1 20.45H3.53V9H7.1v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z" fill="currentColor"></path>
+</svg>
+<span>{{ site.data.pages.contact.s02.f05 | escape }}</span>
+</a>
+</div>
+<div class="contact-panel-right">
+<span class="thread"></span>
+<h2>{{ site.data.pages.contact.s02.f06 | escape }}</h2>
+<p>{{ site.data.pages.contact.s02.f07 | escape }}</p>
+<div class="actions">
+<a class="btn btn-primary" href="mailto:contact@cse-zen.com?subject=Demande%20de%20contact%20CSE%20ZEN">{{ site.data.pages.contact.s02.f08 | escape }}</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container article">
+<h2>{{ site.data.pages.contact.s03.f01 | escape }}</h2>
+<p>{{ site.data.pages.contact.s03.f02 | escape }}</p>
+<p>{{ site.data.pages.contact.s03.f03 | escape }}</p>
+</div>
+</section>
+</main>
+<div id="site-footer"></div>
+<script src="header.js"></script>
+<script src="footer.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

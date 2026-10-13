@@ -1,0 +1,44 @@
+# Contenu de la page equipe-reseau.html — modifié depuis l'espace d'édition (Decap CMS)
+"seo":
+  "titre": "Équipe & réseau — CSE ZEN"
+  "description": "Découvrez l'équipe et les partenaires CSE ZEN."
+"s01":
+  "f01": "Équipe & réseau"
+  "f02": "Une équipe *pluridisciplinaire* au service des élus CSE et représentants du personnel"
+  "f03": "CSE ZEN coordonne son équipe interne, CSE ZEN Avocats, AKP Conseils et un réseau de formateurs et experts spécialisés."
+"s02":
+  "f01": "Direction CSE ZEN"
+  "c01":
+    "f01":
+      "image": "assets/gregory-villeneuve.jpeg"
+      "description": "Grégory Villeneuve"
+    "f02": "Grégory Villeneuve"
+    "f03": "Président — CSE ZEN"
+  "c02":
+    "f01":
+      "image": "assets/sandra-legretard.webp"
+      "description": "Sandra Legretard"
+    "f02": "Sandra Legretard"
+    "f03": "Responsable partenariats — CSE ZEN"
+"s03":
+  "f01": "Partenaires experts"
+  "f02": "Cabinets associés au quotidien"
+  "f03": "CSE ZEN **Avocats**"
+  "f04": "CSE ZEN Avocats"
+  "f05": "Pôle juridique : assistance juridique, contentieux, droit du travail et stratégie d'instance pour accompagner les élus CSE et représentants du personnel dans leurs décisions sensibles."
+  "f06": "Voir le pôle avocats"
+  "f07":
+    "image": "assets/logo-akp.png"
+    "description": "AKP Conseils"
+  "f08": "AKP Conseils"
+  "f09": "Partenaire du pôle comptable : expertise économique, financière et sociale pour aider les élus et représentants du personnel à comprendre les comptes, objectiver les données et renforcer leurs avis."
+  "f10": "Voir le pôle comptabilité"
+"s04":
+  "f01": "Formateurs & experts"
+  "f02": "Réseau d'intervenants spécialisés"
+  "f03": "Des intervenants spécialisés en droit du travail, SSCT, économie, communication, référents sexisme et harcèlement sexuel, et accompagnement des instances représentatives."
+"s05":
+  "f01": "Construire le bon dispositif pour vos élus et représentants du personnel"
+  "f02": "CSE ZEN mobilise l'équipe et le réseau adaptés à votre contexte, votre secteur et vos enjeux."
+  "f03": "Échanger avec l'équipe"
+  "f04": "Voir l'offre"

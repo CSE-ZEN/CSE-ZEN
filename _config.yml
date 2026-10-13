@@ -1,0 +1,26 @@
+# Configuration Jekyll (construction du site par GitHub Pages)
+title: CSE ZEN
+url: https://www.cse-zen.com
+lang: fr
+timezone: Europe/Paris
+# Publier les articles dès leur enregistrement, même si l'heure est légèrement en avance
+future: true
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+# Articles de la page Ressources (rédigés depuis l'espace d'édition)
+collections:
+  articles:
+    output: true
+    permalink: /resources/:name.html
+
+defaults:
+  - scope:
+      type: articles
+    values:
+      layout: article

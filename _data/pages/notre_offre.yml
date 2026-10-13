@@ -1,0 +1,84 @@
+# Contenu de la page notre-offre.html — modifié depuis l'espace d'édition (Decap CMS)
+"seo":
+  "titre": "Notre offre — CSE ZEN"
+  "description": "Découvrez les six pôles CSE ZEN : juridique, comptabilité, formation, solutions digitales, communication et assistance au fonctionnement du CSE."
+"s01":
+  "f01": "Notre offre"
+  "f02": "Une offre *complète* pour accompagner les CSE et représentants du personnel dans toutes leurs missions"
+  "f03": "Juridique, économique, formation, solutions digitales, communication et assistance : CSE ZEN coordonne un réseau d'expertises pour aider les élus CSE et représentants du personnel à agir efficacement."
+"s02":
+  "c01":
+    "f01": "CSE ZEN **Avocats**"
+    "f02": "Pôle juridique"
+    "f03": "CSE ZEN Avocats"
+    "f04": "Assistance juridique quotidienne, consultations, contentieux individuel et collectif, SSCT, harcèlement et accompagnement stratégique face à l'employeur."
+    "f05": "Consultations"
+    "f06": "Contentieux"
+    "f07": "SSCT"
+    "f08": "Harcèlement"
+  "c02":
+    "f01":
+      "image": "assets/logo-akp.png"
+      "description": "AKP Conseils"
+    "f02": "Pôle économique"
+    "f03": "CSE ZEN Expertises"
+    "f04": "Avec AKP Conseils : expertise économique et financière, consultations obligatoires, participation, orientations stratégiques et droit d'alerte économique."
+    "f05": "Comptes"
+    "f06": "Politique sociale"
+    "f07": "Orientations stratégiques"
+    "f08": "Participation"
+  "c03":
+    "f01":
+      "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=900&q=80"
+      "description": "Formation CSE"
+    "f02": "Pôle formation"
+    "f03": "CSE ZEN Formations sur-mesure"
+    "f04": "Formations certifiées Qualiopi et agréées DREETS : SSCT, économique, référent harcèlement, secrétaire, trésorier, négociation, RPS, DUERP et communication."
+    "f05": "Qualiopi"
+    "f06": "DREETS"
+    "f07": "SSCT"
+    "f08": "Villa Zen"
+  "c04":
+    "f01":
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80"
+      "description": "Solutions digitales CSE ZEN"
+    "f02": "Solutions digitales"
+    "f03": "CSE ZEN Solutions digitales"
+    "f04": "Diagnostics comportementaux Into The Shift et modules e-learning Inclusive Way Campus sur la santé-sécurité, la QVCT, les RPS et la prévention du burn-out."
+    "f05": "Into The Shift"
+    "f06": "E-learning"
+    "f07": "RPS"
+    "f08": "Burn-out"
+  "c05":
+    "f01":
+      "image": "assets/communication/hero-communication-cse-zen.png"
+      "description": "CSE ZEN Communication : supports créatifs et sur mesure pour les projets CSE"
+    "f02": "Pôle communication"
+    "f03": "CSE ZEN Communication"
+    "f04": "Une équipe de Community managers qui est à votre disposition pour encore mieux communiquer au quotidien auprès des salariés."
+    "f05": "Supports imprimés"
+    "f06": "Supports digitaux"
+    "f07": "Vidéo & motion design"
+    "f08": "Événementiel"
+    "f09": "Objets personnalisés"
+  "c06":
+    "f01":
+      "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80"
+      "description": "Réunion de travail et prise de notes pour la rédaction d’un procès-verbal CSE"
+    "f02": "Pôle assistance"
+    "f03": "CSE ZEN Assistance"
+    "f04": "Un appui opérationnel pour alléger les missions administratives du CSE : rédaction de procès-verbaux et comptes rendus de réunions ou de commissions, structuration et mise en forme des échanges."
+    "f05": "Procès-verbaux"
+    "f06": "Comptes rendus"
+    "f07": "Réunions CSE"
+    "f08": "Commissions"
+    "f09": "Secrétariat"
+"s03":
+  "f01": "Un fonctionnement clair et *lisible*"
+  "f02": "CSE ZEN privilégie une relation directe, un forfait préétabli, une utilisation illimitée et une absence d'engagement reconduit automatiquement."
+  "f03": "**Forfait annuel préétabli**Le budget est fixé en début de relation."
+  "f04": "**Utilisation illimitée**Les élus et représentants du personnel peuvent solliciter l'accompagnement sans décompte horaire."
+  "f05": "**Bilan annuel**Le renouvellement repose sur la satisfaction et les résultats obtenus."
+"s04":
+  "f01": "Relier les pôles d’expertise aux sujets de terrain"
+  "f02": "L’offre CSE ZEN s’appuie sur une logique de complémentarité : un sujet QVCT peut nécessiter un éclairage juridique, une analyse économique, une formation des élus et représentants du personnel, un outil de suivi et des supports de communication pour mobiliser les salariés. Les pages ressources permettent d’orienter rapidement les représentants du personnel vers les contenus associés aux sujets les plus fréquents : [QVCT](resource-tags/qvct.html), [RPS](resource-tags/rps.html) et [SSCT](resource-tags/ssct.html)."

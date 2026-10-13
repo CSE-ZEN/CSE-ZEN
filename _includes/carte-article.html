@@ -1,0 +1,25 @@
+{%- comment -%} Carte d'article. Paramètres : article, base (chemin vers resources/), compact (sans image) {%- endcomment -%}
+{%- assign a = include.article -%}
+{%- assign fichier = a.url | split: '/' | last -%}
+{%- case a.categorie -%}
+  {%- when 'juridique' -%}{%- assign couleur = ' red' -%}
+  {%- when 'qvct' -%}{%- assign couleur = ' blue' -%}
+  {%- when 'rps' -%}{%- assign couleur = ' amber' -%}
+  {%- when 'ssct' -%}{%- assign couleur = ' green' -%}
+  {%- else -%}{%- assign couleur = '' -%}
+{%- endcase %}
+      <a class="article-card"{% if include.filtre %} data-cat="{{ a.categorie }}"{% endif %} href="{{ include.base }}{{ fichier }}">
+        {%- unless include.compact %}
+        <div class="card-image" style="background-image:url('{{ a.image }}')"></div>
+        {%- endunless %}
+        <div class="card-body">
+          <span class="tag{{ couleur }}">{{ a.carte_etiquette | default: a.etiquette | escape }}</span>
+          <h3>{{ a.carte_titre | default: a.title | escape }}</h3>
+          <p>{{ a.carte_resume | default: a.chapo | strip_html | escape }}</p>
+          {%- assign info1 = a.carte_info_1 -%}
+          {%- if info1 == nil or info1 == '' -%}{%- assign minutes = a.content | number_of_words | divided_by: 200 | plus: 1 -%}{%- assign info1 = minutes | append: ' min de lecture' -%}{%- endif -%}
+          {%- assign info2 = a.carte_info_2 | default: a.etiquette %}
+          <div class="card-meta"><span>{{ info1 | escape }}</span><span class="dot"></span><span>{{ info2 | escape }}</span></div>
+          <span class="read-cta">{% if a.type == 'dossier' %}Lire le dossier{% else %}Lire l'article{% endif %} <span class="arr" aria-hidden="true">→</span></span>
+        </div>
+      </a>

@@ -1,155 +1,147 @@
-<!doctype html>
+---
+# Textes modifiables : _data/pages/notre_offre.yml (espace d'édition)
+---
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Notre offre — CSE ZEN</title>
-<link rel="canonical" href="https://www.cse-zen.com/notre-offre.html">
-<meta name="description" content="Découvrez les six pôles CSE ZEN : juridique, comptabilité, formation, solutions digitales, communication et assistance au fonctionnement du CSE.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>{{ site.data.pages.notre_offre.seo.titre | escape }}</title>
+<link href="https://www.cse-zen.com/notre-offre.html" rel="canonical"/>
+<meta content="{{ site.data.pages.notre_offre.seo.description | escape }}" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="style.css" rel="stylesheet"/>
+{%- include seo.html titre=site.data.pages.notre_offre.seo.titre description=site.data.pages.notre_offre.seo.description %}
 </head>
 <body data-active="Notre offre">
 <div id="site-header"></div>
 <main>
-
 <section class="page-hero">
-  <div class="container">
-    <span class="thread"></span>
-    <div class="kicker">Notre offre</div>
-    <h1>Une offre <em>complète</em> pour accompagner les CSE et représentants du personnel dans toutes leurs missions</h1>
-    <p>Juridique, économique, formation, solutions digitales, communication et assistance : CSE ZEN coordonne un réseau d'expertises pour aider les élus CSE et représentants du personnel à agir efficacement.</p>
-  </div>
+<div class="container">
+<span class="thread"></span>
+<div class="kicker">{{ site.data.pages.notre_offre.s01.f01 | escape }}</div>
+<h1>{{ site.data.pages.notre_offre.s01.f02 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h1>
+<p>{{ site.data.pages.notre_offre.s01.f03 | escape }}</p>
+</div>
 </section>
-
 <section class="section">
-  <div class="container offer-stack">
-
-    <a class="card-link" href="pole-avocats.html">
-      <article class="offer-band red">
-        <div class="offer-visual logo-pad"><div class="offer-brand" aria-label="CSE ZEN Avocats">CSE ZEN <strong>Avocats</strong></div></div>
-        <div>
-          <div class="kicker">Pôle juridique</div>
-          <h2 class="section-title">CSE ZEN Avocats</h2>
-          <p class="section-desc">Assistance juridique quotidienne, consultations, contentieux individuel et collectif, SSCT, harcèlement et accompagnement stratégique face à l'employeur.</p>
-          <div class="pill-list">
-            <span class="pill">Consultations</span>
-            <span class="pill">Contentieux</span>
-            <span class="pill">SSCT</span>
-            <span class="pill">Harcèlement</span>
-          </div>
-        </div>
-      </article>
-    </a>
-
-    <a class="card-link" href="pole-comptabilite.html">
-      <article class="offer-band amber">
-        <div class="offer-visual logo-pad"><img src="assets/logo-akp.png" alt="AKP Conseils" width="260" height="130" loading="lazy" decoding="async"></div>
-        <div>
-          <div class="kicker">Pôle économique</div>
-          <h2 class="section-title">CSE ZEN Expertises</h2>
-          <p class="section-desc">Avec AKP Conseils : expertise économique et financière, consultations obligatoires, participation, orientations stratégiques et droit d'alerte économique.</p>
-          <div class="pill-list">
-            <span class="pill">Comptes</span>
-            <span class="pill">Politique sociale</span>
-            <span class="pill">Orientations stratégiques</span>
-            <span class="pill">Participation</span>
-          </div>
-        </div>
-      </article>
-    </a>
-
-    <a class="card-link" href="formations.html">
-      <article class="offer-band blue">
-        <div class="offer-visual"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=900&q=80" alt="Formation CSE" width="900" height="600" loading="lazy" decoding="async"></div>
-        <div>
-          <div class="kicker">Pôle formation</div>
-          <h2 class="section-title">CSE ZEN Formations sur-mesure</h2>
-          <p class="section-desc">Formations certifiées Qualiopi et agréées DREETS : SSCT, économique, référent harcèlement, secrétaire, trésorier, négociation, RPS, DUERP et communication.</p>
-          <div class="pill-list">
-            <span class="pill">Qualiopi</span>
-            <span class="pill">DREETS</span>
-            <span class="pill">SSCT</span>
-            <span class="pill">Villa Zen</span>
-          </div>
-        </div>
-      </article>
-    </a>
-
-    <a class="card-link" href="solutions-digitales.html">
-      <article class="offer-band green">
-        <div class="offer-visual"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80" alt="Solutions digitales CSE ZEN" width="900" height="600" loading="lazy" decoding="async"></div>
-        <div>
-          <div class="kicker">Solutions digitales</div>
-          <h2 class="section-title">CSE ZEN Solutions digitales</h2>
-          <p class="section-desc">Diagnostics comportementaux Into The Shift et modules e-learning Inclusive Way Campus sur la santé-sécurité, la QVCT, les RPS et la prévention du burn-out.</p>
-          <div class="pill-list">
-            <span class="pill">Into The Shift</span>
-            <span class="pill">E-learning</span>
-            <span class="pill">RPS</span>
-            <span class="pill">Burn-out</span>
-          </div>
-        </div>
-      </article>
-    </a>
-
-    <a class="card-link" href="communication.html">
-      <article class="offer-band copper">
-        <div class="offer-visual"><img src="assets/communication/hero-communication-cse-zen.png" alt="CSE ZEN Communication : supports créatifs et sur mesure pour les projets CSE" width="900" height="600" loading="lazy" decoding="async"></div>
-        <div>
-          <div class="kicker">Pôle communication</div>
-          <h2 class="section-title">CSE ZEN Communication</h2>
-          <p class="section-desc">Une équipe de Community managers qui est à votre disposition pour encore mieux communiquer au quotidien auprès des salariés.</p>
-          <div class="pill-list">
-            <span class="pill">Supports imprimés</span><span class="pill">Supports digitaux</span><span class="pill">Vidéo & motion design</span><span class="pill">Événementiel</span><span class="pill">Objets personnalisés</span>
-          </div>
-        </div>
-      </article>
-    </a>
-
-    <a class="card-link" href="assistance-cse.html">
-      <article class="offer-band teal">
-        <div class="offer-visual"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80" alt="Réunion de travail et prise de notes pour la rédaction d’un procès-verbal CSE" width="900" height="600" loading="lazy" decoding="async"></div>
-        <div>
-          <div class="kicker">Pôle assistance</div>
-          <h2 class="section-title">CSE ZEN Assistance</h2>
-          <p class="section-desc">Un appui opérationnel pour alléger les missions administratives du CSE : rédaction de procès-verbaux et comptes rendus de réunions ou de commissions, structuration et mise en forme des échanges.</p>
-          <div class="pill-list">
-            <span class="pill">Procès-verbaux</span><span class="pill">Comptes rendus</span><span class="pill">Réunions CSE</span><span class="pill">Commissions</span><span class="pill">Secrétariat</span>
-          </div>
-        </div>
-      </article>
-    </a>
-
-  </div>
+<div class="container offer-stack">
+<a class="card-link" href="pole-avocats.html">
+<article class="offer-band red">
+<div class="offer-visual logo-pad"><div aria-label="CSE ZEN Avocats" class="offer-brand">{{ site.data.pages.notre_offre.s02.c01.f01 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div></div>
+<div>
+<div class="kicker">{{ site.data.pages.notre_offre.s02.c01.f02 | escape }}</div>
+<h2 class="section-title">{{ site.data.pages.notre_offre.s02.c01.f03 | escape }}</h2>
+<p class="section-desc">{{ site.data.pages.notre_offre.s02.c01.f04 | escape }}</p>
+<div class="pill-list">
+<span class="pill">{{ site.data.pages.notre_offre.s02.c01.f05 | escape }}</span>
+<span class="pill">{{ site.data.pages.notre_offre.s02.c01.f06 | escape }}</span>
+<span class="pill">{{ site.data.pages.notre_offre.s02.c01.f07 | escape }}</span>
+<span class="pill">{{ site.data.pages.notre_offre.s02.c01.f08 | escape }}</span>
+</div>
+</div>
+</article>
+</a>
+<a class="card-link" href="pole-comptabilite.html">
+<article class="offer-band amber">
+<div class="offer-visual logo-pad"><img alt="{{ site.data.pages.notre_offre.s02.c02.f01.description | escape }}" decoding="async" height="130" loading="lazy" src="{{ site.data.pages.notre_offre.s02.c02.f01.image }}" width="260"/></div>
+<div>
+<div class="kicker">{{ site.data.pages.notre_offre.s02.c02.f02 | escape }}</div>
+<h2 class="section-title">{{ site.data.pages.notre_offre.s02.c02.f03 | escape }}</h2>
+<p class="section-desc">{{ site.data.pages.notre_offre.s02.c02.f04 | escape }}</p>
+<div class="pill-list">
+<span class="pill">{{ site.data.pages.notre_offre.s02.c02.f05 | escape }}</span>
+<span class="pill">{{ site.data.pages.notre_offre.s02.c02.f06 | escape }}</span>
+<span class="pill">{{ site.data.pages.notre_offre.s02.c02.f07 | escape }}</span>
+<span class="pill">{{ site.data.pages.notre_offre.s02.c02.f08 | escape }}</span>
+</div>
+</div>
+</article>
+</a>
+<a class="card-link" href="formations.html">
+<article class="offer-band blue">
+<div class="offer-visual"><img alt="{{ site.data.pages.notre_offre.s02.c03.f01.description | escape }}" decoding="async" height="600" loading="lazy" src="{{ site.data.pages.notre_offre.s02.c03.f01.image }}" width="900"/></div>
+<div>
+<div class="kicker">{{ site.data.pages.notre_offre.s02.c03.f02 | escape }}</div>
+<h2 class="section-title">{{ site.data.pages.notre_offre.s02.c03.f03 | escape }}</h2>
+<p class="section-desc">{{ site.data.pages.notre_offre.s02.c03.f04 | escape }}</p>
+<div class="pill-list">
+<span class="pill">{{ site.data.pages.notre_offre.s02.c03.f05 | escape }}</span>
+<span class="pill">{{ site.data.pages.notre_offre.s02.c03.f06 | escape }}</span>
+<span class="pill">{{ site.data.pages.notre_offre.s02.c03.f07 | escape }}</span>
+<span class="pill">{{ site.data.pages.notre_offre.s02.c03.f08 | escape }}</span>
+</div>
+</div>
+</article>
+</a>
+<a class="card-link" href="solutions-digitales.html">
+<article class="offer-band green">
+<div class="offer-visual"><img alt="{{ site.data.pages.notre_offre.s02.c04.f01.description | escape }}" decoding="async" height="600" loading="lazy" src="{{ site.data.pages.notre_offre.s02.c04.f01.image }}" width="900"/></div>
+<div>
+<div class="kicker">{{ site.data.pages.notre_offre.s02.c04.f02 | escape }}</div>
+<h2 class="section-title">{{ site.data.pages.notre_offre.s02.c04.f03 | escape }}</h2>
+<p class="section-desc">{{ site.data.pages.notre_offre.s02.c04.f04 | escape }}</p>
+<div class="pill-list">
+<span class="pill">{{ site.data.pages.notre_offre.s02.c04.f05 | escape }}</span>
+<span class="pill">{{ site.data.pages.notre_offre.s02.c04.f06 | escape }}</span>
+<span class="pill">{{ site.data.pages.notre_offre.s02.c04.f07 | escape }}</span>
+<span class="pill">{{ site.data.pages.notre_offre.s02.c04.f08 | escape }}</span>
+</div>
+</div>
+</article>
+</a>
+<a class="card-link" href="communication.html">
+<article class="offer-band copper">
+<div class="offer-visual"><img alt="{{ site.data.pages.notre_offre.s02.c05.f01.description | escape }}" decoding="async" height="600" loading="lazy" src="{{ site.data.pages.notre_offre.s02.c05.f01.image }}" width="900"/></div>
+<div>
+<div class="kicker">{{ site.data.pages.notre_offre.s02.c05.f02 | escape }}</div>
+<h2 class="section-title">{{ site.data.pages.notre_offre.s02.c05.f03 | escape }}</h2>
+<p class="section-desc">{{ site.data.pages.notre_offre.s02.c05.f04 | escape }}</p>
+<div class="pill-list">
+<span class="pill">{{ site.data.pages.notre_offre.s02.c05.f05 | escape }}</span><span class="pill">{{ site.data.pages.notre_offre.s02.c05.f06 | escape }}</span><span class="pill">{{ site.data.pages.notre_offre.s02.c05.f07 | escape }}</span><span class="pill">{{ site.data.pages.notre_offre.s02.c05.f08 | escape }}</span><span class="pill">{{ site.data.pages.notre_offre.s02.c05.f09 | escape }}</span>
+</div>
+</div>
+</article>
+</a>
+<a class="card-link" href="assistance-cse.html">
+<article class="offer-band teal">
+<div class="offer-visual"><img alt="{{ site.data.pages.notre_offre.s02.c06.f01.description | escape }}" decoding="async" height="600" loading="lazy" src="{{ site.data.pages.notre_offre.s02.c06.f01.image }}" width="900"/></div>
+<div>
+<div class="kicker">{{ site.data.pages.notre_offre.s02.c06.f02 | escape }}</div>
+<h2 class="section-title">{{ site.data.pages.notre_offre.s02.c06.f03 | escape }}</h2>
+<p class="section-desc">{{ site.data.pages.notre_offre.s02.c06.f04 | escape }}</p>
+<div class="pill-list">
+<span class="pill">{{ site.data.pages.notre_offre.s02.c06.f05 | escape }}</span><span class="pill">{{ site.data.pages.notre_offre.s02.c06.f06 | escape }}</span><span class="pill">{{ site.data.pages.notre_offre.s02.c06.f07 | escape }}</span><span class="pill">{{ site.data.pages.notre_offre.s02.c06.f08 | escape }}</span><span class="pill">{{ site.data.pages.notre_offre.s02.c06.f09 | escape }}</span>
+</div>
+</div>
+</article>
+</a>
+</div>
 </section>
-
 <section class="section section-ivoire">
-  <div class="container grid-2">
-    <div>
-      <span class="thread"></span>
-      <h2 class="section-title">Un fonctionnement clair et <em>lisible</em></h2>
-      <p class="section-desc">CSE ZEN privilégie une relation directe, un forfait préétabli, une utilisation illimitée et une absence d'engagement reconduit automatiquement.</p>
-    </div>
-    <div class="feature-list">
-      <div class="feature"><strong>Forfait annuel préétabli</strong>Le budget est fixé en début de relation.</div>
-      <div class="feature"><strong>Utilisation illimitée</strong>Les élus et représentants du personnel peuvent solliciter l'accompagnement sans décompte horaire.</div>
-      <div class="feature"><strong>Bilan annuel</strong>Le renouvellement repose sur la satisfaction et les résultats obtenus.</div>
-    </div>
-  </div>
+<div class="container grid-2">
+<div>
+<span class="thread"></span>
+<h2 class="section-title">{{ site.data.pages.notre_offre.s03.f01 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h2>
+<p class="section-desc">{{ site.data.pages.notre_offre.s03.f02 | escape }}</p>
+</div>
+<div class="feature-list">
+<div class="feature">{{ site.data.pages.notre_offre.s03.f03 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+<div class="feature">{{ site.data.pages.notre_offre.s03.f04 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+<div class="feature">{{ site.data.pages.notre_offre.s03.f05 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+</div>
+</div>
 </section>
-
-
 <section class="section section-soft">
-  <div class="container article">
-    <h2>Relier les pôles d’expertise aux sujets de terrain</h2>
-    <p>L’offre CSE ZEN s’appuie sur une logique de complémentarité : un sujet QVCT peut nécessiter un éclairage juridique, une analyse économique, une formation des élus et représentants du personnel, un outil de suivi et des supports de communication pour mobiliser les salariés. Les pages ressources permettent d’orienter rapidement les représentants du personnel vers les contenus associés aux sujets les plus fréquents : <a href="resource-tags/qvct.html">QVCT</a>, <a href="resource-tags/rps.html">RPS</a> et <a href="resource-tags/ssct.html">SSCT</a>.</p>
-  </div>
+<div class="container article">
+<h2>{{ site.data.pages.notre_offre.s04.f01 | escape }}</h2>
+<p>{{ site.data.pages.notre_offre.s04.f02 | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+</div>
 </section>
-
 </main>
 <div id="site-footer"></div>
 <script src="header.js"></script>
