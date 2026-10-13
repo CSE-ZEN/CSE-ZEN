@@ -1,5 +1,5 @@
 ---
-# Flux RSS des articles : sert à la publication automatique sur LinkedIn (Make, Zapier…) et aux lecteurs RSS
+# Flux RSS de tous les articles (lecteurs RSS, veille)
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
@@ -18,7 +18,7 @@ layout: null
       <guid isPermaLink="true">{{ site.url }}{{ a.url }}</guid>
       <pubDate>{{ a.date | date_to_rfc822 }}</pubDate>
       <category>{{ a.carte_etiquette | xml_escape }}</category>
-      <description>{{ a.texte_linkedin | default: a.description | xml_escape }}</description>
+      <description>{{ a.description | xml_escape }}</description>
       {%- if a.image %}
       {%- assign img = a.image -%}{%- unless img contains '://' -%}{%- assign img = img | prepend: site.url -%}{%- endunless %}
       <media:content url="{{ img | xml_escape }}" medium="image"/>

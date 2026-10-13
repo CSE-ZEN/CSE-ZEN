@@ -1,0 +1,30 @@
+---
+# Flux réservé à LinkedIn : seuls les articles cochés « Publier aussi sur LinkedIn » y figurent.
+# Un outil comme Make ou Zapier peut le surveiller pour poster automatiquement sur la page LinkedIn.
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>CSE ZEN — Articles à publier sur LinkedIn</title>
+    <link>{{ site.url }}/ressources.html</link>
+    <atom:link href="{{ site.url }}/linkedin.xml" rel="self" type="application/rss+xml"/>
+    <description>Articles et guides pratiques pour les élus CSE et représentants du personnel.</description>
+    <language>fr-FR</language>
+    {%- assign articles = site.articles | where: 'linkedin', true | sort: 'date' | reverse %}
+    {%- for a in articles limit: 30 %}
+    <item>
+      <title>{{ a.title | xml_escape }}</title>
+      <link>{{ site.url }}{{ a.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ a.url }}</guid>
+      <pubDate>{{ a.date | date_to_rfc822 }}</pubDate>
+      <category>{{ a.carte_etiquette | xml_escape }}</category>
+      <description>{{ a.texte_linkedin | default: a.description | xml_escape }}</description>
+      {%- if a.image %}
+      {%- assign img = a.image -%}{%- unless img contains '://' -%}{%- assign img = img | prepend: site.url -%}{%- endunless %}
+      <media:content url="{{ img | xml_escape }}" medium="image"/>
+      {%- endif %}
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>
