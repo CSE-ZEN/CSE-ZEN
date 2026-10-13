@@ -15,7 +15,7 @@ display_url: https://www.cse-zen.com
 logo_url: https://www.cse-zen.com/assets/logo-cse-zen.jpg
 collections:
 - name: articles
-  label: Articles
+  label: 'Ressources : les articles'
   label_singular: article
   folder: _articles
   create: true
@@ -30,8 +30,7 @@ collections:
   view_groups:
   - label: Catégorie
     field: categorie
-  description: Les articles de la page Ressources. Un article publié apparaît automatiquement sur la page Ressources, dans
-    le plan du site et dans le flux LinkedIn.
+  description: "Ce sont les articles de la page Ressources du site. Cliquez sur « + article » pour en écrire un : il apparaîtra automatiquement en tête de la page Ressources. Les textes du haut de la page Ressources (titre, introduction, filtres) se modifient dans « Pages du site »."
   fields:
   - label: Titre de l'article
     name: title
@@ -1988,7 +1987,7 @@ collections:
         widget: string
     preview_path: pole-avocats.html
   - name: pole_comptabilite
-    label: Pôle expertises (comptabilité)
+    label: Pôle CSE ZEN Expertises
     file: _data/pages/pole_comptabilite.yml
     fields:
     - label: Référencement Google
@@ -2626,7 +2625,7 @@ collections:
         widget: string
     preview_path: equipe-reseau.html
   - name: ressources
-    label: Ressources (liste des articles)
+    label: 'Ressources : titre, introduction et filtres de la page'
     file: _data/pages/ressources.yml
     fields:
     - label: Référencement Google
@@ -2682,7 +2681,7 @@ collections:
         widget: text
     preview_path: ressources.html
   - name: guides
-    label: Tous les guides (resources/)
+    label: 'Ressources : page « Tous les guides »'
     file: _data/pages/guides.yml
     fields:
     - label: Référencement Google
