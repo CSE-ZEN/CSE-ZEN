@@ -1,3 +1,6 @@
+---
+# Page d'accueil : les textes viennent de _data/accueil.yml
+---
 <!doctype html>
 <html lang="fr">
 <head>
@@ -21,12 +24,13 @@
   <div class="container hero-grid">
     <div>
       <span class="thread"></span>
-      <div class="eyebrow">Partenaire de confiance des CSE et des représentants du personnel</div>
-      <h1>Agissez en toute <em>sérénité</em> face aux enjeux de votre mandat</h1>
-      <p class="lede">CSE ZEN réunit avocats, experts-comptables, formateurs certifiés, solutions digitales et expertise en communication pour offrir aux élus CSE et représentants du personnel un accompagnement complet, exigeant et sur-mesure.</p>
+      {%- assign b = site.data.accueil.bandeau %}
+      <div class="eyebrow">{{ b.surtitre | escape }}</div>
+      <h1>{{ b.titre_debut | escape }} <em>{{ b.titre_accent | escape }}</em>{% assign c = b.titre_fin | slice: 0 %}{% if b.titre_fin == "" %}{% elsif c == "," or c == "." %}{{ b.titre_fin | escape }}{% else %} {{ b.titre_fin | escape }}{% endif %}</h1>
+      <p class="lede">{{ b.texte | escape }}</p>
       <div class="actions">
-        <a class="btn btn-primary" href="contact.html">Prendre rendez-vous <span class="arr" aria-hidden="true">→</span></a>
-        <a class="btn btn-secondary" href="notre-offre.html">Découvrir l'offre</a>
+        <a class="btn btn-primary" href="contact.html">{{ b.bouton_principal | escape }} <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-secondary" href="notre-offre.html">{{ b.bouton_secondaire | escape }}</a>
       </div>
     </div>
     <div class="hero-aside">
@@ -35,9 +39,9 @@
       </div>
       <div class="hero-card">
         <div class="hero-stats">
-          <div class="hero-stat"><strong>120+</strong><span>CSE accompagnés</span></div>
-          <div class="hero-stat"><strong>1&nbsp;000+</strong><span>élus et représentants formés</span></div>
-          <div class="hero-stat"><strong>170+</strong><span>dossiers contentieux</span></div>
+          {%- for c in b.chiffres %}
+          <div class="hero-stat"><strong>{{ c.valeur | escape }}</strong><span>{{ c.libelle | escape }}</span></div>
+          {%- endfor %}
         </div>
       </div>
     </div>
@@ -58,90 +62,33 @@
   <div class="container">
     <div class="section-header">
       <span class="thread center"></span>
-      <div class="kicker">Notre offre</div>
-      <h2 class="section-title">6 pôles au service de <em>votre CSE et de ses représentants</em></h2>
-      <p class="section-desc">Un écosystème complet pour sécuriser vos décisions, accompagner le fonctionnement quotidien du CSE, protéger vos élus et représentants du personnel, et renforcer votre pouvoir d'agir.</p>
+      {%- assign pi = site.data.accueil.poles_intro %}
+      <div class="kicker">{{ pi.surtitre | escape }}</div>
+      <h2 class="section-title">{{ pi.titre_debut | escape }} <em>{{ pi.titre_accent | escape }}</em>{% assign c = pi.titre_fin | slice: 0 %}{% if pi.titre_fin == "" %}{% elsif c == "," or c == "." %}{{ pi.titre_fin | escape }}{% else %} {{ pi.titre_fin | escape }}{% endif %}</h2>
+      <p class="section-desc">{{ pi.texte | escape }}</p>
     </div>
 
     <div class="poles-grid">
-      <a class="pole-tile pole-tile-1" href="pole-avocats.html" aria-label="CSE ZEN Avocats">
+      {%- for p in site.data.accueil.poles %}
+      <a class="pole-tile pole-tile-{{ forloop.index }}" href="{{ p.page }}" aria-label="{{ p.titre | escape }}">
         <div class="pole-top">
           <span class="pole-bar" aria-hidden="true"></span>
-          <span class="pole-icon" aria-hidden="true">⚖</span>
-        </div>
-        <div class="pole-body">
-          <h3>CSE ZEN Avocats</h3>
-          <p>Avec CSE ZEN Avocats : assistance juridique, consultations, contentieux, SSCT et stratégie.</p>
-          <span class="pole-cta">Découvrir le pôle <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="pole-tile pole-tile-2" href="pole-comptabilite.html" aria-label="CSE ZEN Expertises">
-        <div class="pole-top">
-          <span class="pole-bar" aria-hidden="true"></span>
-          <span class="pole-icon" aria-hidden="true">§</span>
-        </div>
-        <div class="pole-body">
-          <h3>CSE ZEN Expertises</h3>
-          <p>Avec AKP Conseils : expertise économique, financière, politique sociale et droit d'alerte.</p>
-          <span class="pole-cta">Découvrir le pôle <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="pole-tile pole-tile-3" href="formations.html" aria-label="CSE ZEN Formations sur-mesure">
-        <div class="pole-top">
-          <span class="pole-bar" aria-hidden="true"></span>
-          <span class="pole-icon" aria-hidden="true">✦</span>
-        </div>
-        <div class="pole-body">
-          <h3>CSE ZEN Formations sur-mesure</h3>
-          <p>Formations CSE certifiées Qualiopi et agréées DREETS, adaptées au terrain.</p>
-          <span class="pole-cta">Découvrir le pôle <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="pole-tile pole-tile-4" href="solutions-digitales.html" aria-label="CSE ZEN Solutions digitales">
-        <div class="pole-top">
-          <span class="pole-bar" aria-hidden="true"></span>
-          <span class="pole-icon" aria-hidden="true">◈</span>
-        </div>
-        <div class="pole-body">
-          <h3>CSE ZEN Solutions digitales</h3>
-          <p>Organiser et préparer en amont le renouvellement de vos élections CSE avec le leader des élections professionnelles français.</p>
-          <span class="pole-cta">Découvrir le pôle <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="pole-tile pole-tile-5" href="communication.html" aria-label="CSE ZEN Communication">
-        <div class="pole-top">
-          <span class="pole-bar" aria-hidden="true"></span>
-          <span class="pole-icon" aria-hidden="true">✎</span>
-        </div>
-        <div class="pole-body">
-          <h3>CSE ZEN Communication</h3>
-          <p>Une équipe de Community managers qui est à votre disposition pour encore mieux communiquer au quotidien auprès des salariés.</p>
-          <span class="pole-cta">Découvrir le pôle <span class="arr" aria-hidden="true">→</span></span>
-        </div>
-      </a>
-
-      <a class="pole-tile pole-tile-6" href="assistance-cse.html" aria-label="CSE ZEN Assistance">
-        <div class="pole-top">
-          <span class="pole-bar" aria-hidden="true"></span>
-          <span class="pole-icon" aria-hidden="true">
+          <span class="pole-icon" aria-hidden="true">{% if p.icone == "document" %}
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
               <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
               <path d="M14 3v5h5"/>
               <path d="M13 15.5 19.5 9a1.4 1.4 0 0 1 2 2L15 17.5 12 18l.5-3Z"/>
               <path d="M8 12h3M8 16h2"/>
             </svg>
-          </span>
+          {% else %}{{ p.icone }}{% endif %}</span>
         </div>
         <div class="pole-body">
-          <h3>CSE ZEN Assistance</h3>
-          <p>Rédaction de PV et comptes rendus de réunions et commissions pour alléger le quotidien du secrétaire du CSE.</p>
-          <span class="pole-cta">Découvrir le pôle <span class="arr" aria-hidden="true">→</span></span>
+          <h3>{{ p.titre | escape }}</h3>
+          <p>{{ p.sous_titre | escape }}</p>
+          <span class="pole-cta">{{ p.bouton | escape }} <span class="arr" aria-hidden="true">→</span></span>
         </div>
       </a>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -150,26 +97,19 @@
   <div class="container">
     <div class="section-header">
       <span class="thread center"></span>
-      <div class="eyebrow">Méthode</div>
-      <h2 class="section-title">Un accompagnement <em>structuré</em>, pas une hotline</h2>
-      <p class="section-desc">Ligne directe, réactivité, expertise pluridisciplinaire, outils partagés, forfait illimité et sans engagement.</p>
+      {%- assign m = site.data.accueil.methode %}
+      <div class="eyebrow">{{ m.surtitre | escape }}</div>
+      <h2 class="section-title">{{ m.titre_debut | escape }} <em>{{ m.titre_accent | escape }}</em>{% assign c = m.titre_fin | slice: 0 %}{% if m.titre_fin == "" %}{% elsif c == "," or c == "." %}{{ m.titre_fin | escape }}{% else %} {{ m.titre_fin | escape }}{% endif %}</h2>
+      <p class="section-desc">{{ m.texte | escape }}</p>
     </div>
     <div class="grid-3">
+      {%- for k in m.cartes %}
       <div class="card method-card">
-        <span class="method-num">01</span>
-        <h3>Ligne directe</h3>
-        <p>Un interlocuteur identifié pour éviter les pertes d'information et accélérer les décisions.</p>
+        <span class="method-num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+        <h3>{{ k.titre | escape }}</h3>
+        <p>{{ k.texte | escape }}</p>
       </div>
-      <div class="card method-card">
-        <span class="method-num">02</span>
-        <h3>Forfait illimité</h3>
-        <p>Un cadre annuel clair, sans décompte horaire ni surprise pour les élus et représentants du personnel.</p>
-      </div>
-      <div class="card method-card">
-        <span class="method-num">03</span>
-        <h3>Réactivité convenue</h3>
-        <p>Un délai de traitement proposé, validé, puis respecté selon l'urgence réelle.</p>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -178,14 +118,15 @@
   <div class="container grid-2">
     <div>
       <span class="thread"></span>
-      <div class="kicker">Qui sommes-nous</div>
-      <h2 class="section-title">Un partenaire engagé à vos côtés.</h2>
-      <p class="section-desc">CSE ZEN aide les élus CSE et représentants du personnel à comprendre, décider, négocier et agir avec le niveau d'expertise nécessaire face à des directions structurées.</p>
+      {%- assign q = site.data.accueil.qui_sommes_nous %}
+      <div class="kicker">{{ q.surtitre | escape }}</div>
+      <h2 class="section-title">{{ q.titre | escape }}</h2>
+      <p class="section-desc">{{ q.texte | escape }}</p>
     </div>
     <div class="feature-list">
-      <div class="feature"><strong>Sécuriser les décisions</strong>Consultations, avis, délibérations et stratégie d'instance.</div>
-      <div class="feature"><strong>Protéger les élus et représentants</strong>Assistance individuelle, défense du mandat et contentieux.</div>
-      <div class="feature"><strong>Renforcer le pouvoir d'agir</strong>Outils, méthodes, formations et appuis opérationnels.</div>
+      {%- for f in q.points %}
+      <div class="feature"><strong>{{ f.titre | escape }}</strong>{{ f.texte | escape }}</div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -241,10 +182,11 @@
 <section class="section section-dark">
   <div class="container">
     <div class="contact-box">
-      <h2>Parlons de votre CSE et de vos représentants</h2>
-      <p>Premier échange sans engagement pour comprendre vos enjeux et proposer un accompagnement adapté.</p>
+      {%- assign ct = site.data.accueil.contact %}
+      <h2>{{ ct.titre | escape }}</h2>
+      <p>{{ ct.texte | escape }}</p>
       <div class="actions">
-        <a class="btn btn-primary" href="mailto:contact@cse-zen.com">Contactez-nous</a>
+        <a class="btn btn-primary" href="mailto:contact@cse-zen.com">{{ ct.bouton | escape }}</a>
         <a class="btn btn-secondary" href="mailto:contact@cse-zen.com">contact@cse-zen.com</a>
       </div>
     </div>
