@@ -5,8 +5,7 @@ backend:
   name: github
   repo: CSE-ZEN/CSE-ZEN
   branch: cms                      # branche de test ; passera à "main" à la bascule
-  base_url: https://api.netlify.com
-  site_domain: thunderous-gaufre-2cefae.netlify.app   # site Netlify servant uniquement à la connexion
+  base_url: https://cse-zen-auth.broad-fog-84b6.workers.dev   # service de connexion (Cloudflare Worker)
 
 locale: fr
 publish_mode: simple
