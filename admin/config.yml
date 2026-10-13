@@ -30,9 +30,12 @@ collections:
   view_groups:
   - label: Catégorie
     field: categorie
-  description: 'Ce sont les articles de la page Ressources du site. Cliquez sur « + article » pour en écrire un : il apparaîtra
-    automatiquement en tête de la page Ressources. Les textes du haut de la page Ressources (titre, introduction, filtres)
-    se modifient dans « Pages du site ».'
+  description: 'Les articles de la page Ressources du site. ÉCRIRE : cliquez sur « + article », remplissez les champs (le
+    petit « i » donne la consigne), puis « Publier ». BROUILLON ou RETIRER DU SITE : décochez « Visible sur le site » puis
+    « Publier » ; l''article disparaît du site mais reste ici, prêt à être remis en ligne. SUPPRIMER : bouton rouge « Supprimer
+    l''entrée » en haut de l''article (suppression définitive depuis l''interface ; si besoin, Carole peut le récupérer).
+    LINKEDIN : une fois l''article publié, bouton « Préparer le post sur la page LinkedIn de CSE ZEN » dans l''article. Le
+    site se met à jour environ 1 minute après chaque publication.'
   fields:
   - label: Titre de l'article
     name: title
@@ -113,7 +116,8 @@ collections:
     widget: boolean
     default: true
     required: false
-    hint: Décochez pour garder l'article en brouillon (il n'apparaît nulle part sur le site).
+    hint: Décochez pour garder l'article en brouillon, ou pour le retirer du site sans le supprimer. Il reste ici et peut
+      être remis en ligne en recochant la case.
   - label: À la une sur l'accueil
     name: a_la_une
     widget: boolean
@@ -3533,6 +3537,11 @@ collections:
         widget: text
         hint: 'Mise en forme possible : \*\*gras\*\*, \*italique\*, [texte du lien](https://adresse). Le reste s''écrit normalement.'
     preview_path: cookie-policy.html
+  description: 'Les textes et images des pages du site. MODIFIER : ouvrez une page, changez le texte, vérifiez l''aperçu à
+    droite, puis « Publier » ; le site est à jour environ 1 minute après. ANNULER : il n''y a pas de bouton « annuler » ;
+    en cas d''erreur, retapez l''ancien texte, ou demandez à Carole de restaurer la version précédente. Les pages ne peuvent
+    pas être supprimées et leur mise en page reste fixe : vous ne modifiez que le contenu. Les textes du haut de la page Ressources
+    (titre, introduction, filtres) sont dans « Ressources : titre, introduction et filtres de la page ».'
 slug:
   encoding: ascii
   clean_accents: true
