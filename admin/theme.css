@@ -29,3 +29,11 @@ body [class*="-TopBarContainer"] * { color: #1B2036 !important; }
 body [class*="StyledListItemTopBar"],
 body [class*="-NestedObjectLabel"] { background: #F4F2EE !important; color: #1B2036 !important; border-radius: 10px !important; }
 body [class*="-ListItem"] { border-radius: 12px !important; }
+
+/* Consignes : un petit « i » à côté de chaque champ ; la consigne s'affiche au survol */
+body [class*="-ControlContainer"] { position: relative; }
+body [class*="-ControlHint"] { position: absolute !important; top: 0; right: 0; z-index: 20; width: 22px; height: 22px; margin: 0 !important; padding: 0 !important; overflow: hidden; border-radius: 50%; background: #E6F2F2; color: transparent !important; font-size: 0 !important; line-height: 22px; cursor: help; transition: none; }
+body [class*="-ControlHint"]::before { content: "i"; display: block; width: 22px; height: 22px; text-align: center; font: italic 700 13px/22px Georgia, serif; color: #0B6E72; }
+body [class*="-ControlHint"]:hover { width: auto; max-width: 340px; height: auto; overflow: visible; border-radius: 10px; padding: 10px 12px !important; background: #FFFFFF; color: #1B2036 !important; font-size: 13px !important; line-height: 1.5; box-shadow: 0 6px 24px rgba(27, 32, 54, .18); border: 1px solid #E3DFD8; }
+body [class*="-ControlHint"]:hover::before { display: none; }
+body [class*="-ControlPaneContainer"] > [class*="-ControlContainer"]:has([class*="-ControlContainer"]) > [class*="-ControlHint"] { top: 22px; right: 24px; }
